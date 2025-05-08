@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FAF3E0;
+      color: #2C3E50;
+    }
+    header {
+      background-color: #C0392B;
+      padding: 1em;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+    }
+    nav {
+      background-color: #A3B18A;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #2C3E50;
+      font-weight: bold;
+    }
+    .hero {
+      background-image: url('https://example.com/italian-food.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .hero h2 {
+      font-size: 2em;
+    }
+    .content {
+      padding: 2em;
+    }
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5em;
+    }
+    .recipe-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: inherit;
+    }
+    .recipe-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .recipe-card h3 {
+      margin: 0.5em;
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>La Tavola Italiana</h1>
+    <p>Discover the taste of Italy one recipe at a time</p>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Recipes</a>
+    <a href="about.html">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <section class="hero">
+    <h2>Featured: Classic Lasagna</h2>
+  </section>
+  <section class="content">
+    <h2>Popular Recipes</h2>
+    <div class="recipe-grid">
+      <a class="recipe-card" href="tiramisu.html">
+        <img src="https://example.com/tiramisu.jpg" alt="Tiramisu">
+        <h3>Tiramisu</h3>
+      </a>
+      <a class="recipe-card" href="risotto.html">
+        <img src="https://example.com/risotto.jpg" alt="Risotto">
+        <h3>Mushroom Risotto</h3>
+      </a>
+      <a class="recipe-card" href="carbonara.html">
+        <img src="https://example.com/pasta.jpg" alt="Pasta">
+        <h3>Spaghetti Carbonara</h3>
+      </a>
+    </div>
+  </section>
+</body>
+</html>
