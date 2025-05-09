@@ -4,51 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mushroom Risotto Recipe</title>
+    <title>Mushroom Risotto Recipe-La Tavola Italiana</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #3a3a3a;
-        }
-        .recipe-container {
-            max-width: 800px;
-            margin: auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        .ingredients, .instructions {
-            margin-bottom: 20px;
-        }
-        .ingredients ul, .instructions ol {
-            padding-left: 20px;
-        }
-        .ingredients li, .instructions li {
-            margin-bottom: 8px;
-        }
-        .chef-tips {
-            background-color: #e0f7fa;
-            border-left: 5px solid #00acc1;
-            padding: 10px;
-            font-style: italic;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.8em;
-            color: #777;
-        }
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FAF3E0;
+  color: #2C3E50;
+}
+
+header {
+  background-color: #8B2C2C;
+  padding: 1em;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  background-color: #A3B18A;
+  padding: 1em;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: #2C3E50;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #C97C5D;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #8B2C2C;
+}
+.content {
+  padding: 2em;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5em;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.recipe-card h3 {
+  margin: 0.5em;
+  font-family: 'Playfair Display', serif;
+}
+.hero {
+  background-image: url('https://example.com/italian-food.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.hero h2 {
+  font-size: 2em;
+}
     </style>
 </head>
 <body>
-    <div class="recipe-container">
+  <header>
+    <h1>La Tavola Italiana</h1>
+    <p>Discover the taste of Italy one recipe at a time</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tiramisu.html">Tiramisu</a>
+    <a href="mushroomrisotto">Mushroom Risotto</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+    <section class="content">
+    <h2>Mushroom Risotto</h2>
+   <div class="recipe-container">
         <h1>Creamy Mushroom Risotto</h1>
         <p><strong>Prep Time:</strong> 10 minutes</p>
         <p><strong>Cook Time:</strong> 30-40 minutes</p>
