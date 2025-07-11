@@ -1,115 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spaghetti Carbonara Recipe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spaghetti Carbonara Recipe - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #FAF3E0;
+      background-color: #FFF8F0;
       color: #2C3E50;
+      line-height: 1.6;
     }
-
     header {
-      background-color: #8B2C2C;
-      padding: 1em;
-      text-align: center;
+      background-color: #B03A2E;
       color: white;
-    }
-
-    nav {
-      background-color: #A3B18A;
-      padding: 1em;
+      padding: 2em;
       text-align: center;
+      position: relative;
     }
-
-    nav a {
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    /* Navigation Styles */
+    nav {
+      background: #8B2C2C;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 0.5em 0;
+      font-weight: 600;
+      font-size: 1em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
       margin: 0 1em;
-      text-decoration: none;
-      color: #2C3E50;
-      font-weight: bold;
+      padding: 0;
+      position: relative;
     }
-
-    nav a:hover {
-      color: #C97C5D;
+    nav ul li {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      padding: 0.5em 1em;
     }
-
-    h1, h2, h3 {
+    nav ul li:hover {
+      background-color: #B03A2E;
+    }
+    nav ul li ul.dropdown {
+      display: none;
+      position: absolute;
+      background-color: #8B2C2C;
+      padding: 0.5em 0;
+      margin: 0;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      border-radius: 0 0 6px 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    nav ul li:hover ul.dropdown {
+      display: block;
+    }
+    nav ul li ul.dropdown li {
+      display: block;
+      padding: 0.5em 1.2em;
+      white-space: nowrap;
+    }
+    nav ul li ul.dropdown li:hover {
+      background-color: #B03A2E;
+    }
+    /* Content styles */
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2, h3 {
       font-family: 'Playfair Display', serif;
       color: #8B2C2C;
     }
-
-    .content {
-      padding: 2em;
+    ul, ol {
+      padding-left: 1.5em;
     }
-
-    .section {
-      margin: 2em 0;
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
     }
-
-    .time-info {
-      margin: 1em 0;
-      font-style: italic;
-      color: #555;
+    /* Print & Jump to recipe buttons */
+    .top-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5em;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn {
+      background-color: #B03A2E;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      font-family: 'Playfair Display', serif;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+    }
+    .btn:hover {
+      background-color: #8B2C2C;
+    }
+    /* Back link */
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2em;
+      font-size: 1.2em;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #8B2C2C;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    /* Section anchors for jump to recipe */
+    #recipe {
+      scroll-margin-top: 90px; /* for fixed nav offset */
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>La Tavola Italiana</h1>
-    <p>Discover the taste of Italy one recipe at a time</p>
+    <h1>Spaghetti Carbonara</h1>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="spaghetticarbonara.html">Spaghetti Carbonara</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="ricetteitaliane.html">Ricette Italiane</a>
+    <ul>
+      <li>Recipes
+        <ul class="dropdown">
+          <li><a href="#" style="color:white;">Appetizers</a></li>
+          <li><a href="#" style="color:white;">Main Courses</a></li>
+          <li><a href="#" style="color:white;">Desserts</a></li>
+        </ul>
+      </li>
+      <li>American Favorites
+        <ul class="dropdown">
+          <li><a href="#" style="color:white;">Breakfast</a></li>
+          <li><a href="#" style="color:white;">Lunch</a></li>
+          <li><a href="#" style="color:white;">Dinner</a></li>
+        </ul>
+      </li>
+      <li>Recipe Tutorials
+        <ul class="dropdown">
+          <li><a href="#" style="color:white;">Easy</a></li>
+          <li><a href="#" style="color:white;">Medium</a></li>
+          <li><a href="#" style="color:white;">Hard</a></li>
+        </ul>
+      </li>
+      <li>Italy
+        <ul class="dropdown">
+          <li><a href="#" style="color:white;">Taste by Region</a></li>
+          <li><a href="#" style="color:white;">Dine Like a Local</a></li>
+          <li><a href="#" style="color:white;">Culinary Destinations</a></li>
+        </ul>
+      </li>
+    </ul>
   </nav>
 
-  <div class="content">
-    <h2>Spaghetti Carbonara</h2>
-    <p class="time-info">Prep time: 10 mins | Cook time: 15 mins | Total time: 25 mins | Serves: 4</p>
-
-    <div class="section">
-      <h3>Ingredients</h3>
-      <ul>
-        <li>400g (14 oz) spaghetti</li>
-        <li>150g (5 oz) pancetta or guanciale, diced</li>
-        <li>3 large eggs</li>
-        <li>75g (3/4 cup) grated Pecorino Romano cheese</li>
-        <li>Freshly ground black pepper, to taste</li>
-        <li>Salt, for pasta water</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h3>Instructions</h3>
-      <ol>
-        <li>Bring a large pot of salted water to a boil. Cook the spaghetti until al dente according to package instructions.</li>
-        <li>While the pasta cooks, heat a large skillet over medium heat. Add the pancetta or guanciale and cook until crisp. Remove from heat.</li>
-        <li>In a bowl, whisk together the eggs, grated Pecorino Romano, and a generous amount of black pepper.</li>
-        <li>Reserve 1 cup of the pasta cooking water, then drain the spaghetti.</li>
-        <li>Add the hot pasta to the skillet with pancetta and stir quickly to coat in the rendered fat.</li>
-        <li>Remove from heat and quickly mix in the egg and cheese mixture, stirring vigorously to create a creamy sauce. Add reserved pasta water a little at a time to loosen the sauce if needed.</li>
-        <li>Serve immediately with extra cheese and black pepper on top.</li>
-      </ol>
-    </div>
-
-    <div class="section">
-      <h3>Tips</h3>
-      <ul>
-        <li>Use freshly grated Pecorino Romano for the most authentic flavor.</li>
-        <li>Do not add the eggs over direct heat to avoid scrambling.</li>
-        <li>Guanciale is traditional, but pancetta is a fine substitute.</li>
-      </ul>
-    </div>
+  <div class="top-actions" style="max-width:800px;margin:auto;">
+    <button class="btn" onclick="window.print()">Print</button>
+    <a class="btn" href="#recipe">Jump to Recipe</a>
   </div>
+
+  <section class="content">
+    <img src="images/spaghetticarbonara.jpg" alt="Spaghetti Carbonara" class="recipe-image" />
+
+    <h2>Introduction</h2>
+    <p>Spaghetti Carbonara is a quintessential Roman pasta dish known for its creamy texture and rich, savory flavor. It's made with a few simple ingredients: eggs, cheese, pancetta, and pepper. Despite its simplicity, mastering carbonara takes attention to detail, especially to avoid scrambled eggs. The result, however, is a comforting, elegant dish that represents the soul of Italian home cooking.</p>
+
+    <h2>History</h2>
+    <p>The origins of carbonara are widely debated, but many agree that it gained popularity during World War II. Some believe it was born out of American soldiers combining their rations of eggs and bacon with Italian pasta. Others argue it’s a traditional Roman dish that simply evolved over time. Either way, it is now firmly rooted in Italy's culinary tradition.</p>
+
+    <h2 id="recipe">Why We Love It</h2>
+    <p>We love Spaghetti Carbonara for its silky, rich sauce made without cream, relying solely on eggs, cheese, and pancetta for deep, satisfying flavor. It’s quick to prepare, comforting, and perfect for any occasion.</p>
+
+    <h2>Ingredients</h2>
+    <ul>
+      <li>400g (14 oz) spaghetti</li>
+      <li>150g (5 oz) pancetta or guanciale, diced</li>
+      <li>2 whole eggs and 2 egg yolks</li>
+      <li>1 cup grated Pecorino Romano cheese</li>
+      <li>Freshly ground black pepper</li>
+      <li>Salt (for pasta water)</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Bring a large pot of salted water to a boil. Cook the spaghetti until al dente.</li>
+      <li>While the pasta cooks, fry the pancetta in a pan over medium heat until it is crispy. Set aside.</li>
+      <li>In a bowl, whisk together the eggs, yolks, cheese, and a generous amount of black pepper.</li>
+      <li>Drain the pasta, reserving about 1 cup of the pasta water. Quickly add the hot pasta to the egg mixture, tossing to create a creamy sauce.</li>
+      <li>Mix in the pancetta and a splash of pasta water if needed to loosen the sauce. Serve immediately with extra cheese and pepper.</li>
+    </ol>
+
+    <h2>Tips & Tricks</h2>
+    <ul>
+      <li>Use guanciale for a more traditional flavor, though pancetta is a good substitute.</li>
+      <li>The key to carbonara is using the heat of the pasta—not direct heat—to cook the eggs into a silky sauce.</li>
+      <li>Reserve enough pasta water to adjust the sauce's consistency as needed.</li>
+      <li>Do not add cream—authentic carbonara is creamy from the eggs and cheese alone.</li>
+      <li>Use freshly cracked black pepper for a punch of aroma and heat.</li>
+    </ul>
+
+    <h2>Serving Suggestions</h2>
+    <p>Serve with a fresh green salad and a glass of crisp Italian white wine. Garlic bread on the side complements the rich flavors well.</p>
+
+    <h2>Nutrition Info (per serving)</h2>
+    <ul>
+      <li>Calories: 620</li>
+      <li>Protein: 25g</li>
+      <li>Carbohydrates: 75g</li>
+      <li>Fat: 22g</li>
+      <li>Fiber: 3g</li>
+      <li>Sodium: 850mg</li>
+    </ul>
+
+    <h2>Fun Fact</h2>
+    <p>Despite being associated with Italy, Carbonara has become a global favorite and is one of the most searched pasta recipes worldwide!</p>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
 </body>
 </html>

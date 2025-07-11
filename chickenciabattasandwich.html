@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chicken Ciabatta Sandwich - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 2em;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #E6B0AA;
+      padding: 1em;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    nav > div {
+      position: relative;
+      display: inline-block;
+    }
+    nav button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: #2C3E50;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    nav button:hover {
+      text-decoration: underline;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #FDEDE8;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      padding: 0.5em 0;
+      border-radius: 6px;
+    }
+    nav .dropdown-content a {
+      color: #2C3E50;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      display: block;
+    }
+    nav .dropdown-content a:hover {
+      background-color: #B03A2E;
+      color: white;
+    }
+    nav div:hover .dropdown-content {
+      display: block;
+    }
+    .top-buttons {
+      margin: 1em 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    .top-buttons button, .top-buttons a {
+      background-color: #B03A2E;
+      border: none;
+      color: white;
+      padding: 0.5em 1em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .top-buttons button:hover, .top-buttons a:hover {
+      background-color: #8B2C2C;
+    }
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+    }
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2em;
+      font-size: 1.2em;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #8B2C2C;
+      font-weight: bold;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    @media print {
+      nav, .top-buttons {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    function printRecipe() {
+      window.print();
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Chicken Ciabatta Sandwich</h1>
+  </header>
+
+  <nav>
+    <div>
+      <button>Recipes ▼</button>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+    <div>
+      <button>American Favorites ▼</button>
+      <div class="dropdown-content">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+    <div>
+      <button>Italy ▼</button>
+      <div class="dropdown-content">
+        <a href="tastebyregion.html">Taste by Region</a>
+        <a href="dinelikealocal.html">Dine Like a Local</a>
+        <a href="culinarydestinations.html">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="top-buttons">
+    <button onclick="printRecipe()">Print Recipe</button>
+    <a href="#introduction">Jump to Recipe</a>
+  </div>
+
+  <section class="content">
+    <img src="images/chickenciabattasandwich.jpg" alt="Chicken Ciabatta Sandwich" class="recipe-image" />
+
+    <h2 id="introduction">Introduction</h2>
+    <p>This Chicken Ciabatta Sandwich is a warm and hearty Italian-inspired meal, featuring grilled chicken breast, fresh arugula, sun-dried tomato spread, and melted mozzarella — all nestled inside a toasted ciabatta roll.</p>
+
+    <h2 id="history">History</h2>
+    <p>Ciabatta, meaning "slipper" in Italian due to its shape, was first developed in the 1980s in Veneto. Its airy interior and crisp crust make it ideal for panini and gourmet sandwiches like this flavorful grilled chicken version.</p>
+
+    <h2 id="whyweloveit">Why We Love It</h2>
+    <p>It’s simple, filling, and deeply flavorful. The contrast of creamy mozzarella with tangy sun-dried tomato spread and juicy chicken makes this a go-to lunch or dinner. Plus, it’s easy to prep ahead!</p>
+
+    <h2 id="ingredients">Ingredients</h2>
+    <ul>
+      <li>2 ciabatta rolls, halved</li>
+      <li>2 grilled chicken breasts (or 1 large breast split in half)</li>
+      <li>1/2 cup sun-dried tomato spread or pesto</li>
+      <li>4 slices fresh mozzarella</li>
+      <li>1 cup arugula</li>
+      <li>1 tbsp olive oil</li>
+      <li>Salt & pepper to taste</li>
+    </ul>
+
+    <h2 id="instructions">Instructions</h2>
+    <ol>
+      <li>Preheat a skillet or panini press over medium heat.</li>
+      <li>Slice ciabatta rolls and brush inside with olive oil.</li>
+      <li>Grill or reheat chicken breasts; season with salt and pepper if needed.</li>
+      <li>Spread sun-dried tomato spread on the bottom halves of the ciabatta rolls.</li>
+      <li>Layer with chicken, mozzarella, and arugula.</li>
+      <li>Top with the other half of the roll and press slightly.</li>
+      <li>Toast in the skillet or press until cheese is melted and bread is crisp.</li>
+      <li>Slice and serve warm.</li>
+    </ol>
+
+    <h2 id="tips">Tips & Tricks</h2>
+    <ul>
+      <li>Marinate chicken beforehand in olive oil, lemon, and herbs for more flavor.</li>
+      <li>Add roasted red peppers or caramelized onions for variation.</li>
+      <li>Use a grill pan with a weight to mimic a panini press.</li>
+    </ul>
+
+    <h2 id="serving">Serving Suggestions</h2>
+    <p>Pair with a side salad of mixed greens and a glass of sparkling water or iced tea. Perfect for a casual Italian-style lunch.</p>
+
+    <h2 id="nutrition">Nutrition Info (per serving)</h2>
+    <ul>
+      <li>Calories: 420</li>
+      <li>Protein: 32g</li>
+      <li>Carbohydrates: 28g</li>
+      <li>Fat: 20g</li>
+      <li>Fiber: 3g</li>
+      <li>Sodium: 600mg</li>
+    </ul>
+
+    <h2 id="funfact">Fun Fact</h2>
+    <p>Ciabatta bread was Italy’s direct response to the popularity of French baguettes, aiming to create a uniquely Italian sandwich bread.</p>
+
+    <div class="back-link">
+      <a href="index.html">&larr; Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>

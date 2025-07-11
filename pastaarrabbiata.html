@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pasta Arrabbiata - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 2em;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #E6B0AA;
+      padding: 1em;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    nav > div {
+      position: relative;
+      display: inline-block;
+    }
+    nav button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: #2C3E50;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    nav button:hover {
+      text-decoration: underline;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #FDEDE8;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      padding: 0.5em 0;
+      border-radius: 6px;
+    }
+    nav .dropdown-content a {
+      color: #2C3E50;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      display: block;
+      font-weight: normal;
+    }
+    nav .dropdown-content a:hover {
+      background-color: #B03A2E;
+      color: white;
+    }
+    nav div:hover .dropdown-content {
+      display: block;
+    }
+    .top-buttons {
+      margin: 1em 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    .top-buttons button, .top-buttons a {
+      background-color: #B03A2E;
+      border: none;
+      color: white;
+      padding: 0.5em 1em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .top-buttons button:hover, .top-buttons a:hover {
+      background-color: #8B2C2C;
+    }
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+    }
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2em;
+      font-size: 1.2em;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #8B2C2C;
+      font-weight: bold;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    @media print {
+      nav, .top-buttons {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    function printRecipe() {
+      window.print();
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Pasta Arrabbiata</h1>
+  </header>
+
+  <nav>
+    <div>
+      <button>Recipes ▼</button>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+    <div>
+      <button>American Favorites ▼</button>
+      <div class="dropdown-content">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+    <div>
+      <button>Italy ▼</button>
+      <div class="dropdown-content">
+        <a href="tastebyregion.html">Taste by Region</a>
+        <a href="dinelikealocal.html">Dine Like a Local</a>
+        <a href="culinarydestinations.html">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="top-buttons">
+    <button onclick="printRecipe()">Print Recipe</button>
+    <a href="#introduction">Jump to Recipe</a>
+  </div>
+
+  <section class="content">
+    <img src="images/pastaarrabbiata.jpg" alt="Pasta Arrabbiata" class="recipe-image" />
+
+    <h2 id="introduction">Introduction</h2>
+    <p>Pasta Arrabbiata is a fiery Roman classic made with simple ingredients: garlic, olive oil, tomatoes, and red chili flakes. This bold and spicy dish is the perfect comfort food for heat lovers and pasta enthusiasts alike.</p>
+
+    <h2 id="history">History</h2>
+    <p>The name “arrabbiata” means “angry” in Italian — a nod to the spice of the dish. It originated in Rome during the mid-20th century and quickly became a staple in trattorias across Italy, prized for its minimal ingredients and bold flavor.</p>
+
+    <h2 id="whyweloveit">Why We Love It</h2>
+    <p>It’s spicy, garlicky, and deeply satisfying. With only a few pantry staples, you can whip up a restaurant-worthy meal in minutes. Plus, it's vegan and budget-friendly.</p>
+
+    <h2 id="ingredients">Ingredients</h2>
+    <ul>
+      <li>12 oz (340g) penne or spaghetti</li>
+      <li>2 tablespoons olive oil</li>
+      <li>3 cloves garlic, finely sliced</li>
+      <li>1/2–1 teaspoon red pepper flakes (to taste)</li>
+      <li>1 (14 oz) can crushed tomatoes</li>
+      <li>Salt to taste</li>
+      <li>Fresh parsley or basil, chopped (optional)</li>
+      <li>Grated pecorino or parmesan (optional)</li>
+    </ul>
+
+    <h2 id="instructions">Instructions</h2>
+    <ol>
+      <li>Bring a large pot of salted water to a boil and cook pasta according to package instructions. Reserve 1/2 cup pasta water before draining.</li>
+      <li>Meanwhile, in a large skillet, heat olive oil over medium heat.</li>
+      <li>Add garlic and sauté until fragrant but not browned, about 30 seconds.</li>
+      <li>Stir in red pepper flakes and cook for another 10 seconds.</li>
+      <li>Pour in crushed tomatoes and bring to a simmer. Cook for 8–10 minutes, stirring occasionally.</li>
+      <li>Season with salt to taste and thin with reserved pasta water if needed.</li>
+      <li>Add the drained pasta and toss to coat evenly in the sauce.</li>
+      <li>Serve immediately, garnished with herbs and cheese if desired.</li>
+    </ol>
+
+    <h2 id="tips">Tips & Tricks</h2>
+    <ul>
+      <li>Use high-quality canned tomatoes for best flavor.</li>
+      <li>Add more chili flakes if you like it extra spicy — Arrabbiata should have a kick!</li>
+      <li>Top with olives or sautéed mushrooms for variation.</li>
+    </ul>
+
+    <h2 id="serving">Serving Suggestions</h2>
+    <p>Pair with crusty bread and a crisp green salad. A glass of Italian red like Chianti or Montepulciano complements the spice beautifully.</p>
+
+    <h2 id="nutrition">Nutrition Info (per serving)</h2>
+    <ul>
+      <li>Calories: 410</li>
+      <li>Protein: 11g</li>
+      <li>Carbohydrates: 60g</li>
+      <li>Fat: 13g</li>
+      <li>Fiber: 5g</li>
+      <li>Sodium: 300mg</li>
+    </ul>
+
+    <h2 id="funfact">Fun Fact</h2>
+    <p>In Italian slang, calling someone "arrabbiato" can mean they're fiery — just like this pasta!</p>
+
+    <div class="back-link">
+      <a href="index.html">&larr; Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>

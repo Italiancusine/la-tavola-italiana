@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Classic Lasagna - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 2em;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #8B2C2C;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em 0;
+      flex-wrap: wrap;
+    }
+    nav .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    nav .dropbtn {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+      cursor: pointer;
+      padding: 0.5em 1em;
+      font-size: 1em;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #8B2C2C;
+      min-width: 160px;
+      z-index: 1;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    nav .dropdown-content a {
+      color: white;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      display: block;
+      font-weight: normal;
+      font-family: 'Open Sans', sans-serif;
+    }
+    nav .dropdown-content a:hover {
+      background-color: #B03A2E;
+    }
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+      margin-top: 2em;
+    }
+    ul, ol {
+      padding-left: 1.5em;
+    }
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    .btn-print, .btn-jump {
+      background-color: #B03A2E;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      margin-right: 1em;
+      cursor: pointer;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      margin-bottom: 1em;
+    }
+    .btn-print:hover, .btn-jump:hover {
+      background-color: #8B2C2C;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 3em;
+      font-size: 1.2em;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #8B2C2C;
+      font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    table.nutrition-info {
+      border-collapse: collapse;
+      margin-top: 1em;
+      width: 100%;
+      max-width: 400px;
+    }
+    table.nutrition-info th, table.nutrition-info td {
+      border: 1px solid #8B2C2C;
+      padding: 0.5em 1em;
+      text-align: left;
+      font-family: 'Open Sans', sans-serif;
+    }
+    table.nutrition-info th {
+      background-color: #B03A2E;
+      color: white;
+    }
+  </style>
+  <script>
+    function printRecipe() {
+      window.print();
+    }
+    function jumpToRecipe() {
+      document.getElementById('recipe').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Classic Lasagna</h1>
+  </header>
+
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Recipes ▼</button>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">American Favorites ▼</button>
+      <div class="dropdown-content">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Italy ▼</button>
+      <div class="dropdown-content">
+        <a href="tastebyregion.html">Taste by Region</a>
+        <a href="dinelikealocal.html">Dine Like a Local</a>
+        <a href="culinarydestinations.html">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="content">
+    <img src="images/lasagna.jpg" alt="Classic Lasagna" class="recipe-image" />
+
+    <button class="btn-print" onclick="printRecipe()">Print Recipe</button>
+    <button class="btn-jump" onclick="jumpToRecipe()">Jump to Recipe</button>
+
+    <h2>Introduction</h2>
+    <p>Lasagna is the ultimate comfort food and a symbol of Italian culinary tradition. Layers of tender pasta sheets, rich meat sauce, creamy béchamel, and melted cheese combine to create a hearty dish loved worldwide.</p>
+
+    <h2>History</h2>
+    <p>Lasagna has roots in Ancient Rome, but the modern layered version comes from Italy’s Emilia-Romagna region. The word "lasagna" originally referred to the pot it was cooked in!</p>
+
+    <h2 id="recipe">Why We Love It</h2>
+    <p>It’s filling, rich, deeply flavored, and perfect for sharing. The blend of tomato sauce, cheese, and pasta is hard to resist and even better the next day.</p>
+
+    <h2>Ingredients</h2>
+    <ul>
+      <li>12 lasagna noodles</li>
+      <li>1 lb (450g) ground beef or beef/pork mix</li>
+      <li>1 small onion, chopped</li>
+      <li>2 cloves garlic, minced</li>
+      <li>1 can (28 oz) crushed tomatoes</li>
+      <li>2 tbsp tomato paste</li>
+      <li>1 tsp oregano</li>
+      <li>Salt and pepper, to taste</li>
+      <li>2 cups ricotta cheese</li>
+      <li>2 cups mozzarella, shredded</li>
+      <li>1 cup Parmesan, grated</li>
+      <li>3 cups béchamel sauce</li>
+      <li>Fresh basil (optional)</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Preheat oven to 375°F (190°C). Cook noodles until al dente. Set aside.</li>
+      <li>Sauté onion and garlic, then brown the meat. Add tomatoes, paste, and spices. Simmer 20–30 mins.</li>
+      <li>Layer meat sauce, noodles, ricotta, béchamel, mozzarella, and Parmesan. Repeat.</li>
+      <li>Cover and bake 25 mins. Uncover and bake 20 more until golden.</li>
+      <li>Rest 10 mins before serving. Garnish with basil if desired.</li>
+    </ol>
+
+    <h2>Tips & Tricks</h2>
+    <ul>
+      <li>Don’t skip the béchamel — it adds creamy richness.</li>
+      <li>Make ahead and reheat for deeper flavor.</li>
+      <li>Freeze in portions for easy weeknight meals.</li>
+    </ul>
+
+    <h2>Serving Suggestions</h2>
+    <p>Pair with a crisp salad and a glass of Chianti. Finish with gelato or espresso.</p>
+
+    <h2>Nutrition Info (per serving)</h2>
+    <table class="nutrition-info" aria-label="Nutrition information per serving">
+      <tbody>
+        <tr><th>Calories</th><td>520</td></tr>
+        <tr><th>Fat</th><td>28g</td></tr>
+        <tr><th>Saturated Fat</th><td>14g</td></tr>
+        <tr><th>Cholesterol</th><td>120mg</td></tr>
+        <tr><th>Carbohydrates</th><td>38g</td></tr>
+        <tr><th>Sugar</th><td>8g</td></tr>
+        <tr><th>Protein</th><td>33g</td></tr>
+        <tr><th>Fiber</th><td>4g</td></tr>
+        <tr><th>Sodium</th><td>720mg</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Fun Fact</h2>
+    <p>The original lasagna likely didn’t include tomatoes — they weren’t introduced to Europe until the 16th century!</p>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>
+

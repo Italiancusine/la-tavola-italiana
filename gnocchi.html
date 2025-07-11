@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gnocchi Recipe - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 2em;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #8B2C2C;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 1em 0;
+      gap: 2em;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+    }
+    nav .dropdown {
+      position: relative;
+      cursor: pointer;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      color: #2C3E50;
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      padding: 0.5em 0;
+      z-index: 10;
+      border-radius: 4px;
+    }
+    nav .dropdown-content a {
+      display: block;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      color: #2C3E50;
+    }
+    nav .dropdown-content a:hover {
+      background-color: #f4d3d3;
+    }
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .content {
+      max-width: 900px;
+      margin: 2em auto 3em;
+      padding: 0 1em;
+    }
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    button#printBtn {
+      background-color: #B03A2E;
+      color: white;
+      border: none;
+      padding: 0.6em 1.2em;
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 1em;
+    }
+    button#printBtn:hover {
+      background-color: #8B2C2C;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+      margin-top: 1.5em;
+    }
+    ul, ol {
+      padding-left: 1.5em;
+    }
+    .fun-fact {
+      background-color: #f4d3d3;
+      border-left: 5px solid #B03A2E;
+      padding: 1em 1.5em;
+      margin-top: 2em;
+      font-style: italic;
+    }
+    .back-home {
+      margin-top: 3em;
+      font-size: 1.4em;
+      text-align: center;
+    }
+    .back-home a {
+      text-decoration: none;
+      color: #8B2C2C;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+    }
+    .back-home a:hover {
+      text-decoration: underline;
+    }
+    /* Jump to Recipe button style */
+    .jump-to-recipe {
+      display: block;
+      text-align: center;
+      margin-bottom: 1em;
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      color: #B03A2E;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    .jump-to-recipe:hover {
+      text-decoration: underline;
+    }
+    /* Nutrition Table */
+    table.nutrition {
+      width: 100%;
+      max-width: 400px;
+      border-collapse: collapse;
+      margin-top: 1em;
+      font-size: 0.95em;
+    }
+    table.nutrition th, table.nutrition td {
+      border: 1px solid #B03A2E;
+      padding: 0.4em 0.8em;
+      text-align: left;
+    }
+    table.nutrition th {
+      background-color: #B03A2E;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Gnocchi</h1>
+</header>
+
+<nav>
+  <div class="dropdown">
+    Recipes
+    <div class="dropdown-content">
+      <a href="#">Appetizers</a>
+      <a href="#">Main Courses</a>
+      <a href="#">Desserts</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    American Favorites
+    <div class="dropdown-content">
+      <a href="#">Breakfast</a>
+      <a href="#">Lunch</a>
+      <a href="#">Dinner</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    Recipe Tutorials
+    <div class="dropdown-content">
+      <a href="#">Easy</a>
+      <a href="#">Medium</a>
+      <a href="#">Hard</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    Italy
+    <div class="dropdown-content">
+      <a href="#">Taste by Region</a>
+      <a href="#">Dine Like a Local</a>
+      <a href="#">Culinary Destinations</a>
+    </div>
+  </div>
+</nav>
+
+<main class="content">
+
+  <a href="#recipe" class="jump-to-recipe">Jump to Recipe ↓</a>
+
+  <img src="images/gnocchi.jpg" alt="Gnocchi" class="recipe-image" />
+
+  <button id="printBtn" onclick="window.print()">Print Recipe</button>
+
+  <section id="recipe">
+    <h2>Introduction</h2>
+    <p>Gnocchi are soft Italian dumplings made primarily from potatoes, flour, and eggs. They’re tender, pillowy, and a perfect base for a variety of sauces, from simple butter and sage to rich tomato or creamy pesto.</p>
+
+    <h2>History</h2>
+    <p>Gnocchi have been a staple in Italian cuisine since Roman times, evolving from simple dumplings to the delicate potato versions known today. Traditionally handmade in homes and trattorias, gnocchi reflect regional variations but are universally loved for their comforting texture and versatility.</p>
+
+    <h2>Why We Love It</h2>
+    <p>Gnocchi are light yet satisfying, easy to make from scratch, and pair beautifully with countless sauces. Their soft, pillowy texture makes every bite a delight, bringing a touch of authentic Italian comfort food to your table.</p>
+
+    <h2>Ingredients</h2>
+    <ul>
+      <li>2 pounds (900g) russet potatoes</li>
+      <li>1 to 1 ½ cups (125-190g) all-purpose flour, plus extra for dusting</li>
+      <li>1 large egg, lightly beaten</li>
+      <li>1 teaspoon salt</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Boil the potatoes in their skins until tender, about 40 minutes. Drain and peel while still warm.</li>
+      <li>Mash the potatoes thoroughly until smooth and let cool slightly.</li>
+      <li>On a clean surface, make a mound with the mashed potatoes and create a well in the center.</li>
+      <li>Add the beaten egg and salt into the well, then gradually add flour.</li>
+      <li>Gently mix and knead the dough until it comes together into a soft but not sticky ball. Add more flour if too sticky.</li>
+      <li>Divide the dough into 4 pieces. Roll each piece into a long rope about 3/4 inch thick.</li>
+      <li>Cut ropes into 1-inch pieces. Optionally, roll each piece over the back of a fork to create ridges.</li>
+      <li>Bring a large pot of salted water to a boil. Cook gnocchi in batches. They’re done when they float to the surface, about 2-3 minutes.</li>
+      <li>Remove with a slotted spoon and serve with your favorite sauce.</li>
+    </ol>
+
+    <h2>Tips & Tricks</h2>
+    <ul>
+      <li>Use starchy potatoes like russets for light gnocchi.</li>
+      <li>Don’t overwork the dough to keep gnocchi tender.</li>
+      <li>Cook gnocchi fresh or freeze on a tray for later use.</li>
+      <li>For extra flavor, add Parmesan or herbs into the dough.</li>
+    </ul>
+
+    <h2>Serving Suggestions</h2>
+    <p>Serve gnocchi with browned butter and sage, a classic tomato sauce, or creamy Gorgonzola sauce. Pair with a light red wine like Chianti or a dry white like Pinot Grigio.</p>
+
+    <h2>Nutrition Info (per serving)</h2>
+    <table class="nutrition" aria-label="Nutrition Information">
+      <tbody>
+        <tr><th>Calories</th><td>220</td></tr>
+        <tr><th>Fat</th><td>3g</td></tr>
+        <tr><th>Saturated Fat</th><td>1g</td></tr>
+        <tr><th>Carbohydrates</th><td>45g</td></tr>
+        <tr><th>Sugar</th><td>1g</td></tr>
+        <tr><th>Protein</th><td>6g</td></tr>
+        <tr><th>Sodium</th><td>350mg</td></tr>
+        <tr><th>Fiber</th><td>3g</td></tr>
+      </tbody>
+    </table>
+
+    <div class="fun-fact">
+      <strong>Fun Fact:</strong> In Italy, gnocchi is traditionally eaten on Thursdays, known as 'Gnocchi Day,' with families gathering to enjoy this comfort food.
+    </div>
+
+    <div class="back-home">
+      <a href="index.html">← Back to Home</a>
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>
+

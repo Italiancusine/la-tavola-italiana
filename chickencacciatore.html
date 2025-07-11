@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chicken Cacciatore Recipe - Authentic Italian Comfort Dish</title>
+  <meta name="description" content="This authentic Chicken Cacciatore recipe is a rustic Italian classic made with juicy chicken, tomatoes, bell peppers, and herbs. Perfect comfort food for any night of the week!" />
+  <meta name="keywords" content="Chicken Cacciatore, Italian chicken stew, rustic Italian chicken recipe, chicken with tomatoes and peppers, easy chicken cacciatore" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 2em;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #8B2C2C;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em 0;
+      flex-wrap: wrap;
+    }
+    nav > div {
+      position: relative;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #8B2C2C;
+      min-width: 160px;
+      z-index: 1;
+    }
+    nav .dropdown-content a {
+      color: white;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      display: block;
+    }
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    nav a:hover, nav .dropdown-content a:hover {
+      background-color: #B03A2E;
+      text-decoration: underline;
+    }
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    .print-button {
+      background-color: #B03A2E;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 1em;
+    }
+    .print-button:hover {
+      background-color: #8B2C2C;
+    }
+    .jump-link {
+      margin-left: 1em;
+      font-size: 0.9em;
+      color: #B03A2E;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+      margin-top: 2em;
+    }
+    ul, ol {
+      padding-left: 1.5em;
+    }
+    table.nutrition-info {
+      border-collapse: collapse;
+      margin-top: 1em;
+      width: 100%;
+      max-width: 400px;
+    }
+    table.nutrition-info th, table.nutrition-info td {
+      border: 1px solid #8B2C2C;
+      padding: 0.5em 1em;
+      text-align: left;
+    }
+    table.nutrition-info th {
+      background-color: #B03A2E;
+      color: white;
+    }
+    .back-link {
+      text-align: center;
+      margin-top: 2em;
+    }
+    .back-link a {
+      color: #8B2C2C;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function printRecipe() {
+      window.print();
+    }
+    function jumpToRecipe() {
+      document.getElementById('recipe').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Chicken Cacciatore</h1>
+  </header>
+
+  <nav>
+    <div class="dropdown">
+      <button>Recipes ▼</button>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button>American Favorites ▼</button>
+      <div class="dropdown-content">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button>Italy ▼</button>
+      <div class="dropdown-content">
+        <a href="tastebyregion.html">Taste by Region</a>
+        <a href="dinelikealocal.html">Dine Like a Local</a>
+        <a href="culinarydestinations.html">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="content">
+    <button class="print-button" onclick="printRecipe()">Print Recipe</button>
+    <button class="jump-link" onclick="jumpToRecipe()">Jump to Recipe</button>
+
+    <img src="images/chickencacciatore.jpg" alt="Chicken Cacciatore" class="recipe-image" />
+
+    <h2>Introduction</h2>
+    <p>Chicken Cacciatore is a hearty and flavorful Italian dish that means “hunter’s chicken.” This rustic meal features chicken simmered in a savory tomato sauce with bell peppers, onions, garlic, and herbs — perfect for a cozy night in or a family gathering.</p>
+
+    <h2>History</h2>
+    <p>Originating in central Italy, "cacciatore" was a meal made by hunters after returning from a long day. Traditionally made with game meat, modern versions use chicken or rabbit, braised slowly in tomatoes, herbs, and sometimes olives or wine.</p>
+
+    <h2>Why We Love It</h2>
+    <p>This one-pan wonder is packed with Italian flavor, easy to make, and tastes even better the next day. It's gluten-free, customizable, and absolutely satisfying with pasta, polenta, or crusty bread.</p>
+
+    <h2 id="recipe">Ingredients</h2>
+    <ul>
+      <li>4 bone-in, skin-on chicken thighs</li>
+      <li>2 tbsp olive oil</li>
+      <li>1 onion, sliced</li>
+      <li>1 red bell pepper, sliced</li>
+      <li>1 yellow bell pepper, sliced</li>
+      <li>3 garlic cloves, minced</li>
+      <li>1 can (14 oz) crushed tomatoes</li>
+      <li>1/4 cup dry red wine (optional)</li>
+      <li>1 tsp dried oregano</li>
+      <li>1/2 tsp dried thyme</li>
+      <li>Salt & pepper, to taste</li>
+      <li>Fresh parsley or basil, chopped (for garnish)</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Season chicken with salt and pepper. In a large skillet, heat olive oil over medium-high heat.</li>
+      <li>Sear chicken thighs skin-side down until golden brown (about 5 minutes per side). Remove and set aside.</li>
+      <li>In the same pan, sauté onions, peppers, and garlic until softened (about 5–7 minutes).</li>
+      <li>Add crushed tomatoes, wine (if using), oregano, and thyme. Stir and bring to a simmer.</li>
+      <li>Return chicken to the pan, skin-side up. Cover and simmer on low heat for 30–35 minutes or until chicken is cooked through and tender.</li>
+      <li>Uncover and simmer 5 more minutes to thicken the sauce. Taste and adjust seasoning.</li>
+      <li>Serve hot with fresh herbs and your favorite side dish.</li>
+    </ol>
+
+    <h2>Tips & Tricks</h2>
+    <ul>
+      <li>Use boneless thighs or drumsticks if you prefer.</li>
+      <li>Make it spicy with red pepper flakes.</li>
+      <li>Double the sauce for serving over pasta or rice.</li>
+      <li>Great for meal prep — it tastes even better the next day!</li>
+    </ul>
+
+    <h2>Serving Suggestions</h2>
+    <p>Serve Chicken Cacciatore with polenta, mashed potatoes, spaghetti, or rustic bread. A green salad and a glass of Chianti complete the meal beautifully.</p>
+
+    <h2>Nutrition Info (per serving)</h2>
+    <table class="nutrition-info">
+      <tr><th>Calories</th><td>380</td></tr>
+      <tr><th>Protein</th><td>30g</td></tr>
+      <tr><th>Carbs</th><td>12g</td></tr>
+      <tr><th>Fat</th><td>24g</td></tr>
+      <tr><th>Fiber</th><td>3g</td></tr>
+      <tr><th>Sodium</th><td>540mg</td></tr>
+    </table>
+
+    <h2>Fun Fact</h2>
+    <p>“Cacciatore” means “hunter” in Italian. The dish is named after how hunters would prepare game meat using simple, local ingredients from the forest and garden.</p>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>

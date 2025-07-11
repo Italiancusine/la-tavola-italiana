@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aperol Spritz</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #fffaf4;
+      color: #333;
+    }
+
+    nav {
+      background-color: #f3e9dc;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+      border-bottom: 2px solid #e1cbb3;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      background: none;
+      border: none;
+      font-size: 1em;
+      font-weight: bold;
+      color: #6b3e26;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fffaf0;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #5c3d2e;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    header {
+      text-align: center;
+      padding: 2em 1em 1em;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      color: #b33939;
+      margin-bottom: 0.5em;
+    }
+
+    .recipe-image {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin: 1em 0;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      padding: 0.6em 1.2em;
+      background-color: #cc5c43;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    section {
+      padding: 1em 2em;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      color: #a74436;
+      margin-top: 2em;
+    }
+
+    ul, ol {
+      padding-left: 1.5em;
+    }
+
+    a.back-home {
+      display: block;
+      text-align: center;
+      margin: 2em auto 4em;
+      text-decoration: none;
+      font-weight: bold;
+      color: #5c3d2e;
+    }
+
+    a.back-home i {
+      margin-right: 0.5em;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      section {
+        padding: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Recipes</button>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">American Favorites</button>
+      <div class="dropdown-content">
+        <a href="american-breakfast.html">Breakfast</a>
+        <a href="american-lunch.html">Lunch</a>
+        <a href="american-dinner.html">Dinner</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Recipe Tutorials</button>
+      <div class="dropdown-content">
+        <a href="tutorial-easy.html">Easy</a>
+        <a href="tutorial-medium.html">Medium</a>
+        <a href="tutorial-hard.html">Hard</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Italy</button>
+      <div class="dropdown-content">
+        <a href="taste-by-region.html">Taste by Region</a>
+        <a href="dine-like-a-local.html">Dine Like a Local</a>
+        <a href="culinary-destinations.html">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Aperol Spritz</h1>
+    <img src="images/aperolspritz.jpg" alt="Aperol Spritz" class="recipe-image" />
+    <div class="buttons">
+      <button onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+      <button onclick="document.getElementById('recipe').scrollIntoView({ behavior: 'smooth' })">Jump to Recipe</button>
+    </div>
+  </header>
+
+  <!-- Recipe Sections -->
+  <section>
+    <h2>Introduction</h2>
+    <p>The Aperol Spritz is a refreshing Italian cocktail made with Prosecco, Aperol, and soda water. It’s fizzy, slightly bitter, and perfect for warm afternoons.</p>
+
+    <h2>History</h2>
+    <p>This drink originated in the Veneto region and became popular after World War II. Aperol, introduced in 1919, found its home in this modern classic.</p>
+
+    <h2>Why We Love It</h2>
+    <p>It’s bright, vibrant, and simple to prepare. The Aperol Spritz is the ultimate aperitivo to enjoy with friends or before a hearty meal.</p>
+  </section>
+
+  <section id="recipe">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>3 parts Prosecco</li>
+      <li>2 parts Aperol</li>
+      <li>1 part soda water</li>
+      <li>Orange slice (for garnish)</li>
+      <li>Ice cubes</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Fill a wine glass generously with ice cubes.</li>
+      <li>Pour in the Prosecco, then add Aperol.</li>
+      <li>Top with soda water.</li>
+      <li>Stir gently and garnish with an orange slice.</li>
+    </ol>
+
+    <h2>Tips & Tricks</h2>
+    <ul>
+      <li>Use chilled ingredients to keep the drink crisp.</li>
+      <li>Adjust Prosecco and Aperol ratio to taste—less Aperol for less bitterness.</li>
+    </ul>
+
+    <h2>Serving Suggestions</h2>
+    <p>Serve before dinner with salty snacks like olives, cheese boards, or chips. It also pairs wonderfully with light Italian appetizers.</p>
+
+    <h2>Nutrition Info (per serving)</h2>
+    <ul>
+      <li>Calories: 160</li>
+      <li>Sugar: 8g</li>
+      <li>Alcohol content: ~11%</li>
+    </ul>
+
+    <h2>Fun Fact</h2>
+    <p>The Spritz has Austrian roots! It began when Austrian soldiers added water to strong Italian wine—and eventually evolved into this bubbly cocktail.</p>
+  </section>
+
+  <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+</body>
+</html>
+

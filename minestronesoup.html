@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minestrone Soup - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 1.5em;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #8B2C2C;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em 0;
+      position: relative;
+      z-index: 10;
+    }
+    nav > div {
+      position: relative;
+    }
+    nav a, nav button {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1em;
+      padding: 0.25em 0.5em;
+    }
+    nav a:hover, nav button:hover {
+      text-decoration: underline;
+    }
+    nav .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #8B2C2C;
+      display: none;
+      flex-direction: column;
+      min-width: 150px;
+      border-radius: 0 0 6px 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 100;
+    }
+    nav .dropdown a {
+      padding: 0.5em 1em;
+      white-space: nowrap;
+    }
+    nav .dropdown a:hover {
+      background-color: #B03A2E;
+    }
+    nav div:hover .dropdown {
+      display: flex;
+    }
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+    }
+    ul, ol {
+      padding-left: 1.5em;
+    }
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2em;
+      font-size: 1.2em;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #8B2C2C;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    .jump-link {
+      text-align: center;
+      margin: 1em 0;
+    }
+    .jump-link a {
+      color: #B03A2E;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .jump-link a:hover {
+      text-decoration: underline;
+    }
+    .print-button {
+      display: block;
+      margin: 1em auto;
+      background-color: #B03A2E;
+      color: white;
+      border: none;
+      padding: 0.5em 1.2em;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1em;
+    }
+    .print-button:hover {
+      background-color: #8B2C2C;
+    }
+    .nutrition-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
+    }
+    .nutrition-table th, .nutrition-table td {
+      border: 1px solid #ddd;
+      padding: 0.5em;
+      text-align: left;
+    }
+    .nutrition-table th {
+      background-color: #F5E8E4;
+    }
+    @media print {
+      nav, .back-link, .jump-link, .print-button {
+        display: none;
+      }
+      body {
+        background-color: white;
+        color: black;
+      }
+      .content {
+        padding: 1em;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Minestrone Soup</h1>
+  </header>
+
+  <nav>
+    <div>
+      <a href="recipes.html">Recipes</a>
+      <div class="dropdown">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="main-courses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+    <div>
+      <a href="american-favorites.html">American Favorites</a>
+      <div class="dropdown">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+    <div>
+      <a href="tutorials.html">Recipe Tutorials</a>
+      <div class="dropdown">
+        <a href="easy.html">Easy</a>
+        <a href="medium.html">Medium</a>
+        <a href="hard.html">Hard</a>
+      </div>
+    </div>
+    <div>
+      <a href="italy.html">Italy</a>
+      <div class="dropdown">
+        <a href="taste-by-region.html">Taste by Region</a>
+        <a href="dine-like-a-local.html">Dine Like a Local</a>
+        <a href="culinary-destinations.html">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="content">
+    <button class="print-button" onclick="window.print()">Print Recipe</button>
+
+    <div class="jump-link">
+      <a href="#recipe">Jump to Recipe ↓</a>
+    </div>
+
+    <img src="images/minestronesoup.jpg" alt="Minestrone Soup" class="recipe-image" />
+
+    <h2>Introduction</h2>
+    <p>Minestrone is a hearty, nutritious Italian soup filled with fresh vegetables, beans, and pasta or rice. It’s a celebration of seasonal produce and rustic Italian cooking that warms the soul and satisfies the appetite.</p>
+
+    <h2>History</h2>
+    <p>The origins of minestrone trace back to ancient Roman times, when meals were largely plant-based and made with whatever ingredients were readily available. The word "minestrone" comes from "minestra," meaning soup. Over time, it evolved into a regional favorite across Italy, with each area giving its own twist based on local ingredients.</p>
+
+    <h2>Why We Love It</h2>
+    <p>Minestrone is versatile, comforting, and packed with fiber and plant-based protein. It's budget-friendly, freezer-friendly, and endlessly customizable. You can make it year-round and tailor it to your taste and dietary needs!</p>
+
+    <h2 id="recipe">Ingredients</h2>
+    <ul>
+      <li>2 tablespoons olive oil</li>
+      <li>1 onion, diced</li>
+      <li>2 garlic cloves, minced</li>
+      <li>2 carrots, chopped</li>
+      <li>2 celery stalks, chopped</li>
+      <li>1 zucchini, chopped</li>
+      <li>1 cup green beans, chopped</li>
+      <li>1 can (14 oz) diced tomatoes</li>
+      <li>1 can (15 oz) cannellini beans, drained and rinsed</li>
+      <li>4 cups vegetable broth</li>
+      <li>1 teaspoon dried oregano</li>
+      <li>1 teaspoon dried basil</li>
+      <li>Salt and pepper to taste</li>
+      <li>1/2 cup small pasta (like ditalini or elbow)</li>
+      <li>Fresh parsley or Parmesan for garnish (optional)</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Heat olive oil in a large pot over medium heat. Sauté the onion and garlic for 2–3 minutes until softened.</li>
+      <li>Add the carrots, celery, zucchini, and green beans. Cook for 5–7 minutes, stirring occasionally.</li>
+      <li>Stir in the diced tomatoes, cannellini beans, vegetable broth, oregano, and basil. Season with salt and pepper.</li>
+      <li>Bring to a boil, then reduce heat and simmer uncovered for 20–25 minutes.</li>
+      <li>Add the pasta and cook for 8–10 minutes, or until pasta is tender.</li>
+      <li>Serve hot, garnished with fresh parsley or grated Parmesan if desired.</li>
+    </ol>
+
+    <h2>Tips & Tricks</h2>
+    <ul>
+      <li>Use seasonal vegetables for the freshest flavor and texture.</li>
+      <li>Add a Parmesan rind while simmering for extra depth (remove before serving).</li>
+      <li>Use gluten-free pasta or rice to make it gluten-free.</li>
+      <li>Double the batch and freeze in portions—just leave out the pasta and add it fresh when reheating.</li>
+      <li>A splash of lemon juice or vinegar before serving brightens the flavors.</li>
+    </ul>
+
+    <h2>Serving Suggestions</h2>
+    <p>Pair minestrone soup with a slice of warm crusty bread or focaccia and a drizzle of good olive oil. A side of Italian salad or a glass of red wine like Sangiovese rounds out this comforting meal beautifully.</p>
+
+    <h2>Nutrition Info (Per Serving, 1/6 of recipe)</h2>
+    <table class="nutrition-table">
+      <tr><th>Nutrient</th><th>Amount</th></tr>
+      <tr><td>Calories</td><td>180</td></tr>
+      <tr><td>Fat</td><td>4g</td></tr>
+      <tr><td>Saturated Fat</td><td>0.5g</td></tr>
+      <tr><td>Carbohydrates</td><td>30g</td></tr>
+      <tr><td>Sugar</td><td>8g</td></tr>
+      <tr><td>Protein</td><td>8g</td></tr>
+      <tr><td>Sodium</td><td>700mg</td></tr>
+      <tr><td>Fiber</td><td>8g</td></tr>
+    </table>
+
+    <h2>Fun Fact</h2>
+    <p>Minestrone has no fixed recipe—it varies greatly by region and season. In Liguria, it’s common to stir in a spoonful of pesto for added richness and aroma!</p>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>

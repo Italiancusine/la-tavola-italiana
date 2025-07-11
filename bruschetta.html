@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bruschetta Recipe - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 1.5em;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #8B2C2C;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em 0;
+      position: relative;
+    }
+    .dropdown {
+      position: relative;
+    }
+    nav a, .dropbtn {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0.2em 0.5em;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #FDF1E7;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+    }
+    .dropdown-content a {
+      color: #8B2C2C;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1d7cc;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+    }
+    ul, ol {
+      padding-left: 1.5em;
+    }
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    .jump-link, .print-button {
+      text-align: center;
+      margin: 1em 0;
+    }
+    .jump-link a, .print-button button {
+      color: #B03A2E;
+      font-weight: bold;
+      text-decoration: none;
+      background: none;
+      border: 2px solid #B03A2E;
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .jump-link a:hover, .print-button button:hover {
+      background-color: #F5E8E4;
+    }
+    .nutrition-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
+    }
+    .nutrition-table th, .nutrition-table td {
+      border: 1px solid #ddd;
+      padding: 0.5em;
+    }
+    .nutrition-table th {
+      background-color: #F5E8E4;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2em;
+      font-size: 1.2em;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #8B2C2C;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media print {
+      nav, .back-link, .jump-link, .print-button {
+        display: none;
+      }
+      body {
+        background-color: white;
+        color: black;
+      }
+      .content {
+        padding: 1em;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bruschetta</h1>
+  </header>
+
+  <nav>
+    <div class="dropdown">
+      <span class="dropbtn">Recipes</span>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <span class="dropbtn">American Favorites</span>
+      <div class="dropdown-content">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <span class="dropbtn">Italy</span>
+      <div class="dropdown-content">
+        <a href="tastebyregion.html">Taste by Region</a>
+        <a href="dinelikealocal.html">Dine Like a Local</a>
+        <a href="culinarydestinations.html">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="content">
+    <div class="jump-link">
+      <a href="#recipe">Jump to Recipe ↓</a>
+    </div>
+
+    <div class="print-button">
+      <button onclick="window.print()">🖨️ Print Recipe</button>
+    </div>
+
+    <img src="images/bruschetta.jpg" alt="Bruschetta" class="recipe-image" />
+
+    <h2>Introduction</h2>
+    <p>Bruschetta is a beloved Italian appetizer that showcases vibrant flavors and rustic charm. With its crispy grilled bread topped with fresh tomatoes, garlic, basil, and olive oil, it's a delightful start to any Italian meal.</p>
+
+    <h2>History</h2>
+    <p>Bruschetta dates back to ancient Rome when olive oil producers tasted their freshly pressed oil using slices of grilled bread. The name comes from "bruscare," a Roman dialect word meaning "to roast over coals."</p>
+
+    <h2>Why We Love It</h2>
+    <p>It’s simple, fresh, and flavorful — the perfect appetizer that feels elegant but takes minutes to prepare. It’s also a crowd-pleaser that captures the soul of Italian cucina rustica.</p>
+
+    <h2 id="recipe">Ingredients</h2>
+    <ul>
+      <li>1 rustic Italian bread or baguette</li>
+      <li>4 ripe tomatoes, diced</li>
+      <li>2 cloves garlic, minced</li>
+      <li>1 garlic clove (for rubbing toast)</li>
+      <li>1/4 cup fresh basil, chopped</li>
+      <li>2 tablespoons extra-virgin olive oil</li>
+      <li>Salt and pepper to taste</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Slice the bread and toast or grill until golden and crisp.</li>
+      <li>Rub each slice with a garlic clove while still warm.</li>
+      <li>In a bowl, mix tomatoes, minced garlic, basil, olive oil, salt, and pepper.</li>
+      <li>Spoon the mixture onto the bread just before serving to avoid sogginess.</li>
+      <li>Drizzle with additional olive oil and serve immediately.</li>
+    </ol>
+
+    <h2>Tips & Tricks</h2>
+    <ul>
+      <li>Use stale or day-old bread for better crunch and structure.</li>
+      <li>Let the tomato mixture sit for 10–15 minutes to deepen flavor.</li>
+      <li>Top with mozzarella or burrata for a creamy twist.</li>
+      <li>Don’t refrigerate tomatoes—room temp keeps flavor fresh.</li>
+      <li>Add balsamic glaze for a gourmet finish.</li>
+    </ul>
+
+    <h2>Serving Suggestions</h2>
+    <p>Serve bruschetta as a pre-dinner antipasto or as part of an appetizer spread with olives, cheeses, and cured meats. Pair with a crisp white wine like Verdicchio or a sparkling Prosecco.</p>
+
+    <h2>Nutrition Info (Per Serving)</h2>
+    <table class="nutrition-table">
+      <tr><th>Nutrient</th><th>Amount</th></tr>
+      <tr><td>Calories</td><td>120</td></tr>
+      <tr><td>Carbohydrates</td><td>15g</td></tr>
+      <tr><td>Fat</td><td>5g</td></tr>
+      <tr><td>Protein</td><td>2g</td></tr>
+      <tr><td>Sodium</td><td>150mg</td></tr>
+    </table>
+
+    <h2>Fun Fact</h2>
+    <p>In Italy, bruschetta is often eaten during the olive harvest season to highlight freshly pressed olive oil. Some versions use only garlic and oil—no tomato at all!</p>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>
+
+

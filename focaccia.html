@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Focaccia Recipe - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 1.5em;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #8B2C2C;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em 0;
+      flex-wrap: wrap;
+    }
+    nav .dropdown {
+      position: relative;
+    }
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #B03A2E;
+      min-width: 180px;
+      z-index: 1;
+      flex-direction: column;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 0.5em 1em;
+      color: white;
+    }
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+    }
+    ul, ol {
+      padding-left: 1.5em;
+    }
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2em;
+      font-size: 1.2em;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #8B2C2C;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    .jump-link {
+      text-align: center;
+      margin: 1em 0;
+    }
+    .jump-link a {
+      color: #B03A2E;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .jump-link a:hover {
+      text-decoration: underline;
+    }
+    .print-button {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .print-button button {
+      padding: 0.5em 1em;
+      font-weight: bold;
+      background-color: #8B2C2C;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .print-button button:hover {
+      background-color: #A04040;
+    }
+    .nutrition-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
+    }
+    .nutrition-table th, .nutrition-table td {
+      border: 1px solid #ddd;
+      padding: 0.5em;
+    }
+    .nutrition-table th {
+      background-color: #F5E8E4;
+    }
+    @media print {
+      nav, .back-link, .jump-link, .print-button {
+        display: none;
+      }
+      body {
+        background-color: white;
+        color: black;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Focaccia</h1>
+  </header>
+
+  <nav>
+    <div class="dropdown">
+      <a href="#">Recipes</a>
+      <div class="dropdown-content">
+        <a href="#">Appetizers</a>
+        <a href="#">Main Courses</a>
+        <a href="#">Desserts</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">American Favorites</a>
+      <div class="dropdown-content">
+        <a href="#">Breakfast</a>
+        <a href="#">Lunch</a>
+        <a href="#">Dinner</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Recipe Tutorials</a>
+      <div class="dropdown-content">
+        <a href="#">Easy</a>
+        <a href="#">Medium</a>
+        <a href="#">Hard</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Italy</a>
+      <div class="dropdown-content">
+        <a href="#">Taste by Region</a>
+        <a href="#">Dine Like a Local</a>
+        <a href="#">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="content">
+    <div class="print-button">
+      <button onclick="window.print()">🖨️ Print Recipe</button>
+    </div>
+
+    <div class="jump-link">
+      <a href="#recipe">Jump to Recipe ↓</a>
+    </div>
+
+    <img src="images/focaccia.jpg" alt="Focaccia" class="recipe-image" />
+
+    <h2>Introduction</h2>
+    <p>Focaccia is one of Italy's most beloved flatbreads, known for its light, airy crumb and golden, crisp crust. Originating in Liguria, focaccia has been a staple of Italian cuisine for centuries. Its versatility and simplicity make it a favorite in Italian households and bakeries, where it’s often enjoyed on its own, as a sandwich base, or as an accompaniment to soups and salads.</p>
+
+    <h2>History</h2>
+    <p>The word 'focaccia' derives from the Latin 'focus,' meaning 'hearth' or 'fireplace,' because this bread was traditionally baked on the hearth. It predates pizza and is believed to have been made by the Etruscans or ancient Greeks. Over time, it became associated with Liguria, especially Genoa, where the classic focaccia alla Genovese emerged—characterized by a generous drizzle of olive oil and the iconic dimpled surface.</p>
+
+    <h2>Why We Love It</h2>
+    <p>Focaccia is incredibly easy to make, endlessly customizable, and its rich olive oil flavor with that chewy yet crisp texture makes it impossible to resist. It brings the warmth of Italian baking right into your kitchen.</p>
+
+    <h2 id="recipe">Ingredients</h2>
+    <ul>
+      <li>4 cups (500g) all-purpose flour</li>
+      <li>1 1/2 cups (360ml) warm water</li>
+      <li>2 1/4 tsp (7g) active dry yeast</li>
+      <li>2 tsp salt</li>
+      <li>1/4 cup (60ml) extra virgin olive oil, plus more for drizzling</li>
+      <li>1 tsp sugar</li>
+      <li>Coarse sea salt for topping</li>
+      <li>Optional: rosemary, cherry tomatoes, olives, garlic</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>In a bowl, combine warm water, sugar, and yeast. Let sit for 5-10 minutes until frothy.</li>
+      <li>In a large mixing bowl, combine flour and salt. Add the yeast mixture and olive oil. Mix to form a soft dough.</li>
+      <li>Knead on a floured surface for about 10 minutes until smooth and elastic. Place in a lightly oiled bowl, cover, and let rise for 1-2 hours, or until doubled.</li>
+      <li>Grease a large baking sheet or pan with olive oil. Press the dough into the pan, dimpling it with your fingertips. Let rise again for 30 minutes.</li>
+      <li>Preheat oven to 425°F (220°C). Drizzle the dough with olive oil and sprinkle with coarse sea salt and any optional toppings.</li>
+      <li>Bake for 20-25 minutes, or until golden brown. Let cool slightly before serving.</li>
+    </ol>
+
+    <h2>Tips & Tricks</h2>
+    <ul>
+      <li>Use high-quality olive oil for the best flavor.</li>
+      <li>Make sure your yeast is fresh and water is the right temperature (not too hot or cold).</li>
+      <li>Dimpling the dough helps trap oil and adds texture.</li>
+      <li>Experiment with toppings like rosemary, garlic, sun-dried tomatoes, or cheese.</li>
+      <li>Don’t overbake—focaccia should be crisp on the outside and soft inside.</li>
+    </ul>
+
+    <h2>Serving Suggestions</h2>
+    <ul>
+      <li>With a side of olive oil and balsamic vinegar for dipping</li>
+      <li>As a base for hearty sandwiches</li>
+      <li>Alongside soups like minestrone or tomato basil</li>
+      <li>Topped with caramelized onions or prosciutto</li>
+    </ul>
+
+    <h2>Nutrition Info (Per Serving)</h2>
+    <table class="nutrition-table">
+      <tr><th>Nutrient</th><th>Amount</th></tr>
+      <tr><td>Calories</td><td>210</td></tr>
+      <tr><td>Fat</td><td>7g</td></tr>
+      <tr><td>Saturated Fat</td><td>1g</td></tr>
+      <tr><td>Carbohydrates</td><td>32g</td></tr>
+      <tr><td>Sugar</td><td>1g</td></tr>
+      <tr><td>Protein</td><td>5g</td></tr>
+      <tr><td>Sodium</td><td>330mg</td></tr>
+      <tr><td>Fiber</td><td>1g</td></tr>
+    </table>
+
+    <h2>Fun Fact</h2>
+    <p>In Genoa, focaccia is so loved that it’s often eaten for breakfast—sometimes even dipped in cappuccino!</p>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>

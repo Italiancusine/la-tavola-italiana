@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Italian Breakfast Sandwich - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 2em;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #E6B0AA;
+      padding: 1em;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    nav > div {
+      position: relative;
+      display: inline-block;
+    }
+    nav button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: #2C3E50;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    nav button:hover {
+      text-decoration: underline;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #FDEDE8;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      padding: 0.5em 0;
+      border-radius: 6px;
+    }
+    nav .dropdown-content a {
+      color: #2C3E50;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      display: block;
+      font-weight: normal;
+    }
+    nav .dropdown-content a:hover {
+      background-color: #B03A2E;
+      color: white;
+    }
+    nav div:hover .dropdown-content {
+      display: block;
+    }
+    .top-buttons {
+      margin: 1em 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    .top-buttons button, .top-buttons a {
+      background-color: #B03A2E;
+      border: none;
+      color: white;
+      padding: 0.5em 1em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .top-buttons button:hover, .top-buttons a:hover {
+      background-color: #8B2C2C;
+    }
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+    }
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2em;
+      font-size: 1.2em;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #8B2C2C;
+      font-weight: bold;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    @media print {
+      nav, .top-buttons {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    function printRecipe() {
+      window.print();
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Italian Breakfast Sandwich</h1>
+  </header>
+
+  <nav>
+    <div>
+      <button>Recipes ▼</button>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+    <div>
+      <button>American Favorites ▼</button>
+      <div class="dropdown-content">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+    <div>
+      <button>Italy ▼</button>
+      <div class="dropdown-content">
+        <a href="tastebyregion.html">Taste by Region</a>
+        <a href="dinelikealocal.html">Dine Like a Local</a>
+        <a href="culinarydestinations.html">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="top-buttons">
+    <button onclick="printRecipe()">Print Recipe</button>
+    <a href="#introduction">Jump to Recipe</a>
+  </div>
+
+  <section class="content">
+    <img src="images/italianbreakfastsandwich.jpg" alt="Italian Breakfast Sandwich" class="recipe-image" />
+
+    <h2 id="introduction">Introduction</h2>
+    <p>This Italian Breakfast Sandwich layers creamy scrambled eggs, fresh arugula, melted provolone, and juicy tomato slices on a crusty ciabatta roll. A perfect way to start your morning, the sandwich offers rustic comfort with Italian flair.</p>
+
+    <h2 id="history">History</h2>
+    <p>Though breakfast sandwiches originated in the U.S., Italians have long embraced rustic breads with savory fillings. This modern creation takes inspiration from Italian café culture where a small morning panino and espresso are a staple.</p>
+
+    <h2 id="whyweloveit">Why We Love It</h2>
+    <p>It’s quick, nourishing, and full of flavor. The mix of soft eggs, peppery greens, melty cheese, and crispy bread feels indulgent yet wholesome—just like a morning in Rome.</p>
+
+    <h2 id="ingredients">Ingredients</h2>
+    <ul>
+      <li>2 eggs</li>
+      <li>1 tablespoon milk</li>
+      <li>Salt and pepper to taste</li>
+      <li>1 teaspoon olive oil</li>
+      <li>1 ciabatta roll, halved and toasted</li>
+      <li>2 slices provolone cheese</li>
+      <li>1/4 cup arugula</li>
+      <li>2 tomato slices</li>
+    </ul>
+
+    <h2 id="instructions">Instructions</h2>
+    <ol>
+      <li>In a bowl, whisk together eggs, milk, salt, and pepper.</li>
+      <li>Heat olive oil in a skillet over medium heat. Pour in eggs and stir gently until softly scrambled.</li>
+      <li>Place cheese slices on the warm eggs to melt slightly.</li>
+      <li>Layer the bottom half of the toasted roll with arugula and tomato.</li>
+      <li>Top with the cheesy scrambled eggs and the top half of the roll.</li>
+    </ol>
+
+    <h2 id="tips">Tips & Tricks</h2>
+    <ul>
+      <li>Use a nonstick pan for best scrambled egg texture.</li>
+      <li>Ciabatta rolls can be toasted with a bit of garlic butter for extra flavor.</li>
+      <li>Substitute provolone with mozzarella or fontina for variation.</li>
+    </ul>
+
+    <h2 id="serving">Serving Suggestions</h2>
+    <p>Serve with a cappuccino or a fresh orange juice. Add olives or a small side salad for a fuller brunch.</p>
+
+    <h2 id="nutrition">Nutrition Info (per serving)</h2>
+    <ul>
+      <li>Calories: 340</li>
+      <li>Protein: 17g</li>
+      <li>Carbohydrates: 28g</li>
+      <li>Fat: 18g</li>
+      <li>Fiber: 2g</li>
+      <li>Sodium: 550mg</li>
+    </ul>
+
+    <h2 id="funfact">Fun Fact</h2>
+    <p>Arugula, also known as "rocket" in Europe, was once considered an aphrodisiac in ancient Roman times!</p>
+
+    <div class="back-link">
+      <a href="index.html">&larr; Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>

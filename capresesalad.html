@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caprese Salad Recipe - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 1.5em;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #8B2C2C;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1em 2em;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+
+    nav .dropdown {
+      position: relative;
+    }
+
+    nav a, nav button {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: none;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    nav a:hover, nav button:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #F5E8E4;
+      min-width: 160px;
+      z-index: 1;
+      top: 100%;
+      left: 0;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content a {
+      color: #2C3E50;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+    }
+
+    ul, ol {
+      padding-left: 1.5em;
+    }
+
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2em;
+      font-size: 1.2em;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      color: #8B2C2C;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    .jump-link, .print-button {
+      text-align: center;
+      margin: 1em 0;
+    }
+
+    .jump-link a {
+      color: #B03A2E;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .jump-link a:hover {
+      text-decoration: underline;
+    }
+
+    .print-button button {
+      background-color: #B03A2E;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .print-button button:hover {
+      background-color: #922B21;
+    }
+
+    .nutrition-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
+    }
+
+    .nutrition-table th, .nutrition-table td {
+      border: 1px solid #ddd;
+      padding: 0.5em;
+    }
+
+    .nutrition-table th {
+      background-color: #F5E8E4;
+    }
+
+    @media print {
+      nav, .back-link, .jump-link, .print-button {
+        display: none;
+      }
+
+      body {
+        background-color: white;
+        color: black;
+      }
+
+      .content {
+        padding: 1em;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Caprese Salad</h1>
+  </header>
+
+  <nav>
+    <div class="dropdown">
+      <button>Recipes</button>
+      <div class="dropdown-content">
+        <a href="#">Appetizers</a>
+        <a href="#">Main Courses</a>
+        <a href="#">Desserts</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button>American Favorites</button>
+      <div class="dropdown-content">
+        <a href="#">Breakfast</a>
+        <a href="#">Lunch</a>
+        <a href="#">Dinner</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button>Recipe Tutorials</button>
+      <div class="dropdown-content">
+        <a href="#">Easy</a>
+        <a href="#">Medium</a>
+        <a href="#">Hard</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button>Italy</button>
+      <div class="dropdown-content">
+        <a href="#">Taste by Region</a>
+        <a href="#">Dine Like a Local</a>
+        <a href="#">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="content">
+    <div class="jump-link">
+      <a href="#recipe">Jump to Recipe ↓</a>
+    </div>
+
+    <div class="print-button">
+      <button onclick="window.print()">🖨️ Print Recipe</button>
+    </div>
+
+    <img src="images/capresesalad.jpg" alt="Caprese Salad" class="recipe-image" />
+
+    <h2>Introduction</h2>
+    <p>Caprese Salad is the epitome of Italian simplicity—fresh, vibrant, and elegant...</p>
+
+    <h2>History</h2>
+    <p>Named after the Isle of Capri, the Caprese Salad (Insalata Caprese) is believed to have originated...</p>
+
+    <h2>Why We Love It</h2>
+    <p>It’s more than just a salad—it’s a celebration of quality ingredients...</p>
+
+    <h2 id="recipe">Ingredients</h2>
+    <ul>
+      <li>3 ripe tomatoes, sliced</li>
+      <li>8 oz fresh mozzarella, sliced</li>
+      <li>Fresh basil leaves</li>
+      <li>2 tbsp extra-virgin olive oil</li>
+      <li>Salt and freshly ground black pepper to taste</li>
+      <li>Balsamic glaze (optional)</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>Slice tomatoes and mozzarella...</li>
+      <li>Arrange them alternately with basil leaves...</li>
+      <li>Drizzle with olive oil...</li>
+      <li>Optional: Drizzle lightly with balsamic glaze...</li>
+      <li>Serve immediately while fresh and chilled.</li>
+    </ol>
+
+    <h2>Tips & Tricks</h2>
+    <ul>
+      <li>Use heirloom or vine-ripened tomatoes...</li>
+      <li>Buffalo mozzarella adds creaminess...</li>
+      <li>Add avocado or arugula...</li>
+      <li>Let the salad sit at room temp...</li>
+      <li>Make it a meal: add grilled chicken...</li>
+    </ul>
+
+    <h2>Serving Suggestions</h2>
+    <p>Serve as a light appetizer or alongside grilled meats and crusty bread...</p>
+
+    <h2>Nutrition Info (Per Serving)</h2>
+    <table class="nutrition-table">
+      <tr><th>Nutrient</th><th>Amount</th></tr>
+      <tr><td>Calories</td><td>250</td></tr>
+      <tr><td>Fat</td><td>18g</td></tr>
+      <tr><td>Saturated Fat</td><td>7g</td></tr>
+      <tr><td>Carbohydrates</td><td>6g</td></tr>
+      <tr><td>Protein</td><td>14g</td></tr>
+      <tr><td>Sodium</td><td>300mg</td></tr>
+      <tr><td>Fiber</td><td>1g</td></tr>
+      <tr><td>Sugar</td><td>4g</td></tr>
+    </table>
+
+    <h2>Fun Fact</h2>
+    <p>Caprese Salad is sometimes served as a panini or pizza topping...</p>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>

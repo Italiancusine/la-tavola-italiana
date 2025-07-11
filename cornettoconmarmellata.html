@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cornetto con Marmellata - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 2em;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #E6B0AA;
+      padding: 1em;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    nav > div {
+      position: relative;
+      display: inline-block;
+    }
+    nav button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: #2C3E50;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    nav button:hover {
+      text-decoration: underline;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #FDEDE8;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      padding: 0.5em 0;
+      border-radius: 6px;
+    }
+    nav .dropdown-content a {
+      color: #2C3E50;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      display: block;
+      font-weight: normal;
+    }
+    nav .dropdown-content a:hover {
+      background-color: #B03A2E;
+      color: white;
+    }
+    nav div:hover .dropdown-content {
+      display: block;
+    }
+    .top-buttons {
+      margin: 1em 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    .top-buttons button, .top-buttons a {
+      background-color: #B03A2E;
+      border: none;
+      color: white;
+      padding: 0.5em 1em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .top-buttons button:hover, .top-buttons a:hover {
+      background-color: #8B2C2C;
+    }
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+    }
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2em;
+      font-size: 1.2em;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #8B2C2C;
+      font-weight: bold;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    @media print {
+      nav, .top-buttons {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    function printRecipe() {
+      window.print();
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Cornetto con Marmellata</h1>
+  </header>
+
+  <nav>
+    <div>
+      <button>Recipes ▼</button>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+    <div>
+      <button>American Favorites ▼</button>
+      <div class="dropdown-content">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+    <div>
+      <button>Italy ▼</button>
+      <div class="dropdown-content">
+        <a href="tastebyregion.html">Taste by Region</a>
+        <a href="dinelikealocal.html">Dine Like a Local</a>
+        <a href="culinarydestinations.html">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="top-buttons">
+    <button onclick="printRecipe()">Print Recipe</button>
+    <a href="#introduction">Jump to Recipe</a>
+  </div>
+
+  <section class="content">
+    <img src="images/cornettoconmarmellata.jpg" alt="Cornetto con Marmellata" class="recipe-image" />
+
+    <h2 id="introduction">Introduction</h2>
+    <p>The Cornetto con Marmellata is a classic Italian breakfast pastry — a flaky, buttery croissant filled with sweet, fruity jam. It’s a simple yet delightful treat that pairs perfectly with your morning coffee or cappuccino.</p>
+
+    <h2 id="history">History</h2>
+    <p>Cornetti are the Italian version of the French croissant, with a lighter, less buttery dough. Typically enjoyed at breakfast in Italy, they are often filled with various jams or creams, making them a versatile and beloved staple of Italian cafés.</p>
+
+    <h2 id="whyweloveit">Why We Love It</h2>
+    <p>We love Cornetto con Marmellata for its perfect balance of crispy outer layers and soft, flavorful filling. It’s quick to enjoy, comforting, and brings a touch of Italian café culture right into your kitchen.</p>
+
+    <h2 id="ingredients">Ingredients</h2>
+    <ul>
+      <li>1 package of store-bought croissant dough (or homemade croissant dough)</li>
+      <li>1/2 cup of your favorite fruit marmalade or jam (apricot, raspberry, or strawberry work great)</li>
+      <li>1 egg (for egg wash)</li>
+      <li>Powdered sugar, for dusting (optional)</li>
+    </ul>
+
+    <h2 id="instructions">Instructions</h2>
+    <ol>
+      <li><strong>Prepare your tools:</strong> baking sheet, parchment paper, small bowl for egg wash, pastry brush, and a knife.</li>
+      <li>Preheat the oven to 375°F (190°C) and line the baking sheet with parchment paper.</li>
+      <li>Unroll the croissant dough and separate into triangles.</li>
+      <li>Place about 1 tablespoon of marmalade at the wide end of each triangle.</li>
+      <li>Roll the dough from the wide end to the tip, forming the cornetto shape. Curve the ends slightly inward if you like.</li>
+      <li>Place the rolled cornetti on the baking sheet, spacing them evenly.</li>
+      <li>Beat the egg in a small bowl, then brush the tops of each cornetto with the egg wash to get a beautiful golden finish.</li>
+      <li>Bake for 12–15 minutes or until golden brown and puffed.</li>
+      <li>Remove from oven and let cool for a few minutes.</li>
+      <li>Optional: dust with powdered sugar before serving.</li>
+    </ol>
+
+    <h2 id="tips">Tips & Tricks</h2>
+    <ul>
+      <li>For an even flakier texture, chill the dough for 15 minutes before baking.</li>
+      <li>Don’t overfill with marmalade to prevent leaking during baking.</li>
+      <li>Try using different jams or add a small piece of chocolate for variation.</li>
+    </ul>
+
+    <h2 id="serving">Serving Suggestions</h2>
+    <p>Enjoy your Cornetto con Marmellata warm with a rich espresso or creamy cappuccino. It’s perfect for a leisurely Italian-style breakfast or a cozy afternoon snack.</p>
+
+    <h2 id="nutrition">Nutrition Info (per serving)</h2>
+    <ul>
+      <li>Calories: 250</li>
+      <li>Protein: 4g</li>
+      <li>Carbohydrates: 30g</li>
+      <li>Fat: 12g</li>
+      <li>Fiber: 1g</li>
+      <li>Sodium: 180mg</li>
+    </ul>
+
+    <h2 id="funfact">Fun Fact</h2>
+    <p>The word "cornetto" literally means "little horn," referring to the crescent shape of the pastry.</p>
+
+    <div class="back-link">
+      <a href="index.html">&larr; Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Creamy Mushroom Risotto - La Tavola Italiana</title>
+  <title>Margherita Pizza Recipe - La Tavola Italiana</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -34,21 +34,23 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      flex-wrap: wrap;
     }
-    nav .dropdown {
+    nav > div {
       position: relative;
-      display: inline-block;
     }
-    nav .dropbtn {
+    nav a, nav button {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
       background: none;
       border: none;
-      color: white;
-      font-weight: bold;
-      font-family: 'Open Sans', sans-serif;
       cursor: pointer;
       font-size: 1em;
       padding: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+    nav a:hover, nav button:hover {
+      text-decoration: underline;
     }
     nav .dropdown-content {
       display: none;
@@ -57,7 +59,7 @@
       min-width: 160px;
       top: 100%;
       left: 0;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 101;
     }
     nav .dropdown-content a {
@@ -65,15 +67,14 @@
       padding: 12px 16px;
       text-decoration: none;
       display: block;
-      font-weight: normal;
     }
     nav .dropdown-content a:hover {
       background-color: #B03A2E;
+      text-decoration: underline;
     }
     nav .dropdown:hover .dropdown-content {
       display: block;
     }
-
     .content {
       padding: 2em;
       max-width: 800px;
@@ -127,7 +128,6 @@
     .back-link a {
       text-decoration: none;
       color: #8B2C2C;
-      font-weight: bold;
     }
     .back-link a:hover {
       text-decoration: underline;
@@ -160,20 +160,20 @@
 </head>
 <body>
   <header>
-    <h1>Creamy Mushroom Risotto</h1>
+    <h1>Margherita Pizza</h1>
   </header>
 
   <nav>
     <div class="dropdown">
-      <button class="dropbtn">Recipes ▼</button>
+      <button>Recipes ▾</button>
       <div class="dropdown-content">
         <a href="appetizers.html">Appetizers</a>
-        <a href="maincourses.html">Main Courses</a>
+        <a href="main-courses.html">Main Courses</a>
         <a href="desserts.html">Desserts</a>
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn">American Favorites ▼</button>
+      <button>American Favorites ▾</button>
       <div class="dropdown-content">
         <a href="breakfast.html">Breakfast</a>
         <a href="lunch.html">Lunch</a>
@@ -181,11 +181,19 @@
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn">Italy ▼</button>
+      <button>Recipe Tutorials ▾</button>
       <div class="dropdown-content">
-        <a href="tastebyregion.html">Taste by Region</a>
-        <a href="dinelikealocal.html">Dine Like a Local</a>
-        <a href="culinarydestinations.html">Culinary Destinations</a>
+        <a href="easy.html">Easy</a>
+        <a href="medium.html">Medium</a>
+        <a href="hard.html">Hard</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button>Italy ▾</button>
+      <div class="dropdown-content">
+        <a href="taste-by-region.html">Taste by Region</a>
+        <a href="dine-like-a-local.html">Dine Like a Local</a>
+        <a href="culinary-destinations.html">Culinary Destinations</a>
       </div>
     </div>
   </nav>
@@ -194,68 +202,65 @@
     <button class="print-button" onclick="printRecipe()">Print Recipe</button>
     <button class="jump-link" onclick="scrollToRecipe()">Jump to Recipe</button>
 
-    <img src="images/mushroomrisotto.jpg" alt="Creamy Mushroom Risotto" class="recipe-image" />
+    <img src="images/margheritapizza.jpg" alt="Margherita Pizza" class="recipe-image" />
 
     <h2>Introduction</h2>
-    <p>This creamy mushroom risotto is the ultimate comfort food, combining rich flavors of sautéed mushrooms, fragrant Arborio rice, and a touch of Parmesan. It’s perfect for a cozy dinner or special occasion.</p>
+    <p>The Margherita Pizza is a symbol of Italian culinary simplicity and elegance. Featuring a thin, crisp crust, fresh tomato sauce, creamy mozzarella, and fragrant basil, it captures the essence of Naples in every bite. It's the perfect example of how a few quality ingredients can create an unforgettable dish.</p>
 
     <h2>History</h2>
-    <p>Risotto has its origins in Northern Italy, especially the Lombardy region, and dates back to the 14th century. Traditionally, it was a humble peasant dish, but over centuries it has become a symbol of Italian culinary excellence.</p>
+    <p>The Margherita Pizza was created in Naples in 1889 to honor Queen Margherita of Savoy. Chef Raffaele Esposito topped a pizza with tomatoes, mozzarella, and basil to represent the colors of the Italian flag. The Queen was so impressed, the dish was named after her, and it has since become a staple of Italian cuisine worldwide.</p>
 
     <h2>Why We Love It</h2>
-    <p>We love this mushroom risotto for its velvety texture, deep umami flavors, and versatility. It’s elegant enough for guests yet easy enough for a weeknight meal.</p>
+    <p>This pizza is a masterpiece of simplicity and balance. The fresh ingredients shine individually and together, creating a harmony of flavors that is both comforting and sophisticated. It's a great introduction to authentic Italian cooking and a timeless favorite enjoyed worldwide.</p>
 
     <h2 id="recipe-section">Ingredients</h2>
     <ul>
-      <li>2 tbsp olive oil</li>
-      <li>1 small onion, finely chopped</li>
-      <li>2 garlic cloves, minced</li>
-      <li>300g (10 oz) mushrooms (button, cremini, or a mix), sliced</li>
-      <li>1 cup Arborio rice</li>
-      <li>1/2 cup dry white wine (optional)</li>
-      <li>4 cups chicken or vegetable broth, kept warm</li>
-      <li>1/2 cup freshly grated Parmesan cheese</li>
-      <li>2 tbsp unsalted butter</li>
-      <li>Salt and freshly ground black pepper, to taste</li>
-      <li>Fresh parsley, chopped (for garnish)</li>
-      <li>Optional: A squeeze of lemon juice for brightness</li>
+      <li>1 ball of pizza dough (about 250g)</li>
+      <li>1/2 cup crushed San Marzano tomatoes</li>
+      <li>1 tablespoon olive oil</li>
+      <li>125g (4 oz) fresh mozzarella, torn</li>
+      <li>Fresh basil leaves</li>
+      <li>Salt to taste</li>
     </ul>
 
     <h2>Instructions</h2>
     <ol>
-      <li>Sauté onion in olive oil until softened; add garlic and cook 1 min.</li>
-      <li>Add mushrooms and cook until golden brown, about 5–7 minutes.</li>
-      <li>Stir in Arborio rice and toast for 2–3 minutes.</li>
-      <li>Pour in white wine (if using) and stir until mostly absorbed.</li>
-      <li>Add warm broth one ladle at a time, stirring until absorbed; repeat for ~20 mins until rice is creamy and al dente.</li>
-      <li>Stir in butter and Parmesan; season with salt and pepper.</li>
-      <li>Serve garnished with parsley and a squeeze of lemon if desired.</li>
+      <li>Preheat your oven to 500°F (260°C) and place a pizza stone or inverted baking sheet inside to heat.</li>
+      <li>Roll out the dough on a floured surface into a thin 10-12 inch circle.</li>
+      <li>Spread the crushed tomatoes evenly over the dough, leaving a small border for the crust.</li>
+      <li>Drizzle with olive oil and lightly season with salt.</li>
+      <li>Add the mozzarella pieces evenly across the surface.</li>
+      <li>Carefully transfer the pizza to the hot stone and bake for 7-10 minutes, or until the crust is golden and the cheese is bubbling.</li>
+      <li>Remove from the oven and scatter fresh basil leaves on top before serving.</li>
     </ol>
 
     <h2>Tips & Tricks</h2>
     <ul>
-      <li>Keep broth warm to speed up cooking and improve texture.</li>
-      <li>Stir frequently but not constantly for perfect creaminess.</li>
-      <li>Use mixed mushrooms like shiitake or porcini for richer flavor.</li>
-      <li>Try truffle oil or cooked chicken as add-ins.</li>
-      <li>For vegan option, substitute butter and Parmesan with plant-based alternatives.</li>
+      <li>Use a pizza stone or steel to replicate the intense heat of a pizzeria oven.</li>
+      <li>Drain the mozzarella slightly if it's too wet to avoid a soggy crust.</li>
+      <li>For an even crispier bottom, try pre-baking the crust for 2-3 minutes before adding toppings.</li>
+      <li>Never overload the pizza—less is more in a true Margherita.</li>
+      <li>Add basil after baking to keep it fresh and flavorful.</li>
     </ul>
 
     <h2>Serving Suggestions</h2>
-    <p>Serve with a simple green salad and a glass of crisp white wine. This risotto pairs beautifully with roasted vegetables or grilled chicken.</p>
+    <p>Serve your Margherita Pizza hot with a drizzle of extra virgin olive oil and a sprinkle of sea salt. Pair it with a fresh arugula salad and a glass of Chianti or a light Italian lager. It also makes a fantastic appetizer when sliced into small wedges for sharing.</p>
 
     <h2>Nutrition Info (per serving)</h2>
     <table class="nutrition">
-      <tr><th>Calories</th><td>350</td></tr>
-      <tr><th>Protein</th><td>9g</td></tr>
-      <tr><th>Carbohydrates</th><td>45g</td></tr>
-      <tr><th>Fat</th><td>12g</td></tr>
-      <tr><th>Fiber</th><td>3g</td></tr>
-      <tr><th>Sodium</th><td>400mg</td></tr>
+      <tr><th>Calories</th><td>320 kcal</td></tr>
+      <tr><th>Carbohydrates</th><td>38 g</td></tr>
+      <tr><th>Protein</th><td>14 g</td></tr>
+      <tr><th>Fat</th><td>12 g</td></tr>
+      <tr><th>Saturated Fat</th><td>6 g</td></tr>
+      <tr><th>Cholesterol</th><td>35 mg</td></tr>
+      <tr><th>Sodium</th><td>580 mg</td></tr>
+      <tr><th>Fiber</th><td>2 g</td></tr>
+      <tr><th>Sugar</th><td>4 g</td></tr>
     </table>
 
     <h2>Fun Fact</h2>
-    <p>The word “risotto” comes from the Italian word “riso” meaning rice, and the technique relies on slowly cooking the rice in broth until it reaches a creamy consistency.</p>
+    <p>The Margherita Pizza’s colors—red, white, and green—were chosen to represent the Italian flag, making it not just delicious but also a patriotic dish!</p>
 
     <div class="back-link">
       <a href="index.html">← Back to Home</a>

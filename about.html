@@ -2,110 +2,199 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us - La Tavola Italiana</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
-     body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #FAF3E0;
-  color: #2C3E50;
-}
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      text-align: center;
+      padding: 2em;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
 
-header {
-  background-color: #8B2C2C;
-  padding: 1em;
-  text-align: center;
-  color: white;
-}
+    nav {
+      background-color: #8B2C2C;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em 0;
+      flex-wrap: wrap;
+    }
+    nav .dropdown {
+      position: relative;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    nav button:hover {
+      text-decoration: underline;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #8B2C2C;
+      min-width: 160px;
+      z-index: 1;
+    }
+    nav .dropdown-content a {
+      color: white;
+      padding: 0.5em 1em;
+      display: block;
+      text-decoration: none;
+    }
+    nav .dropdown-content a:hover {
+      background-color: #B03A2E;
+    }
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
-nav {
-  background-color: #A3B18A;
-  padding: 1em;
-  text-align: center;
-}
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2em;
+    }
 
-nav a {
-  margin: 0 1em;
-  text-decoration: none;
-  color: #2C3E50;
-  font-weight: bold;
-}
+    .hero-image {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 2em;
+      object-fit: cover;
+      max-height: 400px;
+    }
 
-nav a:hover {
-  color: #C97C5D;
-}
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+      font-size: 2em;
+      margin-top: 1.5em;
+    }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #8B2C2C;
-}
-.content {
-  padding: 2em;
-}
+    p {
+      line-height: 1.7;
+      margin-bottom: 1.5em;
+    }
 
-.recipe-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5em;
-}
+    .newsletter {
+      background-color: #FDEDE8;
+      padding: 2em;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 2em;
+    }
+    .newsletter h3 {
+      margin-bottom: 0.5em;
+      color: #B03A2E;
+    }
+    .newsletter input[type="email"] {
+      padding: 0.7em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-right: 0.5em;
+      width: 60%;
+      max-width: 300px;
+    }
+    .newsletter button {
+      padding: 0.7em 1em;
+      background-color: #B03A2E;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .newsletter button:hover {
+      background-color: #8B2C2C;
+    }
 
-.recipe-card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-decoration: none;
-  color: inherit;
-}
-
-.recipe-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.recipe-card h3 {
-  margin: 0.5em;
-  font-family: 'Playfair Display', serif;
-}
-.hero {
-  background-image: url('https://example.com/italian-food.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.hero h2 {
-  font-size: 2em;
-}
-
+    .back-link {
+      text-align: center;
+      margin-top: 3em;
+    }
+    .back-link a {
+      color: #B03A2E;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>La Tavola Italiana</h1>
-    <p>Discover the taste of Italy one recipe at a time</p>
+    <h1>About La Tavola Italiana</h1>
   </header>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="ricetteitaliane.html">Ricette Italiane</a>
+    <div class="dropdown">
+      <button>Recipes ▼</button>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button>American Favorites ▼</button>
+      <div class="dropdown-content">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button>Italy ▼</button>
+      <div class="dropdown-content">
+        <a href="tastebyregion.html">Taste by Region</a>
+        <a href="dinelikealocal.html">Dine Like a Local</a>
+        <a href="culinarydestinations.html">Culinary Destinations</a>
+      </div>
+    </div>
   </nav>
-  <section class="content">
-    <h2>About La Tavola Italiana</h2>
-    <p><strong>La Tavola Italiana</strong> is a celebration of traditional Italian cooking and culture. Our mission is to bring the flavors, stories, and warmth of Italian cuisine into your kitchen.</p>
-    <p>From beloved classics like lasagna and risotto to hidden regional gems, we aim to showcase dishes that have been passed down through generations. Every recipe we share reflects a deep respect for the ingredients, techniques, and history that make Italian food so special.</p>
-    <p>Whether you're Italian by heritage or heart, we invite you to explore, cook, and enjoy Italy — one recipe at a time.</p>
-  </section>
+
+  <div class="container">
+    <img src="images/ladyshands.jpg" alt="Cooking Together" class="hero-image">
+
+    <h2>Welcome to La Tavola Italiana</h2>
+    <p>At <strong>La Tavola Italiana</strong>, we believe every recipe tells a story — of family, of tradition, of joy. Our mission is to preserve the soul of Italian home cooking and invite you to recreate it in your own kitchen.</p>
+
+    <p>This site is filled with easy-to-follow recipes that bring authentic Italian flavors to life. Whether you're a beginner or a seasoned cook, there's something delicious for everyone — from lasagna and risotto to rustic regional specialties passed down for generations.</p>
+
+    <p>We also include the stories, tips, and cultural heritage behind each dish to help you not only cook, but <em>connect</em> — with Italy, with tradition, and with the people you share meals with.</p>
+
+    <div class="newsletter">
+      <h3>Join the Table</h3>
+      <p>Subscribe for weekly recipes, cooking tips, and Italian inspiration straight to your inbox.</p>
+      <form action="#" method="post">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </div>
 </body>
 </html>
+
+

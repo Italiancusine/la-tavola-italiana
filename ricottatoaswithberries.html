@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ricotta Toast with Berries - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #B03A2E;
+      color: white;
+      padding: 2em;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #E6B0AA;
+      padding: 1em;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    nav > div {
+      position: relative;
+      display: inline-block;
+    }
+    nav button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: #2C3E50;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    nav button:hover {
+      text-decoration: underline;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #FDEDE8;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      padding: 0.5em 0;
+      border-radius: 6px;
+    }
+    nav .dropdown-content a {
+      color: #2C3E50;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      display: block;
+      font-weight: normal;
+    }
+    nav .dropdown-content a:hover {
+      background-color: #B03A2E;
+      color: white;
+    }
+    nav div:hover .dropdown-content {
+      display: block;
+    }
+    .top-buttons {
+      margin: 1em 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    .top-buttons button, .top-buttons a {
+      background-color: #B03A2E;
+      border: none;
+      color: white;
+      padding: 0.5em 1em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .top-buttons button:hover, .top-buttons a:hover {
+      background-color: #8B2C2C;
+    }
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #8B2C2C;
+    }
+    .recipe-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2em;
+      font-size: 1.2em;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #8B2C2C;
+      font-weight: bold;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    @media print {
+      nav, .top-buttons {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    function printRecipe() {
+      window.print();
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Ricotta Toast with Berries</h1>
+  </header>
+
+  <nav>
+    <div>
+      <button>Recipes ▼</button>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+    <div>
+      <button>American Favorites ▼</button>
+      <div class="dropdown-content">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+    <div>
+      <button>Italy ▼</button>
+      <div class="dropdown-content">
+        <a href="tastebyregion.html">Taste by Region</a>
+        <a href="dinelikealocal.html">Dine Like a Local</a>
+        <a href="culinarydestinations.html">Culinary Destinations</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="top-buttons">
+    <button onclick="printRecipe()">Print Recipe</button>
+    <a href="#introduction">Jump to Recipe</a>
+  </div>
+
+  <section class="content">
+    <img src="images/ricottatoaswithberries.jpg" alt="Ricotta Toast with Berries" class="recipe-image" />
+
+    <h2 id="introduction">Introduction</h2>
+    <p>This Ricotta Toast with Berries is a simple yet elegant breakfast or snack that brings the freshness of fruit together with creamy ricotta and hearty whole grain bread. It’s sweet, light, and loaded with flavor.</p>
+
+    <h2 id="history">History</h2>
+    <p>Ricotta has been a staple in Italian kitchens for centuries. Combining it with bread and fresh fruit is a more recent trend inspired by both rustic European peasant meals and modern café culture.</p>
+
+    <h2 id="whyweloveit">Why We Love It</h2>
+    <p>This dish is both beautiful and delicious. It’s easy to make, nutrient-rich, and adaptable with seasonal berries. Plus, it’s a satisfying start to the day without being heavy.</p>
+
+    <h2 id="ingredients">Ingredients</h2>
+    <ul>
+      <li>2 slices whole grain or sourdough bread, toasted</li>
+      <li>1/2 cup ricotta cheese (fresh, whole milk preferred)</li>
+      <li>1/2 cup fresh berries (strawberries, raspberries, blueberries, etc.)</li>
+      <li>1–2 tsp honey or maple syrup (optional)</li>
+      <li>Fresh mint leaves for garnish (optional)</li>
+    </ul>
+
+    <h2 id="instructions">Instructions</h2>
+    <ol>
+      <li>Toast the bread slices until golden and crisp.</li>
+      <li>Spread about 1/4 cup ricotta cheese on each slice of toast.</li>
+      <li>Top with fresh berries of your choice.</li>
+      <li>Drizzle lightly with honey or maple syrup if using.</li>
+      <li>Garnish with mint leaves and serve immediately.</li>
+    </ol>
+
+    <h2 id="tips">Tips & Tricks</h2>
+    <ul>
+      <li>Use whipped ricotta for a smoother texture.</li>
+      <li>Mix a pinch of vanilla or lemon zest into the ricotta for extra flavor.</li>
+      <li>Swap berries for figs, peaches, or roasted grapes depending on season.</li>
+    </ul>
+
+    <h2 id="serving">Serving Suggestions</h2>
+    <p>Serve with a cappuccino or green tea for a refreshing breakfast. Add a side of Greek yogurt or nuts for extra protein.</p>
+
+    <h2 id="nutrition">Nutrition Info (per serving)</h2>
+    <ul>
+      <li>Calories: 290</li>
+      <li>Protein: 11g</li>
+      <li>Carbohydrates: 26g</li>
+      <li>Fat: 15g</li>
+      <li>Fiber: 4g</li>
+      <li>Sodium: 200mg</li>
+    </ul>
+
+    <h2 id="funfact">Fun Fact</h2>
+    <p>Ricotta means "recooked" in Italian—it’s traditionally made from reheated whey left over from cheese making!</p>
+
+    <div class="back-link">
+      <a href="index.html">&larr; Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>

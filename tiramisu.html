@@ -1,139 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tiramisu Recipe - La Tavola Italiana</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #FAF3E0;
-  color: #2C3E50;
-}
-
-header {
-  background-color: #8B2C2C;
-  padding: 1em;
-  text-align: center;
-  color: white;
-}
-
-nav {
-  background-color: #A3B18A;
-  padding: 1em;
-  text-align: center;
-}
-
-nav a {
-  margin: 0 1em;
-  text-decoration: none;
-  color: #2C3E50;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #C97C5D;
-}
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #8B2C2C;
-}
-.content {
-  padding: 2em;
-}
-
-.recipe-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5em;
-}
-
-.recipe-card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-decoration: none;
-  color: inherit;
-}
-
-.recipe-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.recipe-card h3 {
-  margin: 0.5em;
-  font-family: 'Playfair Display', serif;
-}
-.hero {
-  background-image: url('https://example.com/italian-food.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-shadow: 2px 2px 4px #000;
-}
-
-.hero h2 {
-  font-size: 2em;
-}
-
+    body { font-family: 'Open Sans', sans-serif; background-color: #FFF8F0; color: #2C3E50; margin: 0; padding: 0; line-height: 1.6; }
+    header { background-color: #B03A2E; color: white; padding: 2em; text-align: center; }
+    header h1 { font-family: 'Playfair Display', serif; font-size: 3em; margin: 0; }
+    nav { background-color: #E6B0AA; padding: 1em; text-align: center; position: relative; }
+    nav .dropdown { position: relative; display: inline-block; margin: 0 1em; }
+    nav .dropbtn { background: none; border: none; font-weight: bold; cursor: pointer; color: #2C3E50; font-size: 1em; }
+    nav .dropdown-content { display: none; position: absolute; background-color: #f9f9f9; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1; min-width: 160px; }
+    nav .dropdown-content a { color: #2C3E50; padding: 12px 16px; text-decoration: none; display: block; }
+    nav .dropdown-content a:hover { background-color: #f1f1f1; }
+    nav .dropdown:hover .dropdown-content { display: block; }
+    .content { max-width: 800px; margin: auto; padding: 2em; }
+    .recipe-image { width: 100%; border-radius: 10px; max-height: 400px; object-fit: cover; margin-bottom: 1em; }
+    .section-title { font-family: 'Playfair Display', serif; color: #8B2C2C; }
+    button.print-button, .jump-link { background-color: #B03A2E; color: white; border: none; padding: 10px 15px; margin-right: 10px; cursor: pointer; border-radius: 5px; }
+    button.print-button:hover, .jump-link:hover { background-color: #8B2C2C; }
+    .back-link { text-align: center; margin-top: 2em; font-size: 1.2em; }
+    .back-link a { color: #8B2C2C; text-decoration: none; }
+    .back-link a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
-    <h1>La Tavola Italiana</h1>
-    <p>Discover the taste of Italy one recipe at a time</p>
+    <h1>Tiramisu</h1>
   </header>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="tiramisu.html">Tiramisu</a>
-    <a href="privacy.html"Privacy Policy</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="ricetteitaliane.html">Ricette Italiane</a>
+    <div class="dropdown">
+      <button class="dropbtn">Recipes</button>
+      <div class="dropdown-content">
+        <a href="#">Appetizers</a>
+        <a href="#">Main Courses</a>
+        <a href="#">Desserts</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">American Favorites</button>
+      <div class="dropdown-content">
+        <a href="#">Breakfast</a>
+        <a href="#">Lunch</a>
+        <a href="#">Dinner</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Recipe Tutorials</button>
+      <div class="dropdown-content">
+        <a href="#">Easy</a>
+        <a href="#">Medium</a>
+        <a href="#">Hard</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Italy</button>
+      <div class="dropdown-content">
+        <a href="#">Taste by Region</a>
+        <a href="#">Dine Like a Local</a>
+        <a href="#">Culinary Destinations</a>
+      </div>
+    </div>
   </nav>
+
   <section class="content">
-    <h2>Tiramisu</h2>
-    <img src="tiramisu.jpg" alt="Classic Italian Tiramisu">
-    <p>This classic Italian dessert features layers of coffee-soaked ladyfingers and mascarpone cream, topped with cocoa powder.</p>
+    <img src="images/tiramisu.jpg" alt="Tiramisu" class="recipe-image">
+    <button class="print-button" onclick="window.print()">Print</button>
+    <a href="#recipe" class="jump-link">Jump to Recipe</a>
 
-    <h3>Prep Time</h3>
-    <p>30 minutes (plus 4 hours chilling)</p>
+    <h2 class="section-title">Introduction</h2>
+    <p>Tiramisu is a beloved Italian dessert featuring layers of coffee-soaked ladyfingers and rich mascarpone cream. It's the perfect balance of bitter espresso, sweet cream, and a dusting of cocoa.</p>
 
-    <h3>Servings</h3>
-    <p>6–8 people</p>
+    <h2 class="section-title">History</h2>
+    <p>Originating in the Veneto region of Italy in the 1960s, tiramisu literally means "pick me up"—a nod to its energizing espresso and uplifting flavor. It quickly became popular across Italy and the world.</p>
 
-    <h3>Ingredients</h3>
+    <h2 class="section-title">Why We Love It</h2>
+    <p>Tiramisu is elegant yet easy to make. It requires no baking and delivers a gourmet experience in every bite, making it a go-to for dinner parties or indulgent weekends.</p>
+
+    <h2 class="section-title" id="recipe">Ingredients</h2>
     <ul>
       <li>6 egg yolks</li>
-      <li>3/4 cup sugar</li>
-      <li>2/3 cup milk</li>
-      <li>1 1/4 cups heavy cream</li>
-      <li>1/2 teaspoon vanilla extract</li>
-      <li>8 oz mascarpone cheese</li>
-      <li>24 ladyfingers</li>
-      <li>1 1/2 cups strong brewed coffee, cooled</li>
-      <li>2 tablespoons unsweetened cocoa powder</li>
+      <li>3/4 cup granulated sugar</li>
+      <li>1 cup mascarpone cheese</li>
+      <li>1 1/2 cups heavy cream</li>
+      <li>2 cups strong brewed coffee, cooled</li>
+      <li>1/4 cup coffee liqueur (optional)</li>
+      <li>1 package ladyfingers</li>
+      <li>Unsweetened cocoa powder for dusting</li>
     </ul>
 
-    <h3>Instructions</h3>
+    <h2 class="section-title">Instructions</h2>
     <ol>
-      <li>Whisk egg yolks and sugar in a saucepan. Stir in milk and cook over medium heat until thickened. Cool completely.</li>
-      <li>Whip cream with vanilla until stiff. Fold in mascarpone and the cooled custard.</li>
-      <li>Dip ladyfingers in coffee and place in a 9x13 dish. Spread half the cream mixture over them.</li>
-      <li>Repeat with a second layer and top with remaining cream.</li>
-      <li>Dust with cocoa powder. Chill at least 4 hours before serving.</li>
+      <li>Whisk egg yolks and sugar in a bowl over simmering water until thick. Cool slightly.</li>
+      <li>Fold in mascarpone cheese until smooth.</li>
+      <li>In a separate bowl, whip heavy cream until stiff peaks form. Fold into mascarpone mixture.</li>
+      <li>Combine coffee and liqueur. Dip ladyfingers briefly into mixture and layer in dish.</li>
+      <li>Spread half the mascarpone mixture over ladyfingers. Repeat with remaining layers.</li>
+      <li>Dust with cocoa powder. Chill at least 4 hours or overnight.</li>
     </ol>
+
+    <h2 class="section-title">Tips & Tricks</h2>
+    <ul>
+      <li>Use cold, strong coffee for best flavor.</li>
+      <li>Don’t oversoak ladyfingers—just a quick dip!</li>
+      <li>Let tiramisu chill overnight for best texture and taste.</li>
+    </ul>
+
+    <h2 class="section-title">Serving Suggestions</h2>
+    <p>Serve tiramisu cold, cut into squares with an extra dusting of cocoa or grated chocolate. Pairs well with espresso or dessert wine.</p>
+
+    <h2 class="section-title">Nutrition Info (Per Serving)</h2>
+    <p>Calories: 410 | Fat: 28g | Carbs: 30g | Protein: 6g | Sugar: 20g</p>
+
+    <h2 class="section-title">Fun Fact</h2>
+    <p>The name “Tiramisu” means “pick me up” in Italian, a nod to both its energizing espresso content and feel-good taste.</p>
+
+    <div class="back-link">
+      <a href="index.html">&larr; Back to Home</a>
+    </div>
   </section>
 </body>
 </html>
