@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Italian Kitchen Unveiled: Master Authentic Italian Cooking | La Tavola Italiana</title>
+    <meta
+      name="description"
+      content="Unlock the secrets of authentic Italian cooking. Explore guides on pasta making, olive oil, San Marzano tomatoes, and more. Your ultimate resource for mastering Italian cuisine."
+    />
+    <meta
+      name="keywords"
+      content="Italian cooking, Italian recipes, homemade pasta, olive oil guide, San Marzano tomatoes, Italian cuisine, cooking tips, food blog, affiliate links, La Tavola Italiana"
+    />
+    <meta name="author" content="La Tavola Italiana" />
+
+    <!-- Google Fonts - Playfair Display and Open Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CSS CDN for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-dN4M2zF1YSECKMx4rZ0dRTJpjhKvY4xszpZHy1k5D3LhDxol6J/ujnqxA9EKF04HvHr7pj7F/hGQF5N3uU/1ig=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FFF8F0; /* Light cream background */
+        color: #2C3E50; /* Dark blue-gray text */
+        min-height: 100vh; /* Ensure body takes full viewport height */
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Top Bar Styles */
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 2em;
+        background-color: #B03A2E;
+        color: #fff;
+        font-size: 0.9em;
+      }
+      .top-bar a {
+        color: #F5EEC8;
+        margin-left: 1em;
+        text-decoration: none;
+      }
+
+      /* Header Styles */
+      header {
+        background-image: url('https://www.eataly.com/media/wysiwyg/Blog/2021/July/Italian_Food_Traditions.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 4em 2em 2em 2em;
+        text-align: center;
+        color: white;
+        position: relative;
+      }
+      header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 4em;
+        margin: 0;
+        color: #FFE28A;
+      }
+      header h2 {
+        font-size: 2.5em;
+        margin-top: 0.3em;
+        color: #FFD580;
+      }
+
+      /* Navigation Styles */
+      nav {
+        background-color: #FFF0D4;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5em 2em 1em 2em;
+        border-bottom: 2px solid #E5C298;
+        position: relative;
+        z-index: 9;
+      }
+      .nav-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1em;
+      }
+      .search-bar {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        order: 2;
+      }
+      .search-bar input {
+        padding: 0.4em;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 250px;
+      }
+      .social-icons {
+        display: flex;
+        align-items: center;
+        gap: 0.7em;
+        order: 1;
+      }
+      .social-icons a {
+        color: #B03A2E;
+        font-size: 1.3em;
+      }
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2em;
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-top: 1em;
+        position: relative;
+        z-index: 10;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #8B4513;
+      }
+      .nav-links a:hover {
+        color: #C1440E;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropbtn {
+        text-decoration: none;
+        color: #8B4513;
+        font-weight: bold;
+        font-size: 1.3em;
+        padding: 0.2em 0.4em;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #FFF0D4;
+        min-width: 220px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border: 1px solid #E5C298;
+        border-radius: 4px;
+        z-index: 100;
+        margin-top: 0.3em;
+        padding: 0.2em 0;
+        top: 100%;
+        left: 0;
+      }
+      .dropdown:hover .dropdown-content,
+      .dropdown-content:hover,
+      .dropbtn:focus + .dropdown-content {
+        display: block;
+      }
+      .dropdown-content a {
+        color: #8B4513;
+        padding: 10px 16px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: normal;
+        font-size: 1em;
+      }
+      .dropdown-content a:hover {
+        background-color: #E5C298;
+        color: #B03A2E;
+      }
+      .dropdown:hover .dropbtn {
+        color: #C1440E;
+      }
+      .dropdown-content a i {
+        font-size: 1.1em;
+        min-width: 20px;
+        text-align: center;
+        color: #B03A2E;
+      }
+
+      /* Main Content Area */
+      .content {
+        padding: 2em;
+        flex-grow: 1;
+      }
+
+      .content h2 {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: #A94438;
+        font-size: 2.5em;
+        margin-bottom: 1.5em;
+      }
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2em;
+        padding: 0 2em;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .blog-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+      }
+      .blog-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+      .blog-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+      .blog-card h3 {
+        margin: 0.8em;
+        font-family: 'Playfair Display', serif;
+        text-align: center;
+        font-size: 1.8em;
+        color: #A94438;
+      }
+      .blog-description-wrapper {
+        padding: 0 1em 1em;
+        text-align: center;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .blog-description-wrapper p {
+        font-size: 0.95em;
+        margin-bottom: 1em;
+      }
+      .blog-description-wrapper img.inline-blog-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 1em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .read-more-button {
+        display: block;
+        margin: 0 auto;
+        padding: 0.6em 1.5em;
+        background-color: #B03A2E;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 1em;
+        text-align: center;
+        transition: background-color 0.2s ease;
+        width: fit-content;
+      }
+      .read-more-button:hover {
+        background-color: #922B21;
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #800000; /* Maroon */
+        color: #FFF8F0;
+        padding: 1.5em;
+        text-align: center;
+        font-size: 0.9em;
+        margin-top: auto;
+      }
+      footer a {
+        color: #FFD580;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      footer a:hover {
+        color: #FFE28A;
+      }
+
+      /* Footer social icons container */
+      footer .social-icons-footer {
+        margin-top: 0.8em;
+      }
+      footer .social-icons-footer a {
+        margin: 0 0.7em;
+        color: #FFD580;
+        font-size: 1.4em;
+        transition: color 0.2s ease;
+      }
+      footer .social-icons-footer a:hover {
+        color: #FFE28A;
+      }
+      /* Added text next to icons */
+      footer .social-icons-footer a span {
+        margin-left: 6px;
+        font-size: 1em;
+        vertical-align: middle;
+        color: #FFD580;
+      }
+    </style>
+</head>
+<body>
+  <!-- Top Bar Section -->
+  <div class="top-bar">
+    <div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- Navigation Section -->
+  <nav>
+    <div class="nav-top">
+      <div class="search-bar">
+        <input type="text" placeholder="Search recipes..." />
+      </div>
+      <div class="social-icons">
+        <a href="https://pinterest.com/yourprofile" target="_blank" rel="noopener"
+          ><i class="fab fa-pinterest"></i
+          ><span>Pinterest</span></a
+        >
+        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener"
+          ><i class="fab fa-instagram"></i
+          ><span>Instagram</span></a
+        >
+      </div>
+    </div>
+    <div class="nav-links">
+      <div class="dropdown">
+        <a href="recipes.html" class="dropbtn"
+          ><i class="fas fa-utensils"></i> Recipes</a
+        >
+        <div class="dropdown-content">
+          <a href="appetizers.html"><i class="fas fa-seedling"></i> Appetizers</a>
+          <a href="maincourses.html"
+            ><i class="fas fa-drumstick-bite"></i> Main Courses</a
+          >
+          <a href="desserts.html"><i class="fas fa-ice-cream"></i> Desserts</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="americanfavorites.html" class="dropbtn"
+          ><i class="fas fa-hamburger"></i> American Favorites</a
+        >
+        <div class="dropdown-content">
+          <a href="breakfast.html"><i class="fas fa-coffee"></i> Breakfast</a>
+          <a href="lunch.html"><i class="fas fa-hotdog"></i> Lunch</a>
+          <a href="dinner.html"><i class="fas fa-steak"></i> Dinner</a>
+        </div>
+      </div>
+      <div>
+        <a href="italian-kitchen-unveiled.html" class="dropbtn"
+          ><i class="fas fa-book-open"></i> Italian Kitchen Unveiled</a
+        >
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header>
+    <h1>La Tavola Italiana</h1>
+    <h2>Italian Food Recipes & Culture</h2>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="content">
+    <h2 class="main-section-title">Italian Kitchen Unveiled</h2>
+    <p class="text-center text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12">
+      Dive deep into the heart of authentic Italian cooking. Discover essential
+      techniques, understand key ingredients, and elevate your culinary skills
+      with our expert guides and insights.
+    </p>
+
+    <!-- Blog Post Grid -->
+    <div class="blog-grid">
+      <!-- Blog Post 1 -->
+      <article class="blog-card">
+        <img src="images/masteringhomemadepasta.jpg" alt="Mastering Homemade Pasta" />
+        <h3>Mastering Homemade Pasta: From Flour to Fork</h3>
+        <div class="blog-description-wrapper">
+          <img
+            src="images/pastadoughbeingkneaded.jpg"
+            alt="Pasta Dough Being Kneaded"
+          />
+          <p>
+            Unlock the secrets to crafting perfect pasta from scratch. Learn about
+            the best flours, techniques for kneading, rolling, and shaping, and
+            tips for cooking your fresh creations to al dente perfection.
+          </p>
+          <a href="masteringhomemadepasta.html" class="read-more-button">Read More</a>
+        </div>
+      </article>
+
+      <!-- Blog Post 2 -->
+      <article class="blog-card">
+        <img
+          src="images/bottlesofhighqualityitalianoliveoil.jpg"
+          alt="The Secret Life of Italian Olive Oil: A Guide to Choosing & Using"
+        />
+        <h3>The Secret Life of Italian Olive Oil: A Guide to Choosing & Using</h3>
+        <div class="blog-description-wrapper">
+          <img
+            src="images/oliveoil.jpg"
+            alt=" Not all olive oils are created equal"
+            class="inline-blog-img"
+          />
+          <p>
+            Not all olive oils are created equal. Discover the nuances of Italian
+            extra virgin olive oil, how to identify quality, and the best ways to
+            incorporate this liquid gold into your cooking
+          </p>
+          <a
+            href="thesecretlifeofitalianoliveoilaguidetochoosingandusing.html"
+            class="read-more-button"
+            >Read More</a
+          >
+        </div>
+      </article>
+
+      <!-- Blog Post 3 -->
+      <article class="blog-card">
+        <img src="images/canofsanmarzanotomatoes.jpg" alt="Can of San Marzano tomatoes with fresh basil" />
+        <h3>Unlocking the Flavors of San Marzano Tomatoes: Why They Matter</h3>
+        <div class="blog-description-wrapper">
+          <img
+            src="images/ripsanmarzanotomatoes.jpg"
+            alt="Close-up of ripe San Marzano tomatoes"
+            class="inline-blog-img"
+          />
+          <p>
+            Explore why San Marzano tomatoes are the gold standard for Italian
+            sauces. Learn how to select the best cans, simple techniques to enhance
+            their flavor, and classic recipes where they shine.
+          </p>
+          <a href="unlockingtheflavorsofsanmarzanotomatoeswhytheymatter.html" class="read-more-button">Read More</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; <span id="current-year"></span> La Tavola Italiana. All rights reserved.</p>
+    <p class="mt-2">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a> |
+      <a href="#">Affiliate Disclosure</a>
+    </p>
+    <div class="social-icons-footer">
+      <a href="https://pinterest.com/yourprofile" target="_blank" rel="noopener" aria-label="Pinterest"
+        ><i class="fab fa-pinterest"></i><span>Pinterest</span></a
+      >
+      <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener" aria-label="Instagram"
+        ><i class="fab fa-instagram"></i><span>Instagram</span></a
+      >
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in the footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Dropdown functionality
+    function setupDropdown(buttonId, dropdownId) {
+      const button = document.getElementById(buttonId);
+      const dropdown = document.getElementById(dropdownId);
+
+      if (button && dropdown) {
+        button.addEventListener('click', function () {
+          dropdown.classList.toggle('show');
+        });
+
+        window.addEventListener('click', function (event) {
+          if (
+            !event.target.matches(`#${buttonId}`) &&
+            !event.target.closest(`#${dropdownId}`)
+          ) {
+            if (dropdown.classList.contains('show')) {
+              dropdown.classList.remove('show');
+            }
+          }
+        });
+      }
+    }
+
+    setupDropdown('recipesDropdownBtn', 'recipesDropdown');
+    setupDropdown('americanFavoritesDropdownBtn', 'americanFavoritesDropdown');
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipes - La Tavola Italiana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FFF8F0;
+      color: #2C3E50;
+    }
+    header {
+      background-image: url('https://www.eataly.com/media/wysiwyg/Blog/2021/July/Italian_Food_Traditions.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 4em 2em 2em 2em;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4em;
+      margin: 0;
+      color: #FFE28A;
+    }
+    .section {
+      padding: 2em;
+    }
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      color: #A94438;
+      border-bottom: 2px solid #E5C298;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+    }
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5em;
+    }
+    .recipe-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease;
+    }
+    .recipe-card:hover {
+      transform: scale(1.02);
+    }
+    .recipe-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .recipe-card h3 {
+      margin: 0.5em;
+      font-family: 'Playfair Display', serif;
+    }
+    footer {
+      background-color: #800000;
+      color: white;
+      padding: 2em;
+      text-align: center;
+      margin-top: 2em;
+    }
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer svg {
+      display: block;
+      margin: 0 auto 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Recipes</h1>
+  </header>
+
+  <div class="section">
+    <h2>Appetizers</h2>
+    <div class="recipe-grid">
+      <a href="bruschetta.html" class="recipe-card">
+        <img src="images/bruschetta.jpg" alt="Bruschetta">
+        <h3>Bruschetta</h3>
+      </a>
+      <a href="capresesalad.html" class="recipe-card">
+        <img src="images/capresesalad.jpg" alt="Caprese Salad">
+        <h3>Caprese Salad</h3>
+      </a>
+      <a href="focaccia.html" class="recipe-card">
+        <img src="images/focaccia.jpg" alt="Focaccia Bread">
+        <h3>Focaccia Bread</h3>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Main Courses</h2>
+    <div class="recipe-grid">
+      <a href="gnocchi.html" class="recipe-card">
+        <img src="images/gnocchi.jpg" alt="Gnocchi">
+        <h3>Gnocchi</h3>
+      </a>
+      <a href="lasagna.html" class="recipe-card">
+        <img src="images/lasagna.jpg" alt="Lasagna">
+        <h3>Lasagna</h3>
+      </a>
+      <a href="margheritapizza.html" class="recipe-card">
+        <img src="images/margheritapizza.jpg" alt="Margherita Pizza">
+        <h3>Margherita Pizza</h3>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Desserts</h2>
+    <div class="recipe-grid">
+      <a href="tiramisu.html" class="recipe-card">
+        <img src="images/tiramisu.jpg" alt="Tiramisu">
+        <h3>Tiramisu</h3>
+      </a>
+      <a href="strawberrybasilsmoothie.html" class="recipe-card">
+        <img src="images/strawberrybasilsmoothie.jpg" alt="Strawberry Basil Smoothie">
+        <h3>Strawberry Basil Smoothie</h3>
+      </a>
+      <a href="mushroomrisotto.html" class="recipe-card">
+        <img src="images/mushroomrisotto.jpg" alt="Mushroom Risotto">
+        <h3>Mushroom Risotto</h3>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <!-- Footer logo with lower curve text -->
+    <svg width="150" height="80" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+      <path id="curve" d="M 60 100 A 80 60 0 0 1 240 100" fill="transparent"/>
+      <text font-size="18" font-family="Playfair Display" fill="black">
+        <textPath href="#curve" startOffset="50%" text-anchor="middle">La Tavola Italiana</textPath>
+      </text>
+      <ellipse cx="150" cy="100" rx="40" ry="20" fill="none" stroke="black" stroke-width="2"/>
+      <line x1="120" y1="100" x2="180" y2="100" stroke="black" stroke-width="2"/>
+      <circle cx="115" cy="95" r="3" fill="black"/>
+      <circle cx="125" cy="95" r="3" fill="black"/>
+      <circle cx="175" cy="95" r="3" fill="black"/>
+      <circle cx="185" cy="95" r="3" fill="black"/>
+    </svg>
+    <p>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">About</a>
+    </p>
+    <p>Pinterest | Instagram</p>
+  </footer>
+</body>
+</html>
+
