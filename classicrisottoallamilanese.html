@@ -12,15 +12,16 @@
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Margherita Pizza Recipe - La Tavola Italiana</title>
+  <title>Classic Risotto alla Milanese Recipe | La Tavola Italiana</title>
+  <meta name="description" content="Learn how to make the authentic Classic Risotto alla Milanese, a creamy saffron-infused Italian risotto. Perfect traditional recipe from Northern Italy’s Lombardy region." />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
       background-color: #FFF8F0;
       color: #2C3E50;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
     }
     header {
@@ -68,7 +69,7 @@
       min-width: 160px;
       top: 100%;
       left: 0;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
       z-index: 101;
     }
     nav .dropdown-content a {
@@ -85,13 +86,14 @@
       display: block;
     }
     .content {
-      padding: 2em;
       max-width: 800px;
       margin: auto;
+      padding: 2em;
     }
     h2, h3 {
       font-family: 'Playfair Display', serif;
       color: #8B2C2C;
+      margin-top: 2em;
     }
     ul, ol {
       padding-left: 1.5em;
@@ -102,12 +104,13 @@
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 1em;
+      box-shadow: 0 4px 8px rgba(176,58,46,0.3);
     }
     .print-button {
       background-color: #B03A2E;
       color: white;
       border: none;
-      padding: 0.5em 1em;
+      padding: 0.6em 1.2em;
       font-weight: bold;
       font-family: 'Open Sans', sans-serif;
       border-radius: 5px;
@@ -129,14 +132,15 @@
       color: #8B2C2C;
     }
     .back-link {
-      display: block;
       text-align: center;
-      margin-top: 2em;
+      margin-top: 3em;
       font-size: 1.2em;
+      font-family: 'Open Sans', sans-serif;
     }
     .back-link a {
-      text-decoration: none;
       color: #8B2C2C;
+      text-decoration: none;
+      font-weight: bold;
     }
     .back-link a:hover {
       text-decoration: underline;
@@ -169,20 +173,20 @@
 </head>
 <body>
   <header>
-    <h1>Margherita Pizza</h1>
+    <h1>Classic Risotto alla Milanese</h1>
   </header>
 
   <nav>
     <div class="dropdown">
-      <button>Recipes ▾</button>
+      <button>Recipes ▼</button>
       <div class="dropdown-content">
         <a href="appetizers.html">Appetizers</a>
-        <a href="main-courses.html">Main Courses</a>
+        <a href="maincourses.html">Main Courses</a>
         <a href="desserts.html">Desserts</a>
       </div>
     </div>
     <div class="dropdown">
-      <button>American Favorites ▾</button>
+      <button>American Favorites ▼</button>
       <div class="dropdown-content">
         <a href="breakfast.html">Breakfast</a>
         <a href="lunch.html">Lunch</a>
@@ -190,19 +194,11 @@
       </div>
     </div>
     <div class="dropdown">
-      <button>Recipe Tutorials ▾</button>
+      <button>Italy ▼</button>
       <div class="dropdown-content">
-        <a href="easy.html">Easy</a>
-        <a href="medium.html">Medium</a>
-        <a href="hard.html">Hard</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button>Italy ▾</button>
-      <div class="dropdown-content">
-        <a href="taste-by-region.html">Taste by Region</a>
-        <a href="dine-like-a-local.html">Dine Like a Local</a>
-        <a href="culinary-destinations.html">Culinary Destinations</a>
+        <a href="tastebyregion.html">Taste by Region</a>
+        <a href="dinelikealocal.html">Dine Like a Local</a>
+        <a href="culinarydestinations.html">Culinary Destinations</a>
       </div>
     </div>
   </nav>
@@ -211,68 +207,68 @@
     <button class="print-button" onclick="printRecipe()">Print Recipe</button>
     <button class="jump-link" onclick="scrollToRecipe()">Jump to Recipe</button>
 
-    <img src="images/margheritapizza.jpg" alt="Margherita Pizza" class="recipe-image" />
+    <img src="images/risotto.jpg" alt="Classic Risotto alla Milanese in a traditional bowl" class="recipe-image" />
 
     <h2>Introduction</h2>
-    <p>The Margherita Pizza is a symbol of Italian culinary simplicity and elegance. Featuring a thin, crisp crust, fresh tomato sauce, creamy mozzarella, and fragrant basil, it captures the essence of Naples in every bite. It's the perfect example of how a few quality ingredients can create an unforgettable dish.</p>
+    <p>Risotto alla Milanese is a luxurious, creamy Italian rice dish infused with fragrant saffron and rich Parmesan cheese. This iconic dish from Milan combines simple ingredients to create deep, comforting flavors that have delighted food lovers for centuries.</p>
 
     <h2>History</h2>
-    <p>The Margherita Pizza was created in Naples in 1889 to honor Queen Margherita of Savoy. Chef Raffaele Esposito topped a pizza with tomatoes, mozzarella, and basil to represent the colors of the Italian flag. The Queen was so impressed, the dish was named after her, and it has since become a staple of Italian cuisine worldwide.</p>
+    <p>The origins of Risotto alla Milanese trace back to 16th-century Milan. Legend has it that a young apprentice accidentally dropped saffron into a risotto pot during a wedding feast, creating the signature golden color and distinct aroma that quickly became a local sensation.</p>
 
     <h2>Why We Love It</h2>
-    <p>This pizza is a masterpiece of simplicity and balance. The fresh ingredients shine individually and together, creating a harmony of flavors that is both comforting and sophisticated. It's a great introduction to authentic Italian cooking and a timeless favorite enjoyed worldwide.</p>
+    <p>This risotto boasts a beautiful golden hue and a delicate balance between the creamy texture of the rice and the floral, earthy notes of saffron. It's elegant enough for special occasions but simple enough for a cozy weeknight dinner.</p>
 
     <h2 id="recipe-section">Ingredients</h2>
     <ul>
-      <li>1 ball of pizza dough (about 250g)</li>
-      <li>1/2 cup crushed San Marzano tomatoes</li>
-      <li>1 tablespoon olive oil</li>
-      <li>125g (4 oz) fresh mozzarella, torn</li>
-      <li>Fresh basil leaves</li>
-      <li>Salt to taste</li>
+      <li>1 ½ cups Arborio rice</li>
+      <li>4 cups chicken or vegetable broth, kept warm</li>
+      <li>1 small onion, finely chopped</li>
+      <li>3 tbsp unsalted butter, divided</li>
+      <li>½ cup dry white wine</li>
+      <li>1/2 tsp high-quality saffron threads</li>
+      <li>1/2 cup freshly grated Parmesan cheese</li>
+      <li>Salt and freshly ground black pepper, to taste</li>
     </ul>
 
     <h2>Instructions</h2>
     <ol>
-      <li>Preheat your oven to 500°F (260°C) and place a pizza stone or inverted baking sheet inside to heat.</li>
-      <li>Roll out the dough on a floured surface into a thin 10-12 inch circle.</li>
-      <li>Spread the crushed tomatoes evenly over the dough, leaving a small border for the crust.</li>
-      <li>Drizzle with olive oil and lightly season with salt.</li>
-      <li>Add the mozzarella pieces evenly across the surface.</li>
-      <li>Carefully transfer the pizza to the hot stone and bake for 7-10 minutes, or until the crust is golden and the cheese is bubbling.</li>
-      <li>Remove from the oven and scatter fresh basil leaves on top before serving.</li>
+      <li>Heat the broth in a saucepan and keep it warm over low heat.</li>
+      <li>In a large pan, melt 2 tbsp butter and sauté the onion until translucent.</li>
+      <li>Add the Arborio rice and stir to coat the grains with butter; toast for 2 minutes.</li>
+      <li>Pour in the white wine and cook until mostly evaporated.</li>
+      <li>Steep the saffron threads in a small bowl with 2 tbsp warm broth for 5 minutes, then add to the rice.</li>
+      <li>Add warm broth one ladle at a time, stirring constantly until absorbed before adding more.</li>
+      <li>Continue for about 18-20 minutes, until the rice is creamy and al dente.</li>
+      <li>Remove from heat; stir in remaining butter and Parmesan cheese. Season with salt and pepper.</li>
+      <li>Serve immediately, garnished with extra Parmesan if desired.</li>
     </ol>
 
     <h2>Tips & Tricks</h2>
     <ul>
-      <li>Use a pizza stone or steel to replicate the intense heat of a pizzeria oven.</li>
-      <li>Drain the mozzarella slightly if it's too wet to avoid a soggy crust.</li>
-      <li>For an even crispier bottom, try pre-baking the crust for 2-3 minutes before adding toppings.</li>
-      <li>Never overload the pizza—less is more in a true Margherita.</li>
-      <li>Add basil after baking to keep it fresh and flavorful.</li>
+      <li>Keep broth warm throughout to ensure even cooking.</li>
+      <li>Use high-quality saffron for the best flavor and color.</li>
+      <li>Stir frequently but gently to release the rice’s starch and create creaminess.</li>
+      <li>For a vegetarian version, use vegetable broth.</li>
     </ul>
 
     <h2>Serving Suggestions</h2>
-    <p>Serve your Margherita Pizza hot with a drizzle of extra virgin olive oil and a sprinkle of sea salt. Pair it with a fresh arugula salad and a glass of Chianti or a light Italian lager. It also makes a fantastic appetizer when sliced into small wedges for sharing.</p>
+    <p>Pair Risotto alla Milanese with a crisp white wine like Pinot Grigio and a simple green salad to balance the rich flavors.</p>
 
     <h2>Nutrition Info (per serving)</h2>
     <table class="nutrition">
-      <tr><th>Calories</th><td>320 kcal</td></tr>
-      <tr><th>Carbohydrates</th><td>38 g</td></tr>
-      <tr><th>Protein</th><td>14 g</td></tr>
-      <tr><th>Fat</th><td>12 g</td></tr>
-      <tr><th>Saturated Fat</th><td>6 g</td></tr>
-      <tr><th>Cholesterol</th><td>35 mg</td></tr>
-      <tr><th>Sodium</th><td>580 mg</td></tr>
-      <tr><th>Fiber</th><td>2 g</td></tr>
-      <tr><th>Sugar</th><td>4 g</td></tr>
+      <tr><th>Calories</th><td>400</td></tr>
+      <tr><th>Protein</th><td>10g</td></tr>
+      <tr><th>Carbohydrates</th><td>58g</td></tr>
+      <tr><th>Fat</th><td>12g</td></tr>
+      <tr><th>Fiber</th><td>2g</td></tr>
+      <tr><th>Sodium</th><td>350mg</td></tr>
     </table>
 
     <h2>Fun Fact</h2>
-    <p>The Margherita Pizza’s colors—red, white, and green—were chosen to represent the Italian flag, making it not just delicious but also a patriotic dish!</p>
+    <p>The golden color of Risotto alla Milanese comes from saffron, one of the most expensive spices in the world, harvested by hand from crocus flowers.</p>
 
     <div class="back-link">
-      <a href="index.html">← Back to Home</a>
+      <a href="tastebyregion-veneto.html">← Back to Veneto Taste by Region</a>
     </div>
   </section>
 <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/833349ad0ed5ca7b6b03f0253b1029b1.js"></script>

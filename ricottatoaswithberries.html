@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X8GDPFR33H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X8GDPFR33H');
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ricotta Toast with Berries - La Tavola Italiana</title>
@@ -141,29 +150,37 @@
     <h1>Ricotta Toast with Berries</h1>
   </header>
 
-  <nav>
-    <div>
-      <button>Recipes ▼</button>
-      <div class="dropdown-content">
-        <a href="appetizers.html">Appetizers</a>
-        <a href="maincourses.html">Main Courses</a>
-        <a href="desserts.html">Desserts</a>
+ <nav>
+    <div class="nav-top">
+      <div class="search-bar">
+        <input type="text" placeholder="Search recipes..." />
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
       </div>
     </div>
-    <div>
-      <button>American Favorites ▼</button>
-      <div class="dropdown-content">
-        <a href="breakfast.html">Breakfast</a>
-        <a href="lunch.html">Lunch</a>
-        <a href="dinner.html">Dinner</a>
+    <div class="nav-links">
+      <div class="dropdown">
+        <a href="recipes.html" class="dropbtn"><i class="fas fa-utensils"></i> Recipes</a>
+        <div class="dropdown-content">
+          <a href="appetizers.html"><i class="fas fa-seedling"></i> Appetizers</a>
+          <a href="maincourses.html"><i class="fas fa-drumstick-bite"></i> Main Courses</a>
+          <a href="desserts.html"><i class="fas fa-ice-cream"></i> Desserts</a>
+        </div>
       </div>
-    </div>
-    <div>
-      <button>Italy ▼</button>
-      <div class="dropdown-content">
-        <a href="tastebyregion.html">Taste by Region</a>
-        <a href="dinelikealocal.html">Dine Like a Local</a>
-        <a href="culinarydestinations.html">Culinary Destinations</a>
+      <div class="dropdown">
+        <a href="americanfavorites.html" class="dropbtn"><i class="fas fa-hamburger"></i> American Favorites</a>
+        <div class="dropdown-content">
+          <a href="breakfast.html"><i class="fas fa-coffee"></i> Breakfast</a>
+          <a href="lunch.html"><i class="fas fa-hotdog"></i> Lunch</a>
+          <a href="dinner.html"><i class="fas fa-steak"></i> Dinner</a>
+        </div>
+      </div>
+      <div>
+        <a href="italiankitchenunveiled.html" class="dropbtn"><i class="fas fa-book-open"></i> Italian Kitchen Unveiled</a>
       </div>
     </div>
   </nav>
@@ -230,5 +247,6 @@
       <a href="index.html">&larr; Back to Home</a>
     </div>
   </section>
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/833349ad0ed5ca7b6b03f0253b1029b1.js"></script>
 </body>
 </html>
