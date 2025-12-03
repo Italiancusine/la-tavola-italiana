@@ -1,0 +1,28 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="La Tavola Italiana olive branch logo with curved text">
+  <style>
+    .olive-branch {
+      fill: none;
+      stroke: #800000; /* Maroon */
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .title-text {
+      fill: #800000;
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+  </style>
+
+  <!-- Olive branch -->
+  <path class="olive-branch" id="branchPath" d="M20 30 Q70 5 180 30"></path>
+
+  <!-- Curved text along the branch -->
+  <text class="title-text" text-anchor="middle">
+    <textPath href="#branchPath" startOffset="50%">
+      La Tavola Italiana
+    </textPath>
+  </text>
+</svg>
