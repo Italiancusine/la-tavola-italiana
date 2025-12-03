@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X8GDPFR33H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X8GDPFR33H');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Easy Honey Cake - La Tavola Italiana</title>
+<!-- Font Awesome CDN for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+<style>
+/* --- Social Icons Styles --- */
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.social-icons a.pinterest {
+  background: #bd081c;
+}
+.social-icons a.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, 
+    #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.social-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+/* Optional: responsive sizing */
+@media screen and (max-width: 900px) {
+  .social-icons a { width: 40px; height: 40px; font-size: 24px; }
+}
+
+/* --- General Styles --- */
+body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background-color: #FFF8F0; color: #2C3E50; line-height: 1.6; }
+.top-strip { background-color: #B03A2E; height: 36px; width: 100%; }
+.top-bar { background-color: #FFD9C7; display: flex; align-items: center; justify-content: space-between; padding: 0.5em 2em; flex-wrap: wrap; }
+.logo-container img { height: 200px; width: auto; display: block; }
+.top-nav { display: flex; gap: 1.5em; align-items: center; position: relative; }
+.top-nav button, .top-nav a.nav-link { font-weight: bold; background: none; border: none; color: #B03A2E; font-size: 1em; cursor: pointer; padding: 0.3em 0.6em; border-radius: 4px; position: relative; text-decoration: none; }
+.top-nav button:hover, .top-nav a.nav-link:hover { color: #8B2C2C; }
+.top-nav .dropdown-content { display: none; position: absolute; background-color: #FFF8F0; min-width: 180px; left: 50%; transform: translateX(-50%); box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1000; padding: 0.5em 0; border-radius: 6px; }
+.top-nav .dropdown-content a { color: #2C3E50; padding: 0.5em 1em; text-decoration: none; display: block; font-weight: normal; }
+.top-nav .dropdown-content a:hover { background-color: #B03A2E; color: white; }
+.top-nav div:hover .dropdown-content { display: block; }
+.header-right { display: flex; flex-direction: column; align-items: flex-end; }
+.search-social { display: flex; align-items: center; gap: 0.5em; }
+.search-bar { padding: 0.4em 0.8em; border-radius: 6px; border: 1px solid #B03A2E; font-size: 0.9em; }
+
+/* --- Recipe Buttons --- */
+.top-buttons { margin: 1em 0; display: flex; justify-content: flex-start; gap: 0.8em; flex-wrap: wrap; }
+.top-buttons a, .top-buttons button { display: flex; align-items: center; justify-content: center; gap: 0.4em; width: 130px; height: 50px; border: 1px solid #ccc; background-color: white; color: #2C3E50; font-weight: bold; border-radius: 4px; cursor: pointer; text-decoration: none; font-size: 0.95em; }
+.top-buttons a:hover, .top-buttons button:hover { background-color: #f2f2f2; border-color: #999; }
+.top-buttons i { font-size: 1.2em; color: #2C3E50; }
+/* Share dropdown */
+.share-dropdown { position: relative; display: inline-block; }
+.share-dropdown-content { display: none; position: absolute; background-color: #FFF8F0; min-width: 160px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2); border-radius: 6px; z-index: 1000; top: 100%; left: 0; }
+.share-dropdown-content a { display: flex; align-items: center; gap: 0.5em; padding: 0.5em 1em; text-decoration: none; color: #2C3E50; }
+.share-dropdown-content a i { font-size: 1.2em; }
+.share-dropdown-content a:hover { background-color: #B03A2E; color: white; }
+.share-dropdown:hover .share-dropdown-content { display: block; }
+
+/* --- Recipe Content --- */
+.content { padding: 2em; max-width: 800px; margin: auto; }
+h2, h3 { font-family: 'Playfair Display', serif; color: #8B2C2C; }
+.recipe-image { width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 1em; }
+.back-link { display: block; text-align: center; margin-top: 2em; font-size: 1.2em; }
+.back-link a { text-decoration: none; color: #8B2C2C; font-weight: bold; }
+.back-link a:hover { text-decoration: underline; }
+.rate-section { text-align: center; margin: 1.5em 0; font-size: 1.2em; }
+.rate-section span { font-size: 1.5em; cursor: pointer; color: #ccc; margin: 0 2px; transition: color 0.2s; }
+.rate-section span.hover, .rate-section span.selected { color: #FFD700; }
+
+@media print { .top-bar, .top-buttons { display: none; } }
+
+/* --- Footer --- */
+footer { background-color: #800000; color: #FFF8F0; padding: 1em 2em; text-align: center; font-size: 0.9em; }
+footer a { color: #FFD580; text-decoration: none; }
+footer a:hover { color: #FFE28A; }
+.footer-logo-container { max-width: 240px; margin: 0.5em auto; }
+</style>
+
+<script>
+function printRecipe() { window.print(); }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const stars = document.querySelectorAll('.rate-section span');
+  const savedRating = localStorage.getItem('easyHoneyCakeRating');
+  if(savedRating) { stars.forEach((s, i) => s.classList.toggle('selected', i < savedRating)); }
+  stars.forEach((star, index) => {
+    star.addEventListener('mouseover', () => { stars.forEach((s, i) => { s.classList.toggle('hover', i <= index); }); });
+    star.addEventListener('mouseout', () => { stars.forEach((s, i) => { s.classList.remove('hover'); }); });
+    star.addEventListener('click', () => { stars.forEach((s, i) => { s.classList.toggle('selected', i <= index); localStorage.setItem('easyHoneyCakeRating', index+1); }); });
+  });
+
+  const saveButton = document.querySelector('.top-buttons button');
+  const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes') || '[]');
+  if(savedRecipes.includes('Easy Honey Cake')) {
+    saveButton.style.backgroundColor = '#FFD700'; saveButton.style.color = '#2C3E50';
+  }
+  saveButton.addEventListener('click', () => {
+    let savedRecipes = JSON.parse(localStorage.getItem('savedRecipes') || '[]');
+    if(!savedRecipes.includes('Easy Honey Cake')) {
+      savedRecipes.push('Easy Honey Cake');
+      localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
+      saveButton.style.backgroundColor = '#FFD700';
+      alert('Recipe saved to your favorites!');
+    } else { alert('Recipe already in your favorites!'); }
+  });
+
+  // Search highlighting
+  const searchBar = document.querySelector('.search-bar');
+  searchBar.addEventListener('input', () => {
+    const query = searchBar.value.toLowerCase();
+    const contentSection = document.querySelector('.content');
+    contentSection.querySelectorAll('.highlight').forEach(el => { el.outerHTML = el.innerHTML; });
+    if(query.length > 0) {
+      contentSection.querySelectorAll('p, li').forEach(el => {
+        const text = el.textContent.toLowerCase();
+        if(text.includes(query)) {
+          const regex = new RegExp(`(${query})`, 'gi');
+          el.innerHTML = el.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+        }
+      });
+    }
+  });
+
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+});
+</script>
+</head>
+
+<body>
+<div class="top-strip"></div>
+<header>
+  <div class="top-bar">
+    <div class="logo-container">
+      <a href="index.html"><img src="images/logo.png" alt="La Tavola Italiana Logo" /></a>
+    </div>
+    <nav class="top-nav">
+      <div>
+        <button>Recipes ▼</button>
+        <div class="dropdown-content">
+          <a href="appetizers.html">Appetizers</a>
+          <a href="maincourses.html">Main Courses</a>
+          <a href="desserts.html">Desserts</a>
+        </div>
+      </div>
+      <div>
+        <button>American Favorites ▼</button>
+        <div class="dropdown-content">
+          <a href="breakfast.html">Breakfast</a>
+          <a href="lunch.html">Lunch</a>
+          <a href="dinner.html">Dinner</a>
+        </div>
+      </div>
+      <div><a href="italiankitchenunveiled.html" class="nav-link">Italian Kitchen Unveiled</a></div>
+    </nav>
+    <div class="header-right">
+      <div class="search-social">
+        <input type="text" placeholder="Search recipes..." class="search-bar" />
+        <div class="social-icons">
+          <a href="https://pinterest.com/italiancusine" target="_blank" class="pinterest" aria-label="Pinterest">
+            <i class="fab fa-pinterest-p"></i>
+          </a>
+          <a href="https://www.instagram.com/latavolaitalianarecipes/" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="top-buttons">
+  <button><i class="fas fa-heart"></i> Save</button>
+  <button onclick="printRecipe()"><i class="fas fa-print"></i> Print</button>
+  <a href="#introduction"><i class="fas fa-arrow-right"></i> Jump</a>
+  <div class="share-dropdown">
+    <button><i class="fas fa-share-alt"></i> Share ▼</button>
+    <div class="share-dropdown-content">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://italiancusine.github.io/la-tavola-italiana/easy-honey-cake.html" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="https://twitter.com/intent/tweet?url=https://italiancusine.github.io/la-tavola-italiana/easy-honey-cake.html&text=Easy+Honey+Cake" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="https://api.whatsapp.com/send?text=Check+out+this+recipe https://italiancusine.github.io/la-tavola-italiana/easy-honey-cake.html" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:?subject=Easy Honey Cake&body=Check out this recipe: https://italiancusine.github.io/la-tavola-italiana/easy-honey-cake.html"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+  </div>
+  <a href="https://pinterest.com/pin/create/button/?url=https://italiancusine.github.io/la-tavola-italiana/easy-honey-cake.html&media=images/easy-honey-cake.jpg&description=Easy+Honey+Cake" target="_blank"><i class="fab fa-pinterest"></i> Pin</a>
+</div>
+
+<section class="content">
+  <img src="images/easy-honey-cake.jpg" alt="Easy Honey Cake" class="recipe-image" />
+  <h2 id="introduction">Easy Honey Cake</h2>
+  <p>A simple, sweet honey cake that's perfect for breakfast, dessert, or an afternoon tea. Soft, fragrant, and easy to make!</p>
+
+  <h2 id="ingredients">Ingredients (8 servings)</h2>
+  <ul>
+    <li>1 cup (250 ml) honey</li>
+    <li>½ cup (120 ml) vegetable oil or melted butter</li>
+    <li>3 large eggs</li>
+    <li>1 tsp vanilla extract</li>
+    <li>1 ½ cups (190 g) all-purpose flour</li>
+    <li>1 ½ tsp baking powder</li>
+    <li>½ tsp baking soda</li>
+    <li>½ tsp cinnamon (optional)</li>
+    <li>Pinch of salt</li>
+    <li>¼ cup (60 ml) milk</li>
+  </ul>
+
+  <h2 id="instructions">Instructions</h2>
+  <ol>
+    <li>Preheat oven to 350°F (175°C). Grease an 8-inch round pan or line with parchment paper.</li>
+    <li>In a large bowl, whisk honey, oil (or butter), eggs, and vanilla until smooth.</li>
+    <li>In another bowl, combine flour, baking powder, baking soda, cinnamon, and salt.</li>
+    <li>Gradually fold dry ingredients into the wet mixture. Add milk and stir until smooth.</li>
+    <li>Pour batter into the prepared pan.</li>
+    <li>Bake 35–40 minutes, or until a toothpick inserted in the center comes out clean.</li>
+    <li>Let cool before slicing. Optional: dust with powdered sugar or drizzle with extra honey.</li>
+  </ol>
+
+  <h2 id="tips">Tips & Tricks</h2>
+  <ul>
+    <li>For a moist, denser cake, use all honey and a bit more oil.</li>
+    <li>Add nuts or dried fruits for variation.</li>
+    <li>Pairs beautifully with tea or coffee.</li>
+  </ul>
+
+  <div class="rate-section">
+    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+  </div>
+</section>
+
+<div class="back-link"><a href="index.html">← Back to Home</a></div>
+
+<footer>
+  <div class="footer-logo-container" aria-label="Footer logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200">
+      <path id="curve" fill="transparent" d="M 60 95 A 90 38 0 0 1 240 95" />
+      <text font-size="16" fill="white" font-family="'Playfair Display', serif" class="title-text">
+        <textPath href="#curve" startOffset="50%" text-anchor="middle">La Tavola Italiana</textPath>
+      </text>
+      <g transform="translate(90, 85) scale(0.85)">
+        <path d="M0 20 Q30 0 60 20 Q90 40 120 20" stroke="white" stroke-width="3" fill="none"/>
+        <ellipse cx="15" cy="10" rx="5" ry="3" fill="white"/>
+        <ellipse cx="45" cy="5" rx="5" ry="3" fill="white"/>
+        <ellipse cx="75" cy="25" rx="5" ry="3" fill="white"/>
+        <ellipse cx="105" cy="15" rx="5" ry="3" fill="white"/>
+      </g>
+    </svg>
+  </div>
+
+  <p>&copy; <span id="current-year"></span> La Tavola Italiana. All rights reserved.</p>
+  
+  <p class="mt-2">
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="about.html">About</a> |
+    <a href="terms.html">Terms of Service</a> |
+    <a href="affiliate.html">Affiliate Disclosure</a>
+  </p>
+
+  <div class="social-icons-footer" style="margin-top: 15px; display: flex; justify-content: center; gap: 15px;">
+    <a href="https://pinterest.com/italiancusine" target="_blank" rel="noopener" class="pinterest" aria-label="Pinterest">
+      <i class="fab fa-pinterest-p"></i>
+    </a>
+    <a href="https://www.instagram.com/latavolaitalianarecipes/" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/833349ad0ed5ca7b6b03f0253b1029b1.js"></script>
+</body>
+</html>
+
+
+
+

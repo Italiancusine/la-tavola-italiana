@@ -7,206 +7,153 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-X8GDPFR33H');
 </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gnocchi Recipe - La Tavola Italiana</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #FFF8F0;
-      color: #2C3E50;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #B03A2E;
-      color: white;
-      padding: 2em;
-      text-align: center;
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      margin: 0;
-    }
-    nav {
-      background-color: #8B2C2C;
-      color: white;
-      display: flex;
-      justify-content: center;
-      padding: 1em 0;
-      gap: 2em;
-      font-weight: bold;
-      font-family: 'Playfair Display', serif;
-    }
-    nav .dropdown {
-      position: relative;
-      cursor: pointer;
-    }
-    nav .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #fff;
-      color: #2C3E50;
-      min-width: 180px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      padding: 0.5em 0;
-      z-index: 10;
-      border-radius: 4px;
-    }
-    nav .dropdown-content a {
-      display: block;
-      padding: 0.5em 1em;
-      text-decoration: none;
-      color: #2C3E50;
-    }
-    nav .dropdown-content a:hover {
-      background-color: #f4d3d3;
-    }
-    nav .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    .content {
-      max-width: 900px;
-      margin: 2em auto 3em;
-      padding: 0 1em;
-    }
-    .recipe-image {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 1em;
-    }
-    button#printBtn {
-      background-color: #B03A2E;
-      color: white;
-      border: none;
-      padding: 0.6em 1.2em;
-      font-family: 'Playfair Display', serif;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-bottom: 1em;
-    }
-    button#printBtn:hover {
-      background-color: #8B2C2C;
-    }
-    h2, h3 {
-      font-family: 'Playfair Display', serif;
-      color: #8B2C2C;
-      margin-top: 1.5em;
-    }
-    ul, ol {
-      padding-left: 1.5em;
-    }
-    .fun-fact {
-      background-color: #f4d3d3;
-      border-left: 5px solid #B03A2E;
-      padding: 1em 1.5em;
-      margin-top: 2em;
-      font-style: italic;
-    }
-    .back-home {
-      margin-top: 3em;
-      font-size: 1.4em;
-      text-align: center;
-    }
-    .back-home a {
-      text-decoration: none;
-      color: #8B2C2C;
-      font-weight: bold;
-      font-family: 'Playfair Display', serif;
-    }
-    .back-home a:hover {
-      text-decoration: underline;
-    }
-    /* Jump to Recipe button style */
-    .jump-to-recipe {
-      display: block;
-      text-align: center;
-      margin-bottom: 1em;
-      font-family: 'Playfair Display', serif;
-      font-weight: bold;
-      color: #B03A2E;
-      text-decoration: none;
-      font-size: 1.1em;
-    }
-    .jump-to-recipe:hover {
-      text-decoration: underline;
-    }
-    /* Nutrition Table */
-    table.nutrition {
-      width: 100%;
-      max-width: 400px;
-      border-collapse: collapse;
-      margin-top: 1em;
-      font-size: 0.95em;
-    }
-    table.nutrition th, table.nutrition td {
-      border: 1px solid #B03A2E;
-      padding: 0.4em 0.8em;
-      text-align: left;
-    }
-    table.nutrition th {
-      background-color: #B03A2E;
-      color: white;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gnocchi - La Tavola Italiana</title>
+<link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+<style>
+/* General Body */
+body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background-color: #FFF8F0; color: #2C3E50; }
+
+/* Top Strip + Header Top Bar */
+.top-strip { background-color: #B03A2E; height: 36px; width: 100%; }
+
+.top-bar { background-color: #FFD9C7; display: flex; align-items: center; justify-content: space-between; padding: 0.5em 2em; flex-wrap: wrap; }
+
+.logo-container img { height: 200px; width: auto; display: block; }
+
+/* NAV */
+.top-nav { display: flex; gap: 1.5em; align-items: center; }
+.top-nav .dropdown { position: relative; }
+.top-nav button, .top-nav a.nav-link { font-weight: bold; background: none; border: none; color: #B03A2E; font-size: 1em; cursor: pointer; padding: 0.3em 0.6em; border-radius: 4px; text-decoration: none; }
+.top-nav button:hover, .top-nav a.nav-link:hover { color: #8B2C2C; }
+
+.top-nav .dropdown-content { display: none; position: absolute; top: calc(100% + 8px); left: 0; background-color: #FFF8F0; min-width: 180px; box-shadow: 0px 8px 20px rgba(0,0,0,0.18); z-index: 2000; padding: 0.4em 0; border-radius: 6px; }
+.top-nav .dropdown-content a { color: #2C3E50; padding: 0.5em 1em; display: block; text-decoration: none; }
+.top-nav .dropdown-content a:hover { background-color: #B03A2E; color: white; }
+.top-nav .dropdown:hover .dropdown-content { display: block; }
+
+/* Header Right (social icons) */
+.header-right { display:flex; flex-direction:column; align-items:flex-end; }
+.social-icons { display: flex; gap: 20px; }
+.social-icons a { text-decoration: none; color: #B03A2E; font-size: 28px; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; transition: transform 0.2s, box-shadow 0.2s; }
+.social-icons a.pinterest { background: #bd081c; color: white; }
+.social-icons a.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: white; }
+.social-icons a:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+/* Main Page Content */
+.container { max-width: 900px; margin: auto; padding: 2em; }
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; color: #8B2C2C; }
+
+p { line-height: 1.7; margin-bottom: 1.5em; }
+
+.recipe-image { width: 60%; max-width: 400px; height: auto; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block; margin: 1em auto; }
+
+/* Buttons Row */
+.top-buttons { display: flex; justify-content: center; gap: 1em; margin: 1em 0; flex-wrap: wrap; }
+.top-buttons a, .top-buttons button { display: flex; align-items: center; justify-content: center; gap: 0.4em; width: 130px; height: 50px; border: 1px solid #ccc; background-color: white; color: #2C3E50; font-weight: bold; border-radius: 4px; cursor: pointer; text-decoration: none; font-size: 0.95em; }
+.top-buttons a:hover, .top-buttons button:hover { background-color: #f2f2f2; border-color: #999; }
+
+/* Share dropdown */
+.share-dropdown { position: relative; display: inline-block; }
+.share-dropdown-content { display: none; position: absolute; background-color: #FFF8F0; min-width: 160px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2); border-radius: 6px; z-index: 1500; top: 100%; left: 0; }
+.share-dropdown-content a { padding: 0.5em 1em; display: flex; align-items: center; gap: 0.5em; color: #2C3E50; text-decoration:none; }
+.share-dropdown-content a:hover { background-color:#B03A2E; color:white; }
+.share-dropdown:hover .share-dropdown-content { display:block; }
+
+ul, ol { padding-left: 1.5em; }
+
+.back-home { display: block; text-align: center; margin: 2em auto 4em; text-decoration: none; font-weight: bold; color: #B03A2E; }
+.back-home i { margin-right: 0.5em; }
+
+/* Newsletter Box */
+.newsletter { background-color: #FDEDE8; padding: 2em; border-radius: 10px; text-align: center; margin-top: 2em; }
+.newsletter h3 { margin-bottom: 0.5em; color: #B03A2E; }
+.newsletter input[type="email"] { padding: 0.7em; border-radius: 5px; border: 1px solid #ccc; margin-right: 0.5em; width: 60%; max-width: 300px; }
+.newsletter button { padding: 0.7em 1em; background-color: #B03A2E; color: white; border: none; border-radius: 5px; cursor: pointer; }
+.newsletter button:hover { background-color: #8B2C2C; }
+
+/* Footer */
+footer { background-color: #800000; color: #FFF8F0; padding: 1em 2em; text-align: center; }
+footer a { color: #FFD580; text-decoration: none; }
+footer a:hover { color: #FFE28A; }
+
+@media screen and (max-width: 900px) { .social-icons a { width: 40px; height: 40px; font-size: 24px; } }
+</style>
 </head>
 <body>
 
+<!-- Top Strip + Header -->
+<div class="top-strip"></div>
+
 <header>
-  <h1>Gnocchi</h1>
+  <div class="top-bar">
+    <div class="logo-container">
+      <a href="index.html"><img src="images/logo.png" alt="La Tavola Italiana Logo"/></a>
+    </div>
+
+    <nav class="top-nav">
+      <div class="dropdown">
+        <button type="button">Recipes ▼</button>
+        <div class="dropdown-content">
+          <a href="appetizers.html">Appetizers</a>
+          <a href="maincourses.html">Main Courses</a>
+          <a href="desserts.html">Desserts</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button type="button">American Favorites ▼</button>
+        <div class="dropdown-content">
+          <a href="breakfast.html">Breakfast</a>
+          <a href="lunch.html">Lunch</a>
+          <a href="dinner.html">Dinner</a>
+        </div>
+      </div>
+
+      <a href="italiankitchenunveiled.html" class="nav-link">Italian Kitchen Unveiled</a>
+    </nav>
+
+    </nav>
+
+    <div class="header-right">
+      <div class="social-icons">
+        <a href="https://pinterest.com/italiancusine" target="_blank" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
+        <a href="https://www.instagram.com/latavolaitalianarecipes/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
 </header>
 
-<nav>
-  <div class="dropdown">
-    Recipes
-    <div class="dropdown-content">
-      <a href="#">Appetizers</a>
-      <a href="#">Main Courses</a>
-      <a href="#">Desserts</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    American Favorites
-    <div class="dropdown-content">
-      <a href="#">Breakfast</a>
-      <a href="#">Lunch</a>
-      <a href="#">Dinner</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    Recipe Tutorials
-    <div class="dropdown-content">
-      <a href="#">Easy</a>
-      <a href="#">Medium</a>
-      <a href="#">Hard</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    Italy
-    <div class="dropdown-content">
-      <a href="#">Taste by Region</a>
-      <a href="#">Dine Like a Local</a>
-      <a href="#">Culinary Destinations</a>
-    </div>
-  </div>
-</nav>
+<div class="container">
+  <header>
+    <h1>Gnocchi</h1>
+    <img src="images/gnocchi.jpg" alt="Gnocchi" class="recipe-image" />
+    
+    <div class="top-buttons">
+      <button onclick="saveRecipe()"><i class="fas fa-heart"></i> Save</button>
+      <button onclick="printRecipe()"><i class="fas fa-print"></i> Print</button>
+      <a href="#recipe"><i class="fas fa-arrow-right"></i> Jump</a>
 
-<main class="content">
+      <div class="share-dropdown">
+        <button><i class="fas fa-share-alt"></i> Share ▼</button>
+        <div class="share-dropdown-content">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://italiancusine.github.io/la-tavola-italiana/gnocchi.html" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="https://twitter.com/intent/tweet?url=https://italiancusine.github.io/la-tavola-italiana/gnocchi.html" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="https://api.whatsapp.com/send?text=Check+out+this+recipe https://italiancusine.github.io/la-tavola-italiana/gnocchi.html" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="mailto:?subject=Gnocchi&body=Check out this recipe: https://italiancusine.github.io/la-tavola-italiana/gnocchi.html"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+      </div>
 
-  <a href="#recipe" class="jump-to-recipe">Jump to Recipe ↓</a>
-
-  <img src="images/gnocchi.jpg" alt="Gnocchi" class="recipe-image" />
-
-  <button id="printBtn" onclick="window.print()">Print Recipe</button>
+      <a href="https://pinterest.com/pin/create/button/?url=https://italiancusine.github.io/la-tavola-italiana/gnocchi.html&media=images/gnocchi.jpg&description=Gnocchi" target="_blank"><i class="fab fa-pinterest"></i> Pin</a>
+    </div>
+  </header>
 
   <section id="recipe">
     <h2>Introduction</h2>
@@ -268,14 +215,76 @@
       <strong>Fun Fact:</strong> In Italy, gnocchi is traditionally eaten on Thursdays, known as 'Gnocchi Day,' with families gathering to enjoy this comfort food.
     </div>
 
-    <div class="back-home">
-      <a href="index.html">← Back to Home</a>
-    </div>
-
+    <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
   </section>
 
-</main>
+  <div class="newsletter">
+    <h3>Join the Table</h3>
+    <p>Subscribe for weekly recipes, cooking tips, and Italian inspiration straight to your inbox.</p>
+    <form action="#" method="post">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo-container" aria-label="Footer logo" style="margin-bottom: 15px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200">
+      <path id="curve" fill="transparent" d="M 60 95 A 90 38 0 0 1 240 95" />
+      <text font-size="16" fill="white" font-family="'Playfair Display', serif" class="title-text">
+        <textPath href="#curve" startOffset="50%" text-anchor="middle">La Tavola Italiana</textPath>
+      </text>
+      <g transform="translate(90, 85) scale(0.85)">
+        <path d="M0 20 Q30 0 60 20 Q90 40 120 20" stroke="white" stroke-width="3" fill="none"/>
+        <ellipse cx="15" cy="10" rx="5" ry="3" fill="white"/>
+        <ellipse cx="45" cy="5" rx="5" ry="3" fill="white"/>
+        <ellipse cx="75" cy="25" rx="5" ry="3" fill="white"/>
+        <ellipse cx="105" cy="15" rx="5" ry="3" fill="white"/>
+      </g>
+    </svg>
+  </div>
+
+  <p>&copy; <span id="current-year"></span> La Tavola Italiana. All rights reserved.</p>
+  
+  <p class="mt-2">
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="about.html">About</a> |
+    <a href="terms.html">Terms of Service</a> |
+    <a href="affiliate.html">Affiliate Disclosure</a>
+  </p>
+
+  <div class="social-icons-footer" style="margin-top: 15px; display: flex; justify-content: center; gap: 15px;">
+    <a href="https://pinterest.com/italiancusine" target="_blank" rel="noopener" aria-label="Pinterest" style="color: white; font-size: 20px;">
+      <i class="fab fa-pinterest-p"></i>
+    </a>
+    <a href="https://www.instagram.com/latavolaitalianarecipes/" target="_blank" rel="noopener" aria-label="Instagram" style="color: white; font-size: 20px;">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+});
+
+function printRecipe() { window.print(); }
+
+function saveRecipe() {
+  const contentEl = document.querySelector('.container');
+  const recipeText = contentEl ? contentEl.innerText : 'Recipe content not found';
+  const blob = new Blob([recipeText], { type: "text/plain" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "Gnocchi.txt";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
 <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/833349ad0ed5ca7b6b03f0253b1029b1.js"></script>
 </body>
 </html>
-

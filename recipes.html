@@ -78,9 +78,9 @@
     footer {
       background-color: #800000;
       color: white;
-      padding: 2em;
+      padding: 1em;
       text-align: center;
-      margin-top: 2em;
+      margin-top: 1em;
     }
     footer a {
       color: white;
@@ -91,6 +91,73 @@
       display: block;
       margin: 0 auto 1em;
     }
+ }
+
+    /* Footer Styles */
+    footer {
+      background-color: #800000; /* Maroon */
+      color: #FFF8F0;
+      padding: 0.8em 1.5em; /* slightly tighter vertical padding */
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 2em;
+    }
+    footer a {
+      color: #FFD580;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    footer a:hover {
+      color: #FFE28A;
+    }
+    footer .social-icons-footer {
+      margin-top: 0.8em;
+    }
+    footer .social-icons-footer a {
+      margin: 0 0.7em;
+      color: #FFD580;
+      font-size: 1.4em;
+      transition: color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    footer .social-icons-footer a:hover {
+      color: #FFE28A;
+    }
+
+    /* Footer logo container */
+    .footer-logo-container {
+      max-width: 240px;
+      margin: 0.2em auto 0.2em auto; /* reduced vertical margins */
+    }
+
+    /* Olive branch styles */
+    .olive-branch path,
+    .olive-branch ellipse {
+      fill: none;
+      stroke: #000000;
+      stroke-width: 1.7;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+
+    .olive-branch circle {
+      fill: #000000;
+      stroke: none;
+    }
+
+    /* Curved text style */
+    .title-text {
+      fill: #000000;
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+    }
+
   </style>
 </head>
 <body>
@@ -151,26 +218,48 @@
       </a>
     </div>
   </div>
-
+<!-- Footer Section -->
   <footer>
-    <!-- Footer logo with lower curve text -->
-    <svg width="150" height="80" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
-      <path id="curve" d="M 60 100 A 80 60 0 0 1 240 100" fill="transparent"/>
-      <text font-size="18" font-family="Playfair Display" fill="black">
-        <textPath href="#curve" startOffset="50%" text-anchor="middle">La Tavola Italiana</textPath>
-      </text>
-      <ellipse cx="150" cy="100" rx="40" ry="20" fill="none" stroke="black" stroke-width="2"/>
-      <line x1="120" y1="100" x2="180" y2="100" stroke="black" stroke-width="2"/>
-      <circle cx="115" cy="95" r="3" fill="black"/>
-      <circle cx="125" cy="95" r="3" fill="black"/>
-      <circle cx="175" cy="95" r="3" fill="black"/>
-      <circle cx="185" cy="95" r="3" fill="black"/>
-    </svg>
-    <p>
-      <a href="#">Privacy Policy</a> | 
-      <a href="#">About</a>
+    <div class="footer-logo-container" aria-label="Footer logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150">
+        <path id="curve" fill="transparent" d="M 60 95 A 90 38 0 0 1 240 95" />
+        <text font-size="16" fill="white" font-family="'Playfair Display', serif" class="title-text">
+          <textPath href="#curve" startOffset="50%" text-anchor="middle">La Tavola Italiana</textPath>
+        </text>
+        <g transform="translate(90, 85) scale(0.85)">
+          <path d="M0 20 Q30 0 60 20 Q90 40 120 20" stroke="white" stroke-width="3" fill="none"/>
+          <ellipse cx="15" cy="10" rx="5" ry="3" fill="white"/>
+          <ellipse cx="45" cy="5" rx="5" ry="3" fill="white"/>
+          <ellipse cx="75" cy="25" rx="5" ry="3" fill="white"/>
+          <ellipse cx="105" cy="15" rx="5" ry="3" fill="white"/>
+        </g>
+      </svg>
+    </div>
+    <p>&copy; 2025 La Tavola Italiana</p>
+
+    <p>&copy; <span id="current-year"></span> La Tavola Italiana. All rights reserved.</p>
+    <p class="mt-2">
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="about.html">About</a> |
+      <a href="terms.html">Terms of Service</a> |
+      <a href="affiliate.html">Affiliate Disclosure</a>
     </p>
-    <p>Pinterest | Instagram</p>
+    <div class="social-icons-footer">
+      <a
+        href="https://pinterest.com/yourprofile"
+        target="_blank"
+        rel="noopener"
+        aria-label="Pinterest"
+        ><i class="fab fa-pinterest"></i><span>Pinterest</span></a
+      >
+      <a
+        href="https://instagram.com/yourprofile"
+        target="_blank"
+        rel="noopener"
+        aria-label="Instagram"
+        ><i class="fab fa-instagram"></i><span>Instagram</span></a
+      >
+    </div>
   </footer>
 <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/833349ad0ed5ca7b6b03f0253b1029b1.js"></script>
 </body>

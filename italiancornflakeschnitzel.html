@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X8GDPFR33H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X8GDPFR33H');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Italian-Style Cornflake Schnitzel - La Tavola Italiana</title>
+<!-- Font Awesome CDN for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+<style>
+/* Copy all CSS exactly from your Cornetto page (top-bar, header, nav, buttons, content, footer, etc.) */
+.social-icons { display: flex; gap: 20px; }
+.social-icons a { text-decoration: none; color: white; font-size: 28px; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; transition: transform 0.2s, box-shadow 0.2s; }
+.social-icons a.pinterest { background: #bd081c; }
+.social-icons a.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.social-icons a:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+@media screen and (max-width: 900px) { .social-icons a { width: 40px; height: 40px; font-size: 24px; } }
+body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background-color: #FFF8F0; color: #2C3E50; line-height: 1.6; }
+/* --- Top Header Bar --- */
+.top-bar { background-color: #FFD9C7; display: flex; align-items: center; justify-content: space-between; padding: 0.5em 2em; flex-wrap: wrap; }
+.top-strip { background-color: #B03A2E; height: 36px; width: 100%; }
+.logo-container img { height: 200px; width: auto; display: block; }
+.top-nav { display: flex; gap: 1.5em; align-items: center; position: relative; }
+.top-nav button, .top-nav a.nav-link { font-weight: bold; background: none; border: none; color: #B03A2E; font-size: 1em; cursor: pointer; padding: 0.3em 0.6em; border-radius: 4px; position: relative; text-decoration: none; }
+.top-nav button:hover, .top-nav a.nav-link:hover { color: #8B2C2C; }
+.top-nav .dropdown-content { display: none; position: absolute; background-color: #FFF8F0; min-width: 180px; left: 50%; transform: translateX(-50%); box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1000; padding: 0.5em 0; border-radius: 6px; }
+.top-nav .dropdown-content a { color: #2C3E50; padding: 0.5em 1em; text-decoration: none; display: block; font-weight: normal; }
+.top-nav .dropdown-content a:hover { background-color: #B03A2E; color: white; }
+.top-nav div:hover .dropdown-content { display: block; }
+.header-right { display: flex; flex-direction: column; align-items: flex-end; }
+.search-social { display: flex; align-items: center; gap: 0.5em; }
+.search-bar { padding: 0.4em 0.8em; border-radius: 6px; border: 1px solid #B03A2E; font-size: 0.9em; }
+/* --- Social Icons --- */
+.social-icons, .social-icons-footer { display: flex; gap: 20px; }
+.social-icons a, .social-icons-footer a { text-decoration: none; color: white; font-size: 28px; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; transition: transform 0.2s, box-shadow 0.2s; }
+.social-icons a.pinterest, .social-icons-footer a.pinterest { background: #bd081c; }
+.social-icons a.instagram, .social-icons-footer a.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.social-icons a:hover, .social-icons-footer a:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+/* Responsive header */
+@media screen and (max-width: 1200px) { .social-icons a, .social-icons-footer a { width: 40px; height: 40px; font-size: 1.3em; } }
+@media screen and (max-width: 900px) { .top-bar { flex-direction: column; align-items: center; gap: 0.5em; } .top-nav { justify-content: center; flex-wrap: wrap; } .header-right { align-items: center; } .social-icons a, .social-icons-footer a { width: 36px; height: 36px; font-size: 1.2em; } }
+/* --- Recipe Buttons --- */
+.top-buttons { margin: 1em 0; display: flex; justify-content: flex-start; gap: 0.8em; flex-wrap: wrap; }
+.top-buttons a, .top-buttons button { display: flex; align-items: center; justify-content: center; gap: 0.4em; width: 130px; height: 50px; border: 1px solid #ccc; background-color: white; color: #2C3E50; font-weight: bold; border-radius: 4px; cursor: pointer; text-decoration: none; font-size: 0.95em; }
+.top-buttons a:hover, .top-buttons button:hover { background-color: #f2f2f2; border-color: #999; }
+.top-buttons i { font-size: 1.2em; color: #2C3E50; }
+/* Share dropdown */
+.share-dropdown { position: relative; display: inline-block; }
+.share-dropdown-content { display: none; position: absolute; background-color: #FFF8F0; min-width: 160px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2); border-radius: 6px; z-index: 1000; top: 100%; left: 0; }
+.share-dropdown-content a { display: flex; align-items: center; gap: 0.5em; padding: 0.5em 1em; text-decoration: none; color: #2C3E50; }
+.share-dropdown-content a i { font-size: 1.2em; }
+.share-dropdown-content a:hover { background-color: #B03A2E; color: white; }
+.share-dropdown:hover .share-dropdown-content { display: block; }
+/* --- Recipe Content --- */
+.content { padding: 2em; max-width: 800px; margin: auto; }
+h2, h3 { font-family: 'Playfair Display', serif; color: #8B2C2C; }
+.recipe-image { width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 1em; }
+.back-link { display: block; text-align: center; margin-top: 2em; font-size: 1.2em; }
+.back-link a { text-decoration: none; color: #8B2C2C; font-weight: bold; }
+.back-link a:hover { text-decoration: underline; }
+/* Rate section below recipe */
+.rate-section { text-align: center; margin: 1.5em 0; font-size: 1.2em; }
+.rate-section span { font-size: 1.5em; cursor: pointer; color: #ccc; margin: 0 2px; transition: color 0.2s; }
+.rate-section span.hover, .rate-section span.selected { color: #FFD700; }
+@media print { .top-bar, .top-buttons { display: none; } }
+/* --- Footer --- */
+footer { background-color: #800000; color: #FFF8F0; padding: 1em 2em; text-align: center; font-size: 0.9em; }
+footer a { color: #FFD580; text-decoration: none; }
+footer a:hover { color: #FFE28A; }
+.footer-logo-container { max-width: 240px; margin: 0.5em auto; }
+/* --- Highlight search matches --- */
+.highlight { background-color: yellow; }
+</style>
+
+<script>
+function printRecipe() { window.print(); }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const stars = document.querySelectorAll('.rate-section span');
+  const savedRating = localStorage.getItem('cornflakeSchnitzelRating');
+  if(savedRating) { stars.forEach((s, i) => s.classList.toggle('selected', i < savedRating)); }
+  stars.forEach((star, index) => {
+    star.addEventListener('mouseover', () => { stars.forEach((s, i) => { s.classList.toggle('hover', i <= index); }); });
+    star.addEventListener('mouseout', () => { stars.forEach((s, i) => { s.classList.remove('hover'); }); });
+    star.addEventListener('click', () => { stars.forEach((s, i) => { s.classList.toggle('selected', i <= index); }); localStorage.setItem('cornflakeSchnitzelRating', index+1); });
+  });
+
+  const saveButton = document.querySelector('.top-buttons button');
+  const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes') || '[]');
+  if(savedRecipes.includes('Italian-Style Cornflake Schnitzel')) {
+    saveButton.style.backgroundColor = '#FFD700';
+    saveButton.style.color = '#2C3E50';
+  }
+  saveButton.addEventListener('click', () => {
+    let savedRecipes = JSON.parse(localStorage.getItem('savedRecipes') || '[]');
+    if(!savedRecipes.includes('Italian-Style Cornflake Schnitzel')) {
+      savedRecipes.push('Italian-Style Cornflake Schnitzel');
+      localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
+      saveButton.style.backgroundColor = '#FFD700';
+      alert('Recipe saved to your favorites!');
+    } else { alert('Recipe already in your favorites!'); }
+  });
+
+  // --- Search bar live filtering ---
+  const searchBar = document.querySelector('.search-bar');
+  searchBar.addEventListener('input', () => {
+    const query = searchBar.value.trim().toLowerCase();
+    const contentSection = document.querySelector('.content');
+    // Remove previous highlights
+    contentSection.querySelectorAll('.highlight').forEach(el => {
+      el.outerHTML = el.innerHTML;
+    });
+
+    if(query.length > 0) {
+      // escape regex metacharacters in query
+      const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(`(${escaped})`, 'gi');
+      contentSection.querySelectorAll('p, li').forEach(el => {
+        const text = el.textContent.toLowerCase();
+        if(text.includes(query)) {
+          el.innerHTML = el.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+        }
+      });
+    }
+  });
+
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+});
+</script>
+</head>
+<body>
+<div class="top-strip"></div>
+<header>
+  <div class="top-bar">
+    <div class="logo-container">
+      <a href="index.html"><img src="images/logo.png" alt="La Tavola Italiana Logo" /></a>
+    </div>
+    <nav class="top-nav">
+      <div>
+        <button>Recipes ▼</button>
+        <div class="dropdown-content">
+          <a href="appetizers.html">Appetizers</a>
+          <a href="maincourses.html">Main Courses</a>
+          <a href="desserts.html">Desserts</a>
+        </div>
+      </div>
+      <div>
+        <button>American Favorites ▼</button>
+        <div class="dropdown-content">
+          <a href="breakfast.html">Breakfast</a>
+          <a href="lunch.html">Lunch</a>
+          <a href="dinner.html">Dinner</a>
+        </div>
+      </div>
+      <div><a href="italiankitchenunveiled.html" class="nav-link">Italian Kitchen Unveiled</a></div>
+    </nav>
+    <div class="header-right">
+      <div class="search-social">
+        <input type="text" placeholder="Search recipes..." class="search-bar" />
+        <div class="social-icons">
+          <a href="https://pinterest.com/italiancusine" target="_blank" class="pinterest" aria-label="Pinterest">
+            <i class="fab fa-pinterest-p"></i>
+          </a>
+          <a href="https://www.instagram.com/latavolaitalianarecipes/" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- The rest of your page content stays the same -->
+<div class="top-buttons">
+  <button><i class="fas fa-heart"></i> Save</button>
+  <button onclick="printRecipe()"><i class="fas fa-print"></i> Print</button>
+  <a href="#introduction"><i class="fas fa-arrow-right"></i> Jump</a>
+  <div class="share-dropdown">
+    <button><i class="fas fa-share-alt"></i> Share ▼</button>
+    <div class="share-dropdown-content">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://italiancusine.github.io/la-tavola-italiana/italian-style-cornflake-schnitzel.html" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="https://twitter.com/intent/tweet?url=https://italiancusine.github.io/la-tavola-italiana/italian-style-cornflake-schnitzel.html&text=Italian-Style+Cornflake+Schnitzel" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="https://api.whatsapp.com/send?text=Check+out+this+recipe+https://italiancusine.github.io/la-tavola-italiana/italian-style-cornflake-schnitzel.html" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:?subject=Italian-Style Cornflake Schnitzel&body=Check out this recipe: https://italiancusine.github.io/la-tavola-italiana/italian-style-cornflake-schnitzel.html"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+  </div>
+  <a href="https://pinterest.com/pin/create/button/?url=https://italiancusine.github.io/la-tavola-italiana/italian-style-cornflake-schnitzel.html&media=images/placeholder.jpg&description=Italian-Style+Cornflake+Schnitzel" target="_blank"><i class="fab fa-pinterest"></i> Pin</a>
+</div>
+
+<section class="content">
+  <img src="images/placeholder.jpg" alt="Italian-Style Cornflake Schnitzel" class="recipe-image" />
+  <h2 id="introduction">Introduction</h2>
+  <p>Italian-Style Cornflake Schnitzel brings the fun crunch of cornflakes together with classic Italian herb flavors — golden, crispy, and deeply satisfying. It’s a quick, family-friendly main that feels both familiar and a little bit special.</p>
+
+  <h2 id="history">History</h2>
+  <p>While the breaded cutlet is best known as the Austrian Wiener Schnitzel, Italy’s long tradition of breaded meats (<em>cotoletta alla milanese</em>) likely predates it. The idea of using a crunchy coating has evolved everywhere — this variation uses cornflakes for an extra-light crisp and Italian herbs to give the dish Mediterranean character.</p>
+
+  <h2 id="whyweloveit">Why We Love It</h2>
+  <p>We love this version because it combines three great things: texture, speed, and flavor. The cornflake crumb gives an irresistible crunch that stays crisp after frying; the herb-seasoned breadcrumb mix adds Italian warmth and aroma; and the technique is fast — perfect for weeknights when you want something both comforting and slightly elevated. Kids love the crunch, adults love the seasoning, and everyone loves how it turns simple pantry staples into a memorable meal.</p>
+
+  <h2 id="ingredients">Ingredients (4 servings)</h2>
+  <ul>
+    <li>4 chicken cutlets (boneless, skinless, pounded thin)</li>
+    <li>2 cups cornflakes, crushed into fine crumbs</li>
+    <li>½ cup breadcrumbs (Italian seasoned, or plain with herbs added)</li>
+    <li>½ cup all-purpose flour</li>
+    <li>2 large eggs</li>
+    <li>2 tbsp milk or water</li>
+    <li>1 tsp garlic powder</li>
+    <li>1 tsp dried oregano</li>
+    <li>1 tsp dried basil</li>
+    <li>½ tsp paprika</li>
+    <li>Salt & black pepper to taste</li>
+    <li>Olive oil or vegetable oil, for frying (about ¼ inch in skillet)</li>
+  </ul>
+
+  <h2 id="instructions">Instructions</h2>
+  <ol>
+    <li>Place flour in one shallow bowl.</li>
+    <li>In a second bowl, whisk eggs with milk.</li>
+    <li>In a third bowl, mix crushed cornflakes, breadcrumbs, garlic powder, oregano, basil, paprika, salt, and pepper.</li>
+    <li>Dredge each chicken cutlet first in flour (shake off excess), then dip in egg wash, and finally coat well in the cornflake mixture. Press crumbs gently so they stick.</li>
+    <li>Heat about ¼ inch oil in a large skillet over medium heat until shimmering (but not smoking).</li>
+    <li>Fry schnitzels 3–4 minutes per side, until golden brown and cooked through (internal temp 165°F / 74°C).</li>
+    <li>Drain on paper towels, season immediately with a light pinch of salt, and serve hot with lemon wedges.</li>
+  </ol>
+
+  <h2 id="tips">Tips & Tricks</h2>
+  <ul>
+    <li>Use slightly stale or crushed cornflakes for better adhesion — pulse in a food processor for a fine crumb.</li>
+    <li>Don't overcrowd the pan: fry in batches to preserve oil temperature and crispness.</li>
+    <li>For extra flavor, add a tablespoon of grated Parmesan to the cornflake mix.</li>
+    <li>If coating slips off, let cutlets rest 5 minutes after breading so crumbs set before frying.</li>
+  </ul>
+
+  <h2 id="serving">Serving Suggestions</h2>
+  <p>Serve with lemon wedges, a simple tomato-mozzarella salad (caprese-style), roasted garlic potatoes, or a small bowl of warm marinara for dipping. Garnish with chopped parsley for color and freshness.</p>
+
+  <h2 id="nutrition">Nutrition Info (per serving — estimated)</h2>
+  <p>These values are approximate and depend on oil absorption and exact ingredient brands.</p>
+  <ul>
+    <li><strong>Calories:</strong> ~368 kcal</li>
+    <li><strong>Total Fat:</strong> ~15 g</li>
+    <li><strong>Cholesterol:</strong> ~99 mg</li>
+    <li><strong>Sodium:</strong> ~440 mg</li>
+    <li><strong>Carbohydrates:</strong> ~34 g</li>
+    <li><strong>Protein:</strong> ~24 g</li>
+  </ul>
+
+  <h2 id="funfact">Fun Fact</h2>
+  <p>The word “schnitzel” comes from the German diminutive for “slice” — but people across Europe have been breading and frying thin slices of meat for centuries. Using crushed cereal (like cornflakes) for breading became popular in home kitchens because it gives consistent crunch and is a great pantry shortcut.</p>
+
+  <div class="rate-section">
+    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+  </div>
+</section>
+
+<div class="back-link"><a href="index.html">← Back to Home</a></div>
+
+<footer style="background-color: #800000; color: #FFF8F0; text-align: center; padding: 20px;">
+  <div class="footer-logo-container" aria-label="Footer logo" style="margin-bottom: 15px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200">
+      <path id="curve" fill="transparent" d="M 60 95 A 90 38 0 0 1 240 95" />
+      <text font-size="16" fill="white" font-family="'Playfair Display', serif" class="title-text">
+        <textPath href="#curve" startOffset="50%" text-anchor="middle">La Tavola Italiana</textPath>
+      </text>
+      <g transform="translate(90, 85) scale(0.85)">
+        <path d="M0 20 Q30 0 60 20 Q90 40 120 20" stroke="white" stroke-width="3" fill="none"/>
+        <ellipse cx="15" cy="10" rx="5" ry="3" fill="white"/>
+        <ellipse cx="45" cy="5" rx="5" ry="3" fill="white"/>
+        <ellipse cx="75" cy="25" rx="5" ry="3" fill="white"/>
+        <ellipse cx="105" cy="15" rx="5" ry="3" fill="white"/>
+      </g>
+    </svg>
+  </div>
+
+  <p>&copy; <span id="current-year"></span> La Tavola Italiana. All rights reserved.</p>
+  
+  <p class="mt-2">
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="about.html">About</a> |
+    <a href="terms.html">Terms of Service</a> |
+    <a href="affiliate.html">Affiliate Disclosure</a>
+  </p>
+
+  <div class="social-icons-footer" style="margin-top: 15px; display: flex; justify-content: center; gap: 15px;">
+    <a href="https://pinterest.com/italiancusine" target="_blank" rel="noopener" class="pinterest" aria-label="Pinterest" style="color: white; font-size: 20px;">
+      <i class="fab fa-pinterest-p"></i>
+    </a>
+    <a href="https://www.instagram.com/latavolaitalianarecipes/" target="_blank" rel="noopener" class="instagram" aria-label="Instagram" style="color: white; font-size: 20px;">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/833349ad0ed5ca7b6b03f0253b1029b1.js"></script>
+</body>
+</html>
+

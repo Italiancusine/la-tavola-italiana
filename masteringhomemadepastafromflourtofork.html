@@ -7,271 +7,407 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-X8GDPFR33H');
 </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Unlock the secrets to perfect homemade pasta with expert tips, dough variations, storage tricks, and flavor pairings that elevate your Italian kitchen experience." />
-  <meta name="keywords" content="homemade pasta, pasta tips, Italian cooking, fresh pasta, how to make pasta, semolina, pasta storage, pasta shapes, pasta secrets" />
-  <meta name="author" content="La Tavola Italiana" />
-  <title>Mastering Homemade Pasta: From Flour to Fork | Italian Kitchen Unveiled</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #FFF8F0;
-      color: #2C3E50;
-    }
-    nav {
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-    }
-    .nav-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5em 1em;
-    }
-    .nav-top .left-nav a {
-      margin-right: 1em;
-      color: #A94438;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .search-bar input[type="text"] {
-      padding: 0.5em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .social-icons a {
-      margin-left: 10px;
-      color: #B03A2E;
-      font-size: 1.2em;
-      text-decoration: none;
-    }
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 1em;
-      padding: 0.5em;
-      background-color: #FBE8D3;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: #A94438;
-      font-weight: bold;
-    }
-    .dropdown {
-      position: relative;
-    }
-    .dropbtn {
-      padding: 0.5em;
-      display: inline-block;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #fff;
-      min-width: 180px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-      z-index: 1;
-    }
-    .dropdown-content a {
-      display: block;
-      padding: 0.5em 1em;
-      color: #333;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    header {
-      background-image: url('https://www.eataly.com/media/wysiwyg/Blog/2021/July/Italian_Food_Traditions.jpg');
-      background-size: cover;
-      background-position: center;
-      padding: 3em 2em;
-      text-align: center;
-      color: white;
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      margin: 0;
-      color: #FFE28A;
-    }
-    .back-home {
-      display: block;
-      margin: 2em auto;
-      width: fit-content;
-      padding: 0.6em 1.5em;
-      background-color: #B03A2E;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    .back-home:hover {
-      background-color: #922B21;
-    }
-    .content {
-      padding: 2em;
-      line-height: 1.7em;
-      max-width: 800px;
-      margin: auto;
-    }
-    h2, h3 {
-      font-family: 'Playfair Display', serif;
-      color: #A94438;
-    }
-    .content img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin: 1em 0;
-    }
-    .video-coming-soon {
-      margin: 2em 0;
-      text-align: center;
-    }
-    .video-box {
-      background-color: #fceee3;
-      border: 2px dashed #e4c1b3;
-      padding: 2em;
-      border-radius: 12px;
-      max-width: 700px;
-      margin: 0 auto;
-      color: #8b0000;
-      font-size: 1.1em;
-      font-family: 'Open Sans', sans-serif;
-    }
-    .faq h3 {
-      margin-top: 1.5em;
-    }
-  </style>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta name="description" content="Unlock the secrets to perfect homemade pasta with expert tips, dough variations, storage tricks, and flavor pairings that elevate your Italian kitchen experience." />
+<meta name="keywords" content="homemade pasta, pasta tips, Italian cooking, fresh pasta, how to make pasta, semolina, pasta storage, pasta shapes, pasta secrets" />
+<meta name="author" content="La Tavola Italiana" />
+
+<title>Mastering Homemade Pasta: From Flour to Fork | Italian Kitchen Unveiled</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+<style>
+/* ---------- GLOBAL TEMPLATE ---------- */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFF8F0;
+  color: #2C3E50;
+}
+
+.top-strip { background-color: #FFD9C7; height: 36px; width: 100%; }
+
+.top-bar {
+  background-color: #F8EBDD;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 2em;
+  flex-wrap: wrap;
+  gap: 1em;
+  border-bottom: 1px solid #e6d2c1;
+}
+
+.logo-container img { height: 110px; width: auto; display: block; }
+
+/* Navigation */
+.top-nav { display: flex; gap: 1.25em; align-items: center; }
+.top-nav .dropdown { position: relative; }
+.top-nav button, .top-nav a.nav-link {
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #B03A2E;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0.25em 0.6em;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.top-nav button:hover, .top-nav a.nav-link:hover { color: #8B2C2C; }
+
+.top-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background-color: #FFF8F0;
+  min-width: 180px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.18);
+  z-index: 2000;
+  padding: 0.4em 0;
+  border-radius: 6px;
+}
+
+.top-nav .dropdown-content a {
+  color: #2C3E50;
+  padding: 0.5em 1em;
+  display: block;
+  text-decoration: none;
+}
+
+.top-nav .dropdown-content a:hover {
+  background-color: #B03A2E;
+  color: white;
+}
+
+.top-nav .dropdown:hover .dropdown-content { display: block; }
+
+/* Social */
+.header-right { display: flex; flex-direction: column; align-items: flex-end; }
+.social-icons { display: flex; gap: 16px; }
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.instagram { 
+  background: radial-gradient(circle at 30% 107%, 
+    #fdf497 0%, #fdf497 5%, #fd5949 45%, 
+    #d6249f 60%, #285AEB 90%); 
+}
+.pinterest { background: #bd081c; }
+
+/* HEADER IMAGE */
+header {
+  background-image: url('https://www.eataly.com/media/wysiwyg/Blog/2021/July/Italian_Food_Traditions.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 3em 2em;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin: 0;
+  color: #FFE28A;
+}
+
+/* CONTENT */
+.content {
+  padding: 2em;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.7em;
+}
+
+.content img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 1em 0;
+}
+
+h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #A94438;
+}
+
+/* Video */
+.video-box {
+  background-color: #fceee3;
+  border: 2px dashed #e4c1b3;
+  padding: 2em;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+/* Action Buttons */
+.action-buttons {
+  margin: 1.5em 0;
+  display: flex;
+  gap: 12px;
+}
+.action-buttons button {
+  background-color: #B03A2E;
+  color: white;
+  border: none;
+  padding: 0.6em 1.1em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.action-buttons button:hover {
+  background-color: #922B21;
+}
+
+/* Back button */
+.back-home {
+  display: block;
+  margin: 2.5em auto;
+  width: fit-content;
+  padding: 0.7em 1.6em;
+  background-color: #B03A2E;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.back-home:hover { background-color: #922B21; }
+
+/* Footer */
+footer {
+  background-color: #F8EBDD;
+  padding: 2em;
+  text-align: center;
+  color: #B03A2E;
+  border-top: 1px solid #e6d2c1;
+}
+
+footer .footer-social a {
+  margin: 0 6px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+footer .footer-links a {
+  color: #B03A2E;
+  text-decoration: none;
+  margin: 0 8px;
+}
+</style>
 </head>
 
 <body>
-  <nav>
-    <div class="nav-top">
-      <div class="left-nav">
-        <a href="about.html">About</a>
-        <a href="privacy.html">Privacy Policy</a>
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search recipes..." />
-      </div>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
-        <a href="#"><i class="fab fa-pinterest"></i></a>
-      </div>
-    </div>
-    <div class="nav-links">
-      <div class="dropdown">
-        <a href="recipes.html" class="dropbtn"><i class="fas fa-utensils"></i> Recipes</a>
-        <div class="dropdown-content">
-          <a href="appetizers.html">Appetizers</a>
-          <a href="maincourses.html">Main Courses</a>
-          <a href="desserts.html">Desserts</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <a href="americanfavorites.html" class="dropbtn"><i class="fas fa-hamburger"></i> American Favorites</a>
-        <div class="dropdown-content">
-          <a href="breakfast.html">Breakfast</a>
-          <a href="lunch.html">Lunch</a>
-          <a href="dinner.html">Dinner</a>
-        </div>
-      </div>
-      <a href="italiankitchenunveiled.html" class="dropbtn"><i class="fas fa-book-open"></i> Italian Kitchen Unveiled</a>
-    </div>
-  </nav>
 
-  <header>
-    <h1>Mastering Homemade Pasta: From Flour to Fork</h1>
-  </header>
+<!-- TOP STRIP -->
+<div class="top-strip"></div>
 
-  
+<!-- TOP BAR -->
+<div class="top-bar">
 
-  <div class="content">
-    <img src="images/pastadough.jpg" alt="Fresh homemade pasta dough">
-    <p>There’s something deeply satisfying about making pasta from scratch. It connects you to the rhythms of Italian kitchens, to generations who have flour-dusted their counters and shaped noodles by hand.</p>
-
-    <div class="video-coming-soon">
-      <div class="video-box">
-        <p>🍝 <strong>Video tutorial coming soon!</strong></p>
-        <p>We’re preparing a step-by-step video to guide you through homemade pasta making — just like Nonna used to do. Stay tuned!</p>
-      </div>
-    </div>
-
-    <h2>What Makes Great Homemade Pasta?</h2>
-    <p>The secret lies in balance: flour, egg, and patience. Great pasta has a silky texture, slight elasticity, and subtle richness. Semolina flour adds strength and a delicate bite, while “00” flour creates a tender result. Resting the dough and rolling it thin enough are key.</p>
-
-    <h2>Common Mistakes to Avoid</h2>
-    <p><strong>Why is my pasta dough too dry or too wet?</strong> Add water or flour gradually and knead until the dough is smooth and elastic — not sticky, not cracking.</p>
-    <p><strong>Overworking the dough:</strong> Excessive kneading can make your pasta tough. Ten minutes is enough.</p>
-    <p><strong>Skipping the rest:</strong> Dough that hasn’t rested won’t roll easily. Resting relaxes gluten, making it more pliable.</p>
-
-    <h2>Pasta Shapes & Sauce Pairings</h2>
-    <ul>
-      <li><strong>Long pastas</strong> (spaghetti, fettuccine): Great with oil-based or tomato sauces.</li>
-      <li><strong>Short pastas</strong> (penne, rigatoni): Ideal for chunkier sauces.</li>
-      <li><strong>Stuffed pastas</strong> (ravioli, tortellini): Best with butter or light cream sauces.</li>
-    </ul>
-
-    <h2>Ingredient Deep Dive</h2>
-    <p><strong>Semolina:</strong> Adds chew and traditional texture.</p>
-    <p><strong>All-purpose flour:</strong> Great for beginners. Softer texture, easy to work with.</p>
-
-    <h2>Storage Tips</h2>
-    <p>Let pasta dry up to 24 hours and store in an airtight container. Or freeze fresh pasta dusted with flour and cook directly from frozen.</p>
-
-    <h2>Pasta Dough Variations</h2>
-    <ul>
-      <li><strong>Spinach:</strong> Add puréed spinach for color.</li>
-      <li><strong>Beet:</strong> Adds color and earthy flavor.</li>
-      <li><strong>Gluten-Free:</strong> Use rice flour + xanthan gum blend.</li>
-    </ul>
-
-    <h2>Authenticity vs Modern Convenience</h2>
-    <p>Many Italians use machines. What matters most is love, care, and good dough — not hand vs roller debate.</p>
-
-    <h2>My First Pasta Memory</h2>
-    <p>I still remember my Nonna placing a huge ball of dough on the table and saying, “We feed with hands, not machines.” But later that year, she bought a hand-crank roller and whispered, “Just don’t tell the neighbors.” That day, I fell in love with pasta making — and I’ve never looked back.</p>
-
-    <div class="faq">
-      <h2>People Also Ask</h2>
-      <h3>What is the secret to making good pasta?</h3>
-      <p>Fresh ingredients, kneading until elastic, and resting the dough are key.</p>
-
-      <h3>What makes a good homemade pasta?</h3>
-      <p>Silky texture, mild flavor, and slightly chewy bite from good flour and patience.</p>
-
-      <h3>How to enhance homemade pasta?</h3>
-      <p>Add herbs, use fresh eggs, and cook in salted water. Finish in sauce with reserved pasta water.</p>
-
-      <h3>What are the common mistakes in homemade pasta?</h3>
-      <p>Too much flour, skipping rest time, not kneading enough, and rolling too thick.</p>
-
-      <h3>Why does restaurant pasta taste better?</h3>
-      <p>They salt water generously, finish pasta in sauce, and use butter, parmesan, and fresh ingredients.</p>
-
-      <h3>What is the best flour for homemade pasta?</h3>
-      <p>“00” flour for tenderness, semolina for firmness, or a blend.</p>
-
-      <h3>Can you overwork homemade pasta?</h3>
-      <p>Yes. 8–10 minutes of kneading is ideal. Overdoing it leads to toughness.</p>
-    </div>
-
-    <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="images/logo.png" alt="La Tavola Italiana Logo">
+    </a>
   </div>
-<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/833349ad0ed5ca7b6b03f0253b1029b1.js"></script>
-</body>
 
+  <div class="top-nav">
+
+    <div class="dropdown">
+      <button>Recipes</button>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button>American Favorites</button>
+      <div class="dropdown-content">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+
+    <a class="nav-link" href="italiankitchenunveiled.html">
+      Italian Kitchen Unveiled
+    </a>
+
+  </div>
+
+  <div class="header-right">
+    <div class="social-icons">
+      <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+  </div>
+
+</div>
+
+<!-- HEADER -->
+<header>
+  <h1>Mastering Homemade Pasta: From Flour to Fork</h1>
+</header>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="action-buttons">
+    <button onclick="window.print()"><i class="fas fa-print"></i> Print</button>
+    <button onclick="saveRecipe()"><i class="fas fa-bookmark"></i> Save</button>
+    <button onclick="shareRecipe()"><i class="fas fa-share-alt"></i> Share</button>
+  </div>
+
+  <img src="images/pastadough.jpg" alt="Fresh homemade pasta dough">
+  <p>There’s something deeply satisfying about making pasta from scratch. It connects you to the rhythms of Italian kitchens, to generations who have flour-dusted their counters and shaped noodles by hand.</p>
+
+  <div class="video-box">
+    <p>🍝 <strong>Video tutorial coming soon!</strong></p>
+    <p>We’re preparing a step-by-step video to guide you through homemade pasta making — just like Nonna used to do. Stay tuned!</p>
+  </div>
+
+  <h2>What Makes Great Homemade Pasta?</h2>
+  <p>The secret lies in balance: flour, egg, and patience. Great pasta has a silky texture, slight elasticity, and subtle richness. Semolina flour adds strength and a delicate bite, while “00” flour creates a tender result. Resting the dough and rolling it thin enough are key.</p>
+
+  <h2>Common Mistakes to Avoid</h2>
+  <p><strong>Why is my pasta dough too dry or too wet?</strong> Add water or flour gradually and knead until the dough is smooth and elastic — not sticky, not cracking.</p>
+  <p><strong>Overworking the dough:</strong> Excessive kneading can make your pasta tough. Ten minutes is enough.</p>
+  <p><strong>Skipping the rest:</strong> Dough that hasn’t rested won’t roll easily. Resting relaxes gluten, making it more pliable.</p>
+
+  <h2>Pasta Shapes & Sauce Pairings</h2>
+  <ul>
+    <li><strong>Long pastas</strong> (spaghetti, fettuccine): Great with oil-based or tomato sauces.</li>
+    <li><strong>Short pastas</strong> (penne, rigatoni): Ideal for chunkier sauces.</li>
+    <li><strong>Stuffed pastas</strong> (ravioli, tortellini): Best with butter or light cream sauces.</li>
+  </ul>
+
+  <h2>Ingredient Deep Dive</h2>
+  <p><strong>Semolina:</strong> Adds chew and traditional texture.</p>
+  <p><strong>All-purpose flour:</strong> Great for beginners. Softer texture, easy to work with.</p>
+
+  <h2>Storage Tips</h2>
+  <p>Let pasta dry up to 24 hours and store in an airtight container. Or freeze fresh pasta dusted with flour and cook directly from frozen.</p>
+
+  <h2>Pasta Dough Variations</h2>
+  <ul>
+    <li><strong>Spinach:</strong> Add puréed spinach for color.</li>
+    <li><strong>Beet:</strong> Adds color and earthy flavor.</li>
+    <li><strong>Gluten-Free:</strong> Use rice flour + xanthan gum blend.</li>
+  </ul>
+
+  <h2>Authenticity vs Modern Convenience</h2>
+  <p>Many Italians use machines. What matters most is love, care, and good dough — not hand vs roller debate.</p>
+
+  <h2>My First Pasta Memory</h2>
+  <p>I still remember my Nonna placing a huge ball of dough on the table and saying, “We feed with hands, not machines.” But later that year, she bought a hand-crank roller and whispered, “Just don’t tell the neighbors.” That day, I fell in love with pasta making — and I’ve never looked back.</p>
+
+  <div class="faq">
+    <h2>People Also Ask</h2>
+
+    <h3>What is the secret to making good pasta?</h3>
+    <p>Fresh ingredients, kneading until elastic, and resting the dough are key.</p>
+
+    <h3>What makes a good homemade pasta?</h3>
+    <p>Silky texture, mild flavor, and slightly chewy bite from good flour and patience.</p>
+
+    <h3>How to enhance homemade pasta?</h3>
+    <p>Add herbs, use fresh eggs, and cook in salted water. Finish in sauce with reserved pasta water.</p>
+
+    <h3>What are the common mistakes in homemade pasta?</h3>
+    <p>Too much flour, skipping rest time, not kneading enough, and rolling too thick.</p>
+
+    <h3>Why does restaurant pasta taste better?</h3>
+    <p>They salt water generously, finish pasta in sauce, and use butter, parmesan, and fresh ingredients.</p>
+
+    <h3>What is the best flour for homemade pasta?</h3>
+    <p>“00” flour for tenderness, semolina for firmness, or a blend.</p>
+
+    <h3>Can you overwork homemade pasta?</h3>
+    <p>Yes. 8–10 minutes of kneading is ideal. Overdoing it leads to toughness.</p>
+  </div>
+
+  <a href="index.html" class="back-home">
+    <i class="fas fa-arrow-left"></i> Back to Home
+  </a>
+
+  <p>Subscribe for weekly recipes, cooking tips, and behind-the-scenes gems from the Italian kitchen.</p>
+
+  <form>
+    <input type="email" placeholder="Enter your email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+
+</div>
+
+<footer>
+
+  <div class="footer-logo-container" aria-label="Footer logo" style="margin-bottom: 12px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200" role="img" aria-label="La Tavola Italiana">
+      <path id="curve" fill="transparent" d="M 60 95 A 90 38 0 0 1 240 95" />
+      <text font-size="16" fill="#B03A2E" font-family="'Playfair Display', serif">
+        <textPath href="#curve" startOffset="50%" text-anchor="middle">La Tavola Italiana</textPath>
+      </text>
+    </svg>
+  </div>
+
+  <div class="footer-social">
+    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
+  </div>
+
+  <p>&copy; <span id="current-year"></span> La Tavola Italiana. All rights reserved.</p>
+
+  <p class="footer-links">
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="about.html">About</a> |
+    <a href="terms.html">Terms of Service</a> |
+    <a href="affiliate.html">Affiliate Disclosure</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+
+  function saveRecipe() {
+    alert("Recipe saved!");
+  }
+
+  function shareRecipe() {
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        url: window.location.href
+      });
+    } else {
+      alert("Sharing is not supported on this device.");
+    }
+  }
+</script>
+
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/833349ad0ed5ca7b6b03f0253b1029b1.js"></script>
+
+</body>
 </html>
+

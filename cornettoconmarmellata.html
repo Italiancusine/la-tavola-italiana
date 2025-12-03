@@ -1,269 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cornetto con Marmellata - La Tavola Italiana</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8GDPFR33H"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-X8GDPFR33H');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X8GDPFR33H');
 </script>
-<!-- Font Awesome for icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
-<!-- Font Awesome CDN for social icons -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cornetto con Marmellata - La Tavola Italiana</title>
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+
 <style>
-/* Social Icons Styles */
-.social-icons {
-  display: flex;
-  gap: 20px;
-}
-.social-icons a {
-  text-decoration: none;
-  color: white;
-  font-size: 28px;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.social-icons a.pinterest {
-  background: #bd081c;
-}
-.social-icons a.instagram {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, 
-    #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-.social-icons a:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-/* Optional: responsive sizing */
+/* Social Icons */
+.social-icons { display: flex; gap: 20px; }
+.social-icons a { text-decoration: none; color: white; font-size: 28px; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; transition: transform 0.2s, box-shadow 0.2s; }
+.social-icons a.pinterest { background: #bd081c; }
+.social-icons a.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.social-icons a:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
 @media screen and (max-width: 900px) {
   .social-icons a { width: 40px; height: 40px; font-size: 24px; }
 }
-</style>
 
-<style>
-body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background-color: #FFF8F0; color: #2C3E50; line-height: 1.6; }
-/* --- Top Header Bar --- */
-.top-bar { background-color: #FFD9C7; display: flex; align-items: center; justify-content: space-between; padding: 0.5em 2em; flex-wrap: wrap; }
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFF8F0;
+  color: #2C3E50;
+  line-height: 1.6;
+}
+
 .top-strip { background-color: #B03A2E; height: 36px; width: 100%; }
+.top-bar { background-color: #FFD9C7; display: flex; align-items: center; justify-content: space-between; padding: 0.5em 2em; flex-wrap: wrap; }
 .logo-container img { height: 200px; width: auto; display: block; }
-.top-nav { display: flex; gap: 1.5em; align-items: center; position: relative; }
-.top-nav button, .top-nav a.nav-link { font-weight: bold; background: none; border: none; color: #B03A2E; font-size: 1em; cursor: pointer; padding: 0.3em 0.6em; border-radius: 4px; position: relative; text-decoration: none; }
+
+/* NAV */
+.top-nav { display: flex; gap: 1.5em; align-items: center; }
+.top-nav .dropdown { position: relative; }
+.top-nav button, .top-nav a.nav-link { 
+  font-weight: bold; background: none; border: none; color: #B03A2E; font-size: 1em; cursor: pointer;
+  padding: 0.3em 0.6em; border-radius: 4px; text-decoration: none;
+}
 .top-nav button:hover, .top-nav a.nav-link:hover { color: #8B2C2C; }
-.top-nav .dropdown-content { display: none; position: absolute; background-color: #FFF8F0; min-width: 180px; left: 50%; transform: translateX(-50%); box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1000; padding: 0.5em 0; border-radius: 6px; }
-.top-nav .dropdown-content a { color: #2C3E50; padding: 0.5em 1em; text-decoration: none; display: block; font-weight: normal; }
+
+.top-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background-color: #FFF8F0;
+  min-width: 180px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.18);
+  z-index: 2000; 
+  padding: 0.4em 0;
+  border-radius: 6px;
+}
+.top-nav .dropdown-content a {
+  color: #2C3E50; padding: 0.5em 1em; display: block; text-decoration: none;
+}
 .top-nav .dropdown-content a:hover { background-color: #B03A2E; color: white; }
-.top-nav div:hover .dropdown-content { display: block; }
-.header-right { display: flex; flex-direction: column; align-items: flex-end; }
-.search-social { display: flex; align-items: center; gap: 0.5em; }
-.search-bar { padding: 0.4em 0.8em; border-radius: 6px; border: 1px solid #B03A2E; font-size: 0.9em; }
+.top-nav .dropdown:hover .dropdown-content { display: block; }
 
-/* --- Social Icons --- */
-.social-icons, .social-icons-footer { display: flex; gap: 20px; }
-.social-icons a, .social-icons-footer a {
-  text-decoration: none;
-  color: white;
-  font-size: 28px;
-  width: 50px;
-  height: 50px;
+/* Header right adjustments without search */
+.header-right { display:flex; flex-direction:column; align-items:flex-end; }
+.search-social { display:flex; align-items:center; gap:0.5em; }
+
+/* Buttons Row */
+.top-buttons {
+  margin: 1em 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  transition: transform 0.2s, box-shadow 0.2s;
+  gap: 0.8em;
+  flex-wrap: wrap;
 }
-.social-icons a.pinterest, .social-icons-footer a.pinterest { background: #bd081c; }
-.social-icons a.instagram, .social-icons-footer a.instagram { 
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, 
-              #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+.top-buttons a, .top-buttons button {
+  display: flex; align-items: center; justify-content: center; gap: 0.4em;
+  width: 130px; height: 50px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #2C3E50;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.95em;
 }
-.social-icons a:hover, .social-icons-footer a:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-
-/* Responsive header */
-@media screen and (max-width: 1200px) { .social-icons a, .social-icons-footer a { width: 40px; height: 40px; font-size: 1.3em; } }
-@media screen and (max-width: 900px) { .top-bar { flex-direction: column; align-items: center; gap: 0.5em; } .top-nav { justify-content: center; flex-wrap: wrap; } .header-right { align-items: center; } .social-icons a, .social-icons-footer a { width: 36px; height: 36px; font-size: 1.2em; } }
-
-/* --- Recipe Buttons --- */
-.top-buttons { margin: 1em 0; display: flex; justify-content: flex-start; gap: 0.8em; flex-wrap: wrap; }
-.top-buttons a, .top-buttons button { display: flex; align-items: center; justify-content: center; gap: 0.4em; width: 130px; height: 50px; border: 1px solid #ccc; background-color: white; color: #2C3E50; font-weight: bold; border-radius: 4px; cursor: pointer; text-decoration: none; font-size: 0.95em; }
 .top-buttons a:hover, .top-buttons button:hover { background-color: #f2f2f2; border-color: #999; }
-.top-buttons i { font-size: 1.2em; color: #2C3E50; }
+
 /* Share dropdown */
 .share-dropdown { position: relative; display: inline-block; }
-.share-dropdown-content { display: none; position: absolute; background-color: #FFF8F0; min-width: 160px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2); border-radius: 6px; z-index: 1000; top: 100%; left: 0; }
-.share-dropdown-content a { display: flex; align-items: center; gap: 0.5em; padding: 0.5em 1em; text-decoration: none; color: #2C3E50; }
-.share-dropdown-content a i { font-size: 1.2em; }
-.share-dropdown-content a:hover { background-color: #B03A2E; color: white; }
-.share-dropdown:hover .share-dropdown-content { display: block; }
+.share-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFF8F0;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  z-index: 1500;
+  top: 100%; left: 0;
+}
+.share-dropdown-content a {
+  padding: 0.5em 1em; display: flex; align-items: center; gap: 0.5em; color: #2C3E50; text-decoration:none;
+}
+.share-dropdown-content a:hover { background-color:#B03A2E; color:white; }
+.share-dropdown:hover .share-dropdown-content { display:block; }
 
-/* --- Recipe Content --- */
+/* Content */
 .content { padding: 2em; max-width: 800px; margin: auto; }
 h2, h3 { font-family: 'Playfair Display', serif; color: #8B2C2C; }
 .recipe-image { width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 1em; }
-.back-link { display: block; text-align: center; margin-top: 2em; font-size: 1.2em; }
-.back-link a { text-decoration: none; color: #8B2C2C; font-weight: bold; }
-.back-link a:hover { text-decoration: underline; }
 
-/* Rate section below recipe */
-.rate-section { text-align: center; margin: 1.5em 0; font-size: 1.2em; }
-.rate-section span { font-size: 1.5em; cursor: pointer; color: #ccc; margin: 0 2px; transition: color 0.2s; }
-.rate-section span.hover, .rate-section span.selected { color: #FFD700; }
+.back-link { text-align: center; margin-top: 2em; }
+.back-link a { color: #8B2C2C; font-weight: bold; text-decoration: none; }
+.back-link a:hover { text-decoration: underline; }
 
 @media print { .top-bar, .top-buttons { display: none; } }
 
-/* --- Footer --- */
-footer { background-color: #800000; color: #FFF8F0; padding: 1em 2em; text-align: center; font-size: 0.9em; }
+/* Footer */
+footer { background-color: #800000; color: #FFF8F0; padding: 1em 2em; text-align: center; }
 footer a { color: #FFD580; text-decoration: none; }
 footer a:hover { color: #FFE28A; }
-.footer-logo-container { max-width: 240px; margin: 0.5em auto; }
-</style>
 
-<script>
-function printRecipe() { window.print(); }
-document.addEventListener('DOMContentLoaded', function() {
-  const stars = document.querySelectorAll('.rate-section span');
-  const savedRating = localStorage.getItem('cornettoRating');
-  if(savedRating) { stars.forEach((s, i) => s.classList.toggle('selected', i < savedRating)); }
-  stars.forEach((star, index) => {
-    star.addEventListener('mouseover', () => { stars.forEach((s, i) => { s.classList.toggle('hover', i <= index); }); });
-    star.addEventListener('mouseout', () => { stars.forEach((s, i) => { s.classList.remove('hover'); }); });
-    star.addEventListener('click', () => { stars.forEach((s, i) => { s.classList.toggle('selected', i <= index); }); localStorage.setItem('cornettoRating', index+1); });
-  });
-  const saveButton = document.querySelector('.top-buttons button');
-  const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes') || '[]');
-  if(savedRecipes.includes('Cornetto con Marmellata')) {
-    saveButton.style.backgroundColor = '#FFD700'; saveButton.style.color = '#2C3E50';
-  }
-  saveButton.addEventListener('click', () => {
-    let savedRecipes = JSON.parse(localStorage.getItem('savedRecipes') || '[]');
-    if(!savedRecipes.includes('Cornetto con Marmellata')) { savedRecipes.push('Cornetto con Marmellata'); localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes)); saveButton.style.backgroundColor = '#FFD700'; alert('Recipe saved to your favorites!'); } else { alert('Recipe already in your favorites!'); }
-  });
-  const searchBar = document.querySelector('.search-bar');
-  searchBar.addEventListener('input', () => { const query = searchBar.value.toLowerCase(); if(query.length > 1){ alert("Searching for: " + query); } });
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-});
-</script>
+</style>
 </head>
 
 <body>
 <div class="top-strip"></div>
+
 <header>
   <div class="top-bar">
     <div class="logo-container">
-      <a href="index.html"><img src="images/logo.png" alt="La Tavola Italiana Logo" /></a>
+      <a href="index.html"><img src="images/logo.png" alt="La Tavola Italiana Logo"/></a>
     </div>
+
     <nav class="top-nav">
-      <div>
-        <button>Recipes ▼</button>
+      <div class="dropdown">
+        <button type="button">Recipes ▼</button>
         <div class="dropdown-content">
           <a href="appetizers.html">Appetizers</a>
           <a href="maincourses.html">Main Courses</a>
           <a href="desserts.html">Desserts</a>
         </div>
       </div>
-      <div>
-        <button>American Favorites ▼</button>
+
+      <div class="dropdown">
+        <button type="button">American Favorites ▼</button>
         <div class="dropdown-content">
           <a href="breakfast.html">Breakfast</a>
           <a href="lunch.html">Lunch</a>
           <a href="dinner.html">Dinner</a>
         </div>
       </div>
-      <div><a href="italiankitchenunveiled.html" class="nav-link">Italian Kitchen Unveiled</a></div>
-    </nav>
-    <div class="header-right">
-      <div class="search-social">
-        <input type="text" placeholder="Search recipes..." class="search-bar" />
-        <div class="social-icons">
-  <a href="https://www.pinterest.com/" target="_blank" class="pinterest" aria-label="Pinterest">
-    <i class="fab fa-pinterest-p"></i>
-  </a>
-  <a href="https://www.instagram.com/" target="_blank" class="instagram" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-</div>
 
+      <a href="italiankitchenunveiled.html" class="nav-link">Italian Kitchen Unveiled</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="social-icons">
+        <a href="https://pinterest.com/italiancusine" target="_blank" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
+        <a href="https://www.instagram.com/latavolaitalianarecipes/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </div>
-</header>
 
+<!-- BUTTONS -->
 <div class="top-buttons">
-  <button><i class="fas fa-heart"></i> Save</button>
+  <button onclick="saveRecipe()"><i class="fas fa-heart"></i> Save</button>
   <button onclick="printRecipe()"><i class="fas fa-print"></i> Print</button>
   <a href="#introduction"><i class="fas fa-arrow-right"></i> Jump</a>
+
   <div class="share-dropdown">
     <button><i class="fas fa-share-alt"></i> Share ▼</button>
     <div class="share-dropdown-content">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-      <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=Cornetto+con+Marmellata" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-      <a href="https://api.whatsapp.com/send?text=Check+out+this+recipe+YOUR_URL" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="mailto:?subject=Cornetto con Marmellata&body=Check out this recipe: YOUR_URL"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://italiancusine.github.io/la-tavola-italiana/cornettoconmarmellata.html" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="https://twitter.com/intent/tweet?url=https://italiancusine.github.io/la-tavola-italiana/cornettoconmarmellata.html" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="https://api.whatsapp.com/send?text=Check+out+this+recipe https://italiancusine.github.io/la-tavola-italiana/cornettoconmarmellata.html" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:?subject=Cornetto con Marmellata&body=Check out this recipe: https://italiancusine.github.io/la-tavola-italiana/cornettoconmarmellata.html"><i class="fas fa-envelope"></i> Email</a>
     </div>
   </div>
-  <a href="https://pinterest.com/pin/create/button/?url=YOUR_URL&media=images/cornettoconmarmellata.jpg&description=Cornetto+con+Marmellata" target="_blank"><i class="fab fa-pinterest"></i> Pin</a>
+
+  <a href="https://pinterest.com/pin/create/button/?url=https://italiancusine.github.io/la-tavola-italiana/cornettoconmarmellata.html&media=images/cornettoconmarmellata.jpg&description=Cornetto+con+Marmellata" target="_blank"><i class="fab fa-pinterest"></i> Pin</a>
 </div>
 
 <section class="content">
   <img src="images/cornettoconmarmellata.jpg" alt="Cornetto con Marmellata" class="recipe-image" />
   <h2 id="introduction">Introduction</h2>
-  <p>The Cornetto con Marmellata is a classic Italian breakfast pastry — a flaky, buttery croissant filled with sweet, fruity jam. Perfect with morning coffee or cappuccino.</p>
+  <p>The Cornetto con Marmellata is a classic Italian breakfast pastry — a golden, flaky, buttery croissant delicately filled with luscious, sweet, fruity jam. Perfectly paired with a rich espresso or creamy cappuccino for an indulgent morning treat.</p>
   <h2 id="history">History</h2>
-  <p>Cornetti are the Italian version of the French croissant, with a lighter, less buttery dough. Enjoyed at breakfast, often filled with various jams or creams.</p>
+  <p>Cornetti are the authentic Italian counterpart to the French croissant, featuring a lighter, airy dough with a subtly sweet flavor. Traditionally enjoyed at breakfast, these pastries are often filled with vibrant fruit jams or smooth creams, reflecting the artisanal Italian café culture.</p>
   <h2 id="whyweloveit">Why We Love It</h2>
-  <p>Perfect balance of crispy outer layers and soft, flavorful filling. Comforting and brings Italian café culture to your kitchen.</p>
+  <p>Experience the perfect balance of crispy, golden outer layers and soft, flavorful, melt-in-your-mouth filling. Comforting, aromatic, and delightfully indulgent, these pastries bring the charm of Italian cafés directly to your kitchen.</p>
   <h2 id="ingredients">Ingredients</h2>
   <ul>
-    <li>1 package of store-bought croissant dough (or homemade)</li>
-    <li>1/2 cup fruit marmalade or jam (apricot, raspberry, strawberry)</li>
-    <li>1 egg (for egg wash)</li>
-    <li>Powdered sugar, optional</li>
+    <li>1 package of store-bought or freshly prepared, tender croissant dough</li>
+    <li>1/2 cup fruity, aromatic marmalade or jam (apricot, raspberry, strawberry)</li>
+    <li>1 fresh egg (for glossy egg wash)</li>
+    <li>Powdered sugar, optional for a delicate finish</li>
   </ul>
   <h2 id="instructions">Instructions</h2>
   <ol>
-    <li>Prepare baking sheet, parchment, egg wash, brush, knife.</li>
-    <li>Preheat oven to 375°F (190°C).</li>
-    <li>Unroll dough, separate triangles, add 1 tbsp marmalade each.</li>
-    <li>Roll triangles to form cornetto, curve ends slightly.</li>
-    <li>Place on baking sheet, brush with egg wash.</li>
-    <li>Bake 12–15 min until golden.</li>
-    <li>Cool briefly, dust with powdered sugar if desired.</li>
+    <li>Prepare baking sheet, parchment paper, egg wash, brush, and knife.</li>
+    <li>Preheat oven to 375°F (190°C) for golden, flaky results.</li>
+    <li>Unroll dough, separate triangles, add 1 tbsp of fragrant, sweet marmalade to each.</li>
+    <li>Roll triangles into classic cornetto shapes, gently curving the ends.</li>
+    <li>Place on baking sheet and brush generously with egg wash.</li>
+    <li>Bake 18–22 minutes until perfectly puffed, golden, and slightly crisp.</li>
+    <li>Cool slightly, dust with powdered sugar, serve warm with a café-style beverage.</li>
   </ol>
   <h2 id="tips">Tips & Tricks</h2>
   <ul>
-    <li>Chill dough 15 minutes before baking for flakier texture.</li>
-    <li>Don't overfill to prevent leaks.</li>
-    <li>Add chocolate or try different jams for variation.</li>
+    <li>Keep dough chilled until ready to roll to ensure flaky layers.</li>
+    <li>Use high-quality jam for the best flavor contrast.</li>
+    <li>Let baked cornetti cool slightly to prevent filling from spilling out.</li>
   </ul>
   <h2 id="serving">Serving Suggestions</h2>
-  <p>Enjoy warm with espresso or cappuccino. Great for Italian-style breakfast or cozy snack.</p>
+  <p>Pair your Cornetto con Marmellata with a cappuccino or espresso, a fresh fruit salad, and a light morning spread for the perfect Italian breakfast experience.</p>
   <h2 id="nutrition">Nutrition Info (per serving)</h2>
-  <ul>
-    <li>Calories: 250</li>
-    <li>Protein: 4g</li>
-    <li>Carbohydrates: 30g</li>
-    <li>Fat: 12g</li>
-    <li>Fiber: 1g</li>
-    <li>Sodium: 180mg</li>
-  </ul>
+  <p>Approximate: 250 kcal, 10g fat, 35g carbs, 4g protein.</p>
   <h2 id="funfact">Fun Fact</h2>
-  <p>"Cornetto" literally means "little horn," referring to the crescent shape.</p>
-  <div class="rate-section"> Rate this recipe: <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> </div>
-  <div class="back-link">
-    <a href="index.html">&larr; Back to Home</a>
+  <p>In Italy, cornetti are typically enjoyed for breakfast, often with just a cappuccino, as a daily indulgence rather than a dessert.</p>
+
+  <div class="rate-section">
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
   </div>
 </section>
+
+<div class="back-link"><a href="index.html">← Back to Home</a></div>
 
 <footer style="background-color: #800000; color: #FFF8F0; text-align: center; padding: 20px;">
   <div class="footer-logo-container" aria-label="Footer logo" style="margin-bottom: 15px;">
@@ -292,19 +266,60 @@ document.addEventListener('DOMContentLoaded', function() {
   </p>
 
   <div class="social-icons-footer" style="margin-top: 15px; display: flex; justify-content: center; gap: 15px;">
-    <a href="https://pinterest.com/yourprofile" target="_blank" rel="noopener" class="pinterest" aria-label="Pinterest" style="color: white; font-size: 20px;">
+    <a href="https://pinterest.com/italiancusine" target="_blank" rel="noopener" class="pinterest" aria-label="Pinterest" style="color: white; font-size: 20px;">
       <i class="fab fa-pinterest-p"></i>
     </a>
-    <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener" class="instagram" aria-label="Instagram" style="color: white; font-size: 20px;">
+    <a href="https://www.instagram.com/latavolaitalianarecipes/" target="_blank" rel="noopener" class="instagram" aria-label="Instagram" style="color: white; font-size: 20px;">
       <i class="fab fa-instagram"></i>
     </a>
   </div>
 </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('current-year').textContent = new Date().getFullYear();
 
+  // small enhancement: close open dropdowns on click outside (useful on touch devices)
+  document.addEventListener('click', function(e) {
+    const isDropdownButton = e.target.closest('.top-nav .dropdown');
+    if (!isDropdownButton) {
+      document.querySelectorAll('.top-nav .dropdown-content').forEach(dc => {});
+    }
+  });
+
+  // Rating stars interactivity
+  const stars = document.querySelectorAll('.rate-section .star');
+  stars.forEach(star => {
+    star.addEventListener('click', function() {
+      const rating = this.dataset.value;
+      stars.forEach(s => s.style.color = s.dataset.value <= rating ? 'gold' : 'gray');
+      alert('You rated this recipe ' + rating + ' stars!');
+    });
+  });
+});
+
+/* Working print + save */
+function printRecipe() {
+  window.print();
+}
+
+function saveRecipe() {
+  const contentEl = document.querySelector('.content');
+  const recipeText = contentEl ? contentEl.innerText : 'Recipe content not found';
+  const blob = new Blob([recipeText], { type: "text/plain" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "Cornetto_con_Marmellata.txt";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
 <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/833349ad0ed5ca7b6b03f0253b1029b1.js"></script>
 </body>
 </html>
+
+
 
 
 

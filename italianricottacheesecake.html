@@ -7,244 +7,229 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-X8GDPFR33H');
 </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Italian Ricotta Cheesecake - La Tavola Italiana</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
-  <style>
-    /* Basic Reset */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #FFF8F0;
-      color: #2C3E50;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #B03A2E;
-      color: white;
-      padding: 1.5em;
-      text-align: center;
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      margin: 0;
-    }
-    /* Navigation with dropdown */
-    nav {
-      background-color: #8B2C2C;
-      display: flex;
-      justify-content: center;
-      gap: 1em;
-      padding: 0.8em 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav > .nav-item {
-      position: relative;
-    }
-    nav > .nav-item > button {
-      background: none;
-      border: none;
-      color: white;
-      font-weight: bold;
-      font-size: 1em;
-      cursor: pointer;
-      padding: 0.5em 1em;
-      font-family: 'Open Sans', sans-serif;
-    }
-    nav > .nav-item > button:hover,
-    nav > .nav-item > button:focus {
-      text-decoration: underline;
-      outline: none;
-    }
-    .dropdown {
-      display: none;
-      position: absolute;
-      background-color: #8B2C2C;
-      min-width: 160px;
-      top: 100%;
-      left: 0;
-      border-radius: 0 0 6px 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      z-index: 200;
-    }
-    .dropdown a {
-      color: white;
-      padding: 0.6em 1em;
-      text-decoration: none;
-      display: block;
-      font-weight: normal;
-      font-family: 'Open Sans', sans-serif;
-    }
-    .dropdown a:hover,
-    .dropdown a:focus {
-      background-color: #B03A2E;
-      outline: none;
-    }
-    nav > .nav-item:hover .dropdown,
-    nav > .nav-item:focus-within .dropdown {
-      display: block;
-    }
 
-    /* Content area */
-    .content {
-      padding: 2em;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2, h3 {
-      font-family: 'Playfair Display', serif;
-      color: #8B2C2C;
-    }
-    ul, ol {
-      padding-left: 1.5em;
-    }
-    .recipe-image {
-      width: 100%;
-      max-height: 450px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 1em;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .action-buttons {
-      margin: 1em 0 2em;
-      display: flex;
-      justify-content: space-between;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      gap: 1em;
-    }
-    button.print-btn,
-    a.jump-link {
-      background-color: #B03A2E;
-      color: white;
-      border: none;
-      padding: 0.6em 1.2em;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 6px;
-      font-family: 'Open Sans', sans-serif;
-      text-decoration: none;
-      display: inline-block;
-      user-select: none;
-    }
-    button.print-btn:hover,
-    a.jump-link:hover {
-      background-color: #8B2C2C;
-      text-decoration: none;
-    }
-    button.print-btn:focus,
-    a.jump-link:focus {
-      outline: 3px solid #B03A2E;
-      outline-offset: 2px;
-    }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Italian Ricotta Cheesecake - La Tavola Italiana</title>
 
-    /* Nutrition Table */
-    .nutrition-table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 1em;
-      margin-bottom: 2em;
-    }
-    .nutrition-table th, .nutrition-table td {
-      border: 1px solid #ddd;
-      padding: 0.5em;
-      text-align: left;
-    }
-    .nutrition-table th {
-      background-color: #F5E8E4;
-      font-weight: bold;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
-    /* Back link */
-    .back-link {
-      text-align: center;
-      font-size: 1.2em;
-      margin-bottom: 3em;
-    }
-    .back-link a {
-      text-decoration: none;
-      color: #8B2C2C;
-      font-weight: bold;
-      font-family: 'Open Sans', sans-serif;
-      user-select: none;
-    }
-    .back-link a:hover,
-    .back-link a:focus {
-      text-decoration: underline;
-      outline: none;
-    }
-  </style>
-  <script>
-    function printRecipe() {
-      window.print();
-    }
-  </script>
+<style>
+/* BODY */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFF8F0;
+  color: #2C3E50;
+}
+
+/* TOP STRIP + TOP BAR */
+.top-strip { background-color: #FFD9C7; height: 36px; width: 100%; }
+
+.top-bar {
+  background-color: #F8EBDD;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 2em;
+  flex-wrap: wrap;
+  gap: 1em;
+  border-bottom: 1px solid #e6d2c1;
+}
+
+.logo-container img { height: 110px; width: auto; display:block; }
+
+/* NAVIGATION */
+.top-nav { display: flex; gap: 1.25em; align-items: center; }
+.top-nav .dropdown { position: relative; }
+.top-nav button, .top-nav a.nav-link {
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #B03A2E;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0.25em 0.6em;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.top-nav button:hover, .top-nav a.nav-link:hover { color: #8B2C2C; }
+
+.top-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background-color: #FFF8F0;
+  min-width: 180px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.18);
+  z-index: 2000;
+  padding: 0.4em 0;
+  border-radius: 6px;
+}
+.top-nav .dropdown-content a {
+  color: #2C3E50;
+  padding: 0.5em 1em;
+  display: block;
+  text-decoration: none;
+}
+.top-nav .dropdown-content a:hover { background-color: #B03A2E; color: white; }
+.top-nav .dropdown:hover .dropdown-content { display: block; }
+
+/* Header right social */
+.header-right { display:flex; flex-direction:column; align-items:flex-end; }
+.social-icons { display:flex; gap:16px; align-items:center; }
+.social-icons a { text-decoration:none; color:#B03A2E; font-size:20px; width:44px; height:44px; display:flex; justify-content:center; align-items:center; border-radius:50%; transition:transform .15s; }
+.social-icons a.pinterest { background:#bd081c; color:white; }
+.social-icons a.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:white; }
+.social-icons a:hover { transform:scale(1.05); box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+
+/* Container */
+.container { max-width: 900px; margin: auto; padding: 2em; }
+
+/* Page title */
+.page-header { text-align:center; margin-bottom: 0.5em; }
+.page-header h1 {
+  font-family: 'Playfair Display', serif;
+  color: #8B2C2C;
+  font-size: 2.6em;
+  margin: 0.2em 0 0.6em;
+}
+
+/* Recipe image */
+.recipe-image {
+  width: 60%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display:block;
+  margin: 1em auto;
+}
+
+/* Top buttons */
+.top-buttons {
+  display:flex;
+  justify-content:center;
+  gap:0.8em;
+  margin: 1em 0;
+  flex-wrap:wrap;
+}
+.top-buttons button, .top-buttons a {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.5em;
+  width:140px;
+  height:46px;
+  border:1px solid #d8d0ca;
+  background:white;
+  color:#2C3E50;
+  font-weight:bold;
+  border-radius:6px;
+  cursor:pointer;
+  text-decoration:none;
+  font-size:0.95em;
+}
+.top-buttons button:hover, .top-buttons a:hover { background:#f7f5f4; border-color:#bfb5ac; }
+
+/* Headings and content */
+h2 { font-family:'Playfair Display', serif; color:#8B2C2C; margin-top:1.6em; }
+ul, ol { padding-left:1.5em; line-height:1.6; }
+
+/* Tips & newsletter */
+.tips-bar { background-color:#FDEDE8; border:1px solid #f0d0c8; padding:0.9em 1em; border-radius:8px; margin-top:1em; }
+.newsletter { background-color: #FDEDE8; padding: 1.6em; border-radius: 10px; text-align: center; margin-top: 2em; }
+.newsletter h3 { margin:0 0 0.4em; color:#B03A2E; }
+.newsletter input[type="email"] { padding:0.6em; border-radius:5px; border:1px solid #ccc; width:60%; max-width:260px; margin-right:0.4em; }
+.newsletter button { padding:0.6em 0.9em; background:#B03A2E; color:white; border:none; border-radius:6px; cursor:pointer; }
+.newsletter button:hover { background:#8B2C2C; }
+
+/* Back link */
+.back-link { text-align:center; margin:2.2em 0 3em; }
+.back-link a { text-decoration:none; color:#B03A2E; font-weight:bold; }
+
+/* Footer */
+footer { background-color: #800000; color: #FFF8F0; padding: 1.2em 2em; text-align:center; margin-top:2em; }
+.footer-links a { color:#FFD580; text-decoration:none; margin:0 6px; }
+.footer-social { display:flex; justify-content:center; gap:12px; margin-top:12px; }
+
+/* Responsiveness */
+@media screen and (max-width:900px) {
+  .logo-container img { height:80px; }
+  .recipe-image { width:80%; }
+  .top-buttons button, .top-buttons a { width: 44%; }
+  .top-bar { padding: 0.4em 1em; }
+}
+</style>
 </head>
 <body>
 
-  <header>
+<!-- Top strip + top bar -->
+<div class="top-strip"></div>
+
+<header class="top-bar" role="banner">
+  <div class="logo-container" aria-label="La Tavola Italiana logo">
+    <a href="index.html"><img src="images/logo.png" alt="La Tavola Italiana Logo"></a>
+  </div>
+
+  <nav class="top-nav" role="navigation" aria-label="Main navigation">
+    <div class="dropdown">
+      <button type="button">Recipes ▼</button>
+      <div class="dropdown-content">
+        <a href="appetizers.html">Appetizers</a>
+        <a href="maincourses.html">Main Courses</a>
+        <a href="desserts.html">Desserts</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button type="button">American Favorites ▼</button>
+      <div class="dropdown-content">
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+      </div>
+    </div>
+
+     <a class="nav-link" href="italiankitchenunveiled.html">Italian Kitchen Unveiled</a>
+
+  </nav>
+
+  <div class="header-right" aria-hidden="false">
+    <div class="social-icons" aria-label="social links">
+      <a class="pinterest" href="https://pinterest.com/italiancusine" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      <a class="instagram" href="https://www.instagram.com/latavolaitalianarecipes/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <header class="page-header">
     <h1>Italian Ricotta Cheesecake</h1>
   </header>
 
-  <nav>
-    <div class="nav-item" tabindex="0">
-      <button aria-haspopup="true" aria-expanded="false" aria-controls="recipes-menu">Recipes ▼</button>
-      <div class="dropdown" id="recipes-menu" role="menu" aria-label="Recipes Submenu">
-        <a href="appetizers.html" role="menuitem" tabindex="-1">Appetizers</a>
-        <a href="main-courses.html" role="menuitem" tabindex="-1">Main Courses</a>
-        <a href="desserts.html" role="menuitem" tabindex="-1">Desserts</a>
-      </div>
-    </div>
+  <img src="images/italianricottacheesecake.jpg" alt="Italian Ricotta Cheesecake" class="recipe-image"/>
 
-    <div class="nav-item" tabindex="0">
-      <button aria-haspopup="true" aria-expanded="false" aria-controls="american-menu">American Favorites ▼</button>
-      <div class="dropdown" id="american-menu" role="menu" aria-label="American Favorites Submenu">
-        <a href="breakfast.html" role="menuitem" tabindex="-1">Breakfast</a>
-        <a href="lunch.html" role="menuitem" tabindex="-1">Lunch</a>
-        <a href="dinner.html" role="menuitem" tabindex="-1">Dinner</a>
-      </div>
-    </div>
+  <div class="top-buttons">
 
-    <div class="nav-item" tabindex="0">
-      <button aria-haspopup="true" aria-expanded="false" aria-controls="tutorials-menu">Recipe Tutorials ▼</button>
-      <div class="dropdown" id="tutorials-menu" role="menu" aria-label="Recipe Tutorials Submenu">
-        <a href="easy.html" role="menuitem" tabindex="-1">Easy</a>
-        <a href="medium.html" role="menuitem" tabindex="-1">Medium</a>
-        <a href="hard.html" role="menuitem" tabindex="-1">Hard</a>
-      </div>
-    </div>
+    <button onclick="printRecipe()"><i class="fas fa-print"></i> Print</button>
 
-    <div class="nav-item" tabindex="0">
-      <button aria-haspopup="true" aria-expanded="false" aria-controls="italy-menu">Italy ▼</button>
-      <div class="dropdown" id="italy-menu" role="menu" aria-label="Italy Submenu">
-        <a href="taste-by-region.html" role="menuitem" tabindex="-1">Taste by Region</a>
-        <a href="dine-like-a-local.html" role="menuitem" tabindex="-1">Dine Like a Local</a>
-        <a href="culinary-destinations.html" role="menuitem" tabindex="-1">Culinary Destinations</a>
-      </div>
-    </div>
-  </nav>
+    <a href="#recipe-section"><i class="fas fa-arrow-right"></i> Jump</a>
 
-  <main class="content">
-    <img src="images/italianricottacheesecake.jpg" alt="Italian Ricotta Cheesecake" class="recipe-image" />
+    <!-- NEW: SAVE BUTTON -->
+    <button onclick="saveRecipe()"><i class="fas fa-bookmark"></i> Save</button>
 
-    <div class="action-buttons">
-      <button class="print-btn" onclick="printRecipe()" aria-label="Print this recipe">Print Recipe 🖨️</button>
-      <a href="#recipe" class="jump-link">Jump to Recipe ↓</a>
-    </div>
+    <!-- NEW: SHARE BUTTON -->
+    <button onclick="shareRecipe()"><i class="fas fa-share-alt"></i> Share</button>
 
+  </div>
+
+  <section class="content" id="recipe-section">
     <h2>Introduction</h2>
     <p>Italian Ricotta Cheesecake is a timeless dessert that’s lighter and fluffier than its New York counterpart. Creamy ricotta, fresh lemon zest, and a touch of vanilla come together to create a cloud-like cheesecake that melts in your mouth. It’s a classic at Italian holidays, Sunday dinners, and celebrations—and one bite will show you why.</p>
 
@@ -254,7 +239,7 @@
     <h2>Why We Love It</h2>
     <p>This cheesecake isn't overly sweet or dense—it's delicate and elegant. It pairs beautifully with fresh berries, powdered sugar, or even espresso. Whether served cold from the fridge or just gently chilled, it’s always a showstopper. Plus, it’s naturally gluten-free when baked without a crust!</p>
 
-    <h2 id="recipe">Ingredients</h2>
+    <h2>Ingredients</h2>
     <ul>
       <li>2 lbs whole milk ricotta cheese (well drained)</li>
       <li>3/4 cup granulated sugar</li>
@@ -295,10 +280,7 @@
     <h2>Nutrition Info (per serving)</h2>
     <table class="nutrition-table" aria-label="Nutrition Information per serving">
       <thead>
-        <tr>
-          <th>Nutrient</th>
-          <th>Amount</th>
-        </tr>
+        <tr><th>Nutrient</th><th>Amount</th></tr>
       </thead>
       <tbody>
         <tr><td>Calories</td><td>320</td></tr>
@@ -316,11 +298,91 @@
     <h2>Fun Fact</h2>
     <p>The word "ricotta" means "recooked" in Italian, referring to the traditional process of making ricotta cheese by reheating the whey left over from other cheeses. This process yields the soft, creamy cheese that makes this cheesecake so uniquely delicious!</p>
 
-  </main>
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
 
-  <div class="back-link">
-    <a href="index.html" aria-label="Back to Home">← Back to Home</a>
+    <div class="newsletter" aria-label="Subscribe to newsletter">
+      <h3>Join the Table</h3>
+      <p>Subscribe for weekly recipes, cooking tips, and Italian inspiration straight to your inbox.</p>
+      <form action="#" method="post">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </section>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo-container" aria-label="Footer logo" style="margin-bottom: 12px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200" role="img" aria-label="La Tavola Italiana">
+      <path id="curve" fill="transparent" d="M 60 95 A 90 38 0 0 1 240 95"/>
+      <text font-size="16" fill="white" font-family="'Playfair Display', serif">
+        <textPath href="#curve" startOffset="50%" text-anchor="middle">La Tavola Italiana</textPath>
+      </text>
+      <g transform="translate(90, 85) scale(0.85)">
+        <path d="M0 20 Q30 0 60 20 Q90 40 120 20" stroke="white" stroke-width="3" fill="none"/>
+        <ellipse cx="15" cy="10" rx="5" ry="3" fill="white"/>
+        <ellipse cx="45" cy="5" rx="5" ry="3" fill="white"/>
+        <ellipse cx="75" cy="25" rx="5" ry="3" fill="white"/>
+        <ellipse cx="105" cy="15" rx="5" ry="3" fill="white"/>
+      </g>
+    </svg>
   </div>
+
+  <p>&copy; <span id="current-year"></span> La Tavola Italiana. All rights reserved.</p>
+
+  <p class="footer-links" style="margin-top:6px;">
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="about.html">About</a> |
+    <a href="terms.html">Terms of Service</a> |
+    <a href="affiliate.html">Affiliate Disclosure</a>
+  </p>
+
+  <div class="footer-social">
+    <a class="pinterest" href="https://pinterest.com/italiancusine" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+    <a class="instagram" href="https://www.instagram.com/latavolaitalianarecipes/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
+
+<script>
+// Print
+function printRecipe() { window.print(); }
+
+// Save Recipe
+function saveRecipe() {
+  let saved = JSON.parse(localStorage.getItem("savedRecipes")) || [];
+  if (!saved.includes("Italian Ricotta Cheesecake")) {
+    saved.push("Italian Ricotta Cheesecake");
+    localStorage.setItem("savedRecipes", JSON.stringify(saved));
+    alert("Recipe saved!");
+  } else {
+    alert("This recipe is already saved.");
+  }
+}
+
+// Share Recipe
+function shareRecipe() {
+  if (navigator.share) {
+    navigator.share({
+      title: "Italian Ricotta Cheesecake",
+      text: "Try this amazing Italian Ricotta Cheesecake!",
+      url: window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href);
+    alert("Link copied to clipboard!");
+  }
+}
+</script>
+
+<script>
+// Auto year
+document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
 <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/833349ad0ed5ca7b6b03f0253b1029b1.js"></script>
 </body>
 </html>
+
