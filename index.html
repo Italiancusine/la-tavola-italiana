@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
 <style>
+/* ——— unchanged CSS ——— */
 body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; background-color:#FFF8F0; color:#2C3E50; }
 .top-strip { background-color:#FFD9C7; height:36px; width:100%; }
 .top-bar { background-color:#F8EBDD; display:flex; align-items:center; justify-content:space-between; padding:0.5em 2em; flex-wrap:wrap; gap:1em; border-bottom:1px solid #e6d2c1; }
@@ -38,16 +39,44 @@ body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; background-col
 .social-icons a:hover { transform:scale(1.05); box-shadow:0 4px 12px rgba(0,0,0,0.08); }
 .container { max-width:1100px; margin:auto; padding:2em; }
 .page-header { text-align:center; margin-bottom:0.5em; }
-.page-header h1 { font-family:'Playfair Display', serif; color:#8B2C2C; font-size:2em; margin:0.2em 0 0.6em; } /* Smaller than subtitle */
+.page-header h1 { font-family:'Playfair Display', serif; color:#8B2C2C; font-size:2em; margin:0.2em 0 0.6em; }
 .page-subtitle { text-align:center; font-family:'Playfair Display', serif; font-size:2.4em; color:#B03A2E; margin-bottom:0.4em; }
 
-/* Popular Recipes Grid */
 .popular-recipes { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1.6em; margin:2em 0; }
 .recipe-card { background:white; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center; transition:transform .15s; cursor:pointer; text-decoration:none; color:inherit; }
 .recipe-card:hover { transform:scale(1.03); }
 .recipe-card img { width:100%; height:160px; object-fit:cover; }
 .recipe-card h3 { font-family:'Playfair Display', serif; font-size:1.2em; color:#8B2C2C; margin:0.6em 0 0.3em; }
 .recipe-card p { font-size:0.95em; padding:0 0.8em 1em; color:#2C3E50; display:none; }
+
+.la-tavola-market-box {
+  background:#FFF2E8;
+  border:2px solid #B03A2E;
+  border-radius:10px;
+  padding:1.6em;
+  margin-top:3em;
+  text-align:center;
+}
+.la-tavola-market-box h2 {
+  font-family:'Playfair Display', serif;
+  color:#B03A2E;
+  margin-bottom:0.4em;
+}
+.la-tavola-market-box p {
+  margin-bottom:1em;
+  font-size:1.05em;
+}
+.la-tavola-market-btn {
+  background:#B03A2E;
+  color:white;
+  padding:0.65em 1.1em;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.la-tavola-market-btn:hover {
+  background:#8B2C2C;
+}
 
 .newsletter { background-color:#FDEDE8; padding:1.6em; border-radius:10px; text-align:center; margin-top:3em; }
 .newsletter h3 { margin:0 0 0.4em; color:#B03A2E; }
@@ -96,6 +125,9 @@ footer { background-color:#800000; color:#FFF8F0; padding:1.2em 2em; text-align:
     </div>
 
     <a class="nav-link" href="italiankitchenunveiled.html">Italian Kitchen Unveiled</a>
+
+    <!-- NEW NAV LINK -->
+    <a class="nav-link" href="tenclassicrecipesanyonecanmasterebook.html">La Tavola Market</a>
   </nav>
 
   <div class="header-right">
@@ -117,6 +149,7 @@ footer { background-color:#800000; color:#FFF8F0; padding:1.2em 2em; text-align:
   </header>
 
   <div class="popular-recipes">
+    <!-- unchanged recipe cards -->
     <a href="aperolspritz.html" class="recipe-card">
       <img src="images/aperolspritz.jpg" alt="Aperol Spritz" />
       <h3>Aperol Spritz</h3>
@@ -159,6 +192,13 @@ footer { background-color:#800000; color:#FFF8F0; padding:1.2em 2em; text-align:
     </a>
   </div>
 
+  <!-- ⭐ NEW PROMO SECTION ⭐ -->
+  <div class="la-tavola-market-box">
+    <h2>📘 La Tavola Market</h2>
+    <p>Bring the taste of Italy into your home with our exclusive kitchen guides and e-books.</p>
+    <a href="tenclassicrecipesanyonecanmasterebook.html" class="la-tavola-market-btn">Shop Now</a>
+  </div>
+
   <div class="newsletter">
     <h3>Join the Table</h3>
     <p>Subscribe for weekly recipes, cooking tips, and Italian inspiration.</p>
@@ -170,6 +210,7 @@ footer { background-color:#800000; color:#FFF8F0; padding:1.2em 2em; text-align:
 </div>
 
 <footer>
+  <!-- unchanged footer -->
   <div class="footer-logo-container" aria-label="Footer logo" style="margin-bottom:12px;">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200" role="img" aria-label="La Tavola Italiana">
       <path id="curve" fill="transparent" d="M 60 95 A 90 38 0 0 1 240 95" />
@@ -205,7 +246,3 @@ document.getElementById("current-year").textContent = new Date().getFullYear();
 <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/833349ad0ed5ca7b6b03f0253b1029b1.js"></script>
 </body>
 </html>
-
-
-
-
